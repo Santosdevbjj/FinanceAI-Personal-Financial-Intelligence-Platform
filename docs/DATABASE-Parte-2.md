@@ -2,7 +2,7 @@
 
 Esta seção descreve as tabelas centrais da plataforma FinanceAI.
 
-Objetivos:
+## Objetivos:
 
 - Modelagem financeira robusta
 - Integridade transacional
@@ -73,7 +73,7 @@ CREATE TABLE users (
 
 ---
 
-Índices
+## Índices
 
 CREATE UNIQUE INDEX idx_users_email ON users(email);
 CREATE INDEX idx_users_status ON users(account_status);
@@ -82,7 +82,7 @@ CREATE INDEX idx_users_created_at ON users(created_at);
 
 ---
 
-Constraints
+## Constraints
 
 email obrigatório
 
@@ -96,14 +96,14 @@ auth_provider suporta expansão OAuth
 
 ---
 
-2. USER_SETTINGS
+## 2. USER_SETTINGS
 
 Configurações financeiras e comportamentais do usuário.
 
 
 ---
 
-Schema
+## Schema
 
 CREATE TABLE user_settings (
     id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
@@ -134,7 +134,7 @@ CREATE TABLE user_settings (
 
 ---
 
-3. FINANCIAL_INSTITUTIONS
+## 3. FINANCIAL_INSTITUTIONS
 
 Instituições financeiras integradas.
 
@@ -156,7 +156,7 @@ Santander
 
 ---
 
-Schema
+## Schema
 
 CREATE TABLE financial_institutions (
     id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
@@ -178,7 +178,7 @@ CREATE TABLE financial_institutions (
 
 ---
 
-Índices
+## Índices
 
 CREATE INDEX idx_financial_institutions_name ON financial_institutions(name);
 CREATE INDEX idx_financial_institutions_active ON financial_institutions(active);
@@ -186,7 +186,7 @@ CREATE INDEX idx_financial_institutions_active ON financial_institutions(active)
 
 ---
 
-4. ACCOUNTS
+## 4. ACCOUNTS
 
 Representa contas financeiras do usuário.
 
@@ -210,7 +210,7 @@ Cripto (futuro)
 
 ---
 
-Schema
+## Schema
 
 CREATE TABLE accounts (
     id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
@@ -252,7 +252,7 @@ CREATE TABLE accounts (
 
 ---
 
-Índices
+## Índices
 
 CREATE INDEX idx_accounts_user_id ON accounts(user_id);
 CREATE INDEX idx_accounts_type ON accounts(account_type);
@@ -262,7 +262,7 @@ CREATE INDEX idx_accounts_sync_status ON accounts(sync_status);
 
 ---
 
-Constraints de Negócio
+## Constraints de Negócio
 
 Conta pertence a 1 usuário
 
@@ -276,14 +276,14 @@ current_balance sempre reconciliável
 
 ---
 
-5. ACCOUNT_BALANCE_HISTORY
+## 5. ACCOUNT_BALANCE_HISTORY
 
 Histórico de saldo para gráficos e analytics.
 
 
 ---
 
-Schema
+## Schema
 
 CREATE TABLE account_balance_history (
     id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
@@ -305,7 +305,7 @@ CREATE TABLE account_balance_history (
 
 ---
 
-Índices
+## Índices
 
 CREATE INDEX idx_balance_history_account_date
 ON account_balance_history(account_id, balance_date DESC);
@@ -313,7 +313,7 @@ ON account_balance_history(account_id, balance_date DESC);
 
 ---
 
-6. CATEGORIES
+## 6. CATEGORIES
 
 Categorias financeiras.
 
@@ -328,7 +328,7 @@ Freelance
 Dividendos
 
 
-Despesas:
+## Despesas:
 
 Alimentação
 
@@ -342,7 +342,7 @@ Moradia
 
 ---
 
-Schema
+## Schema
 
 CREATE TABLE categories (
     id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
@@ -370,7 +370,7 @@ CREATE TABLE categories (
 
 ---
 
-Regras
+## Regras
 
 Categorias do sistema: is_system = true
 
@@ -382,7 +382,7 @@ Suporte hierarquia
 
 ---
 
-Índices
+## Índices
 
 CREATE INDEX idx_categories_user ON categories(user_id);
 CREATE INDEX idx_categories_type ON categories(category_type);
@@ -391,7 +391,7 @@ CREATE INDEX idx_categories_parent ON categories(parent_category_id);
 
 ---
 
-7. TRANSACTIONS
+## 7. TRANSACTIONS
 
 Tabela mais crítica da plataforma.
 
@@ -413,7 +413,7 @@ Investimentos
 
 ---
 
-Schema
+## Schema
 
 CREATE TABLE transactions (
     id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
@@ -461,7 +461,7 @@ CREATE TABLE transactions (
 
 ---
 
-Índices Críticos
+## Índices Críticos
 
 CREATE INDEX idx_transactions_user ON transactions(user_id);
 CREATE INDEX idx_transactions_account ON transactions(account_id);
@@ -481,7 +481,7 @@ ON transactions USING GIN(metadata);
 
 ---
 
-Constraints de negócio
+## Constraints de negócio
 
 amount
 
@@ -501,7 +501,7 @@ adjustment
 
 ---
 
-transfer_group_id
+## transfer_group_id
 
 Usado para ligar:
 
@@ -513,7 +513,7 @@ entrada de conta B
 
 ---
 
-installment logic
+## installment logic
 
 Compra parcelada:
 
@@ -525,7 +525,7 @@ Parcela 12/12
 
 ---
 
-8. TRANSACTION_ATTACHMENTS
+## 8. TRANSACTION_ATTACHMENTS
 
 Anexos da transação.
 
@@ -545,7 +545,7 @@ OCR
 
 ---
 
-Schema
+## Schema
 
 CREATE TABLE transaction_attachments (
     id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
@@ -565,14 +565,14 @@ CREATE TABLE transaction_attachments (
 
 ---
 
-9. TRANSACTION_TAGS
+## 9. TRANSACTION_TAGS
 
 Tags opcionais normalizadas (caso não usar JSONB puro).
 
 
 ---
 
-Schema
+## Schema
 
 CREATE TABLE transaction_tags (
     id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
@@ -587,7 +587,7 @@ CREATE TABLE transaction_tags (
 
 ---
 
-Índices
+## Índices
 
 CREATE INDEX idx_transaction_tags_transaction
 ON transaction_tags(transaction_id);
@@ -598,7 +598,7 @@ ON transaction_tags(tag);
 
 ---
 
-10. RECURRING_TRANSACTIONS
+## 10. RECURRING_TRANSACTIONS
 
 Motor de recorrência financeira.
 
@@ -616,7 +616,7 @@ Assinaturas
 
 ---
 
-Schema
+## Schema
 
 CREATE TABLE recurring_transactions (
     id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
@@ -651,7 +651,7 @@ CREATE TABLE recurring_transactions (
 
 ---
 
-recurrence_type suportados
+## recurrence_type suportados
 
 daily
 
@@ -667,7 +667,10 @@ yearly
 
 ---
 
-Relacionamento Core (Resumo)
+## Relacionamento Core (Resumo) 
+
+<img width="724" height="652" alt="1000126107" src="https://github.com/user-attachments/assets/c513b6a7-5845-4998-a81b-4cee2b214137" />
+
 
 users
  ├── user_settings
@@ -685,7 +688,7 @@ users
 
 ---
 
-Design Decisions
+## Design Decisions
 
 Por que UUID?
 
@@ -703,7 +706,7 @@ event sourcing compatibility
 
 ---
 
-Por que JSONB?
+## Por que JSONB?
 
 Porque permite:
 
@@ -719,7 +722,7 @@ extensibilidade sem migrations frequentes
 
 ---
 
-Por que soft delete?
+## Por que soft delete?
 
 Porque sistemas financeiros exigem:
 
@@ -735,7 +738,7 @@ rollback operacional
 
 ---
 
-Core Principles
+## Core Principles
 
 A modelagem acima foi construída para:
 
@@ -756,18 +759,3 @@ observabilidade
 
 ---
 
-Essa é a **Parte 2 completa**.
-
-A **Parte 3** é a mais importante porque entra em:
-
-- `budgets`
-- `goals`
-- `financial_ledger`
-- `audit_logs`
-- `ai_insights`
-- `notifications`
-- `reports`
-- `user_sessions`
-- `risk_events`
-
-**(essa parte deixa o banco realmente em nível enterprise/FAANG)**.
