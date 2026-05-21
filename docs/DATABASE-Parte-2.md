@@ -672,19 +672,6 @@ yearly
 <img width="724" height="652" alt="1000126107" src="https://github.com/user-attachments/assets/c513b6a7-5845-4998-a81b-4cee2b214137" />
 
 
-users
- ├── user_settings
- ├── accounts
- │    ├── transactions
- │    │    ├── attachments
- │    │    ├── tags
- │    │    └── categories
- │    └── balance_history
- │
- ├── recurring_transactions
- │
- └── categories
-
 
 ---
 
