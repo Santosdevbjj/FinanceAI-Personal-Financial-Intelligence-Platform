@@ -129,9 +129,9 @@ Client → Gateway → Auth → API → AI Service → DB
 
 ## 15.3 Métricas Críticas
 
-Infra
+#### Infra
 
-Monitorar:
+#### Monitorar:
 
 CPU %
 
@@ -158,9 +158,9 @@ Disk	>80%	>95%
 
 ---
 
-API
+### API
 
-Monitorar:
+#### Monitorar:
 
 Requests/sec
 
@@ -187,7 +187,7 @@ Error rate	< 0.5%
 
 ## Database
 
-Monitorar:
+#### Monitorar:
 
 connection pool
 
@@ -212,7 +212,7 @@ Cache hit	> 90%
 
 ---
 
-AI
+#### AI
 
 Monitorar:
 
