@@ -28,11 +28,11 @@ AI Core Engines
 Decision Layer
         ↓
 User Experience Layer
-
+```
 
 ---
 
-Engines principais
+## Engines principais
 
 1. Transaction Categorization Engine
 
@@ -62,16 +62,16 @@ Engines principais
 
 ---
 
-9. Transaction Categorization Engine
+## 9. Transaction Categorization Engine
 
-9.1 Objetivo
+## 9.1 Objetivo
 
 Classificar automaticamente transações financeiras em categorias relevantes.
 
 
 ---
 
-Problema resolvido
+## Problema resolvido
 
 Transformar:
 
@@ -91,7 +91,7 @@ Em:
 
 ---
 
-9.2 Inputs
+## 9.2 Inputs
 
 Dados de entrada
 
@@ -117,7 +117,7 @@ geolocation (opcional)
 
 ---
 
-9.3 Outputs
+## 9.3 Outputs
 
 category
 
@@ -135,14 +135,14 @@ explanation metadata
 
 ---
 
-9.4 Model architecture
+## 9.4 Model architecture
 
 Arquitetura híbrida:
 
 
 ---
 
-Layer 1 — Rule Engine
+## Layer 1 — Rule Engine
 
 Regras determinísticas:
 
@@ -158,7 +158,7 @@ Exemplos:
 
 ---
 
-Layer 2 — ML Classifier
+## Layer 2 — ML Classifier
 
 Modelos supervisionados:
 
@@ -176,7 +176,7 @@ BERT text classifier
 
 ---
 
-Layer 3 — User Personalization Layer
+## Layer 3 — User Personalization Layer
 
 Ajusta classificação baseado em histórico individual.
 
@@ -196,7 +196,7 @@ O sistema aprende padrões personalizados.
 
 ---
 
-9.5 Confidence logic
+## 9.5 Confidence logic
 
 Thresholds
 
@@ -211,7 +211,7 @@ Confidence	Action
 
 ---
 
-9.6 Explainability
+## 9.6 Explainability
 
 O engine deve explicar:
 
@@ -227,7 +227,7 @@ recurrence detection
 
 ---
 
-9.7 Retraining strategy
+## 9.7 Retraining strategy
 
 Treinamento periódico com:
 
@@ -243,16 +243,16 @@ drift detection
 
 ---
 
-10. Spending Prediction Engine
+## 10. Spending Prediction Engine
 
-10.1 Objetivo
+## 10.1 Objetivo
 
 Prever quanto o usuário provavelmente gastará até o final do período.
 
 
 ---
 
-Perguntas respondidas
+## Perguntas respondidas
 
 Quanto vou gastar este mês?
 
@@ -264,7 +264,7 @@ Qual categoria está acelerando?
 
 ---
 
-10.2 Inputs
+## 10.2 Inputs
 
 historical transactions
 
@@ -284,7 +284,7 @@ user behavior trends
 
 ---
 
-10.3 Outputs
+## 10.3 Outputs
 
 total projected spend
 
@@ -300,7 +300,7 @@ acceleration signals
 
 ---
 
-10.4 Model types
+## 10.4 Model types
 
 Dependendo maturidade dos dados:
 
@@ -333,7 +333,7 @@ LSTM (futuro)
 
 ---
 
-10.5 Features
+## 10.5 Features
 
 Exemplos:
 
@@ -353,7 +353,7 @@ salary_day_distance
 
 ---
 
-10.6 Output example
+## 10.6 Output example
 
 {
   "projected_total_spend": 5420,
@@ -365,7 +365,7 @@ salary_day_distance
 
 ---
 
-11. Cashflow Forecast Engine
+## 11. Cashflow Forecast Engine
 
 11.1 Objetivo
 
@@ -374,7 +374,7 @@ Prever saldo futuro ao longo do tempo.
 
 ---
 
-Perguntas respondidas
+## Perguntas respondidas
 
 Quanto terei daqui 10 dias?
 
@@ -386,7 +386,7 @@ Qual meu runway financeiro?
 
 ---
 
-11.2 Inputs
+## 11.2 Inputs
 
 current balance
 
@@ -406,7 +406,7 @@ seasonal behavior
 
 ---
 
-11.3 Outputs
+## 11.3 Outputs
 
 projected daily balance
 
@@ -420,7 +420,7 @@ risk alerts
 
 ---
 
-11.4 Forecast horizon
+## 11.4 Forecast horizon
 
 Suporte:
 
@@ -438,7 +438,7 @@ Suporte:
 
 ---
 
-11.5 Forecast techniques
+## 11.5 Forecast techniques
 
 Layer 1
 
@@ -456,7 +456,7 @@ subscriptions
 
 ---
 
-Layer 2
+## Layer 2
 
 Probabilistic forecast:
 
@@ -470,7 +470,7 @@ user patterns
 
 ---
 
-Layer 3
+## Layer 3
 
 Monte Carlo simulation (future roadmap)
 
@@ -479,7 +479,7 @@ Simular múltiplos cenários.
 
 ---
 
-11.6 Example output
+## 11.6 Example output
 
 {
   "balance_day_30": 1320,
@@ -490,16 +490,16 @@ Simular múltiplos cenários.
 
 ---
 
-12. Budget Intelligence Engine
+## 12. Budget Intelligence Engine
 
-12.1 Objetivo
+## 12.1 Objetivo
 
 Transformar orçamento estático em orçamento adaptativo e inteligente.
 
 
 ---
 
-Perguntas respondidas
+## Perguntas respondidas
 
 Meu orçamento está realista?
 
@@ -511,7 +511,7 @@ Qual categoria precisa controle?
 
 ---
 
-12.2 Inputs
+## 12.2 Inputs
 
 current budget
 
@@ -529,7 +529,7 @@ goals
 
 ---
 
-12.3 Outputs
+## 12.3 Outputs
 
 suggested budget adjustments
 
@@ -543,7 +543,7 @@ adaptive recommendations
 
 ---
 
-12.4 Capabilities
+## 12.4 Capabilities
 
 Budget realism scoring
 
@@ -563,7 +563,7 @@ histórico
 
 ---
 
-Adaptive budget suggestions
+## Adaptive budget suggestions
 
 Exemplo:
 
@@ -574,7 +574,7 @@ Exemplo:
 
 ---
 
-Category pressure detection
+## Category pressure detection
 
 Detecta:
 
@@ -588,16 +588,16 @@ sazonalidade
 
 ---
 
-13. Goal Optimization Engine
+## 13. Goal Optimization Engine
 
-13.1 Objetivo
+## 13.1 Objetivo
 
 Ajudar o usuário a atingir metas financeiras de forma otimizada.
 
 
 ---
 
-Tipos de meta
+## Tipos de meta
 
 Reserva de emergência
 
@@ -615,7 +615,7 @@ Objetivos personalizados
 
 ---
 
-13.2 Inputs
+## 13.2 Inputs
 
 goal amount
 
@@ -633,7 +633,7 @@ risk tolerance
 
 ---
 
-13.3 Outputs
+## 13.3 Outputs
 
 recommended monthly contribution
 
@@ -647,28 +647,28 @@ goal acceleration opportunities
 
 ---
 
-13.4 Optimization logic
+## 13.4 Optimization logic
 
 O sistema avalia:
 
 
 ---
 
-Cenário atual
+## Cenário atual
 
 Se nada mudar
 
 
 ---
 
-Cenário otimizado
+## Cenário otimizado
 
 Com ajustes sugeridos
 
 
 ---
 
-Cenário agressivo
+## Cenário agressivo
 
 Com máxima economia possível
 
@@ -686,9 +686,9 @@ Com máxima economia possível
 
 ---
 
-14. Risk & Fraud Detection Engine
+## 14. Risk & Fraud Detection Engine
 
-14.1 Objetivo
+## 14.1 Objetivo
 
 Detectar:
 
@@ -704,7 +704,7 @@ transações fora do padrão
 
 ---
 
-14.2 Tipos de risco
+## 14.2 Tipos de risco
 
 Behavioral anomaly
 
@@ -715,35 +715,35 @@ Gasto incomum em horário atípico
 
 ---
 
-Amount anomaly
+## Amount anomaly
 
 Valor fora da distribuição histórica
 
 
 ---
 
-Merchant anomaly
+## Merchant anomaly
 
 Merchant nunca visto
 
 
 ---
 
-Velocity anomaly
+## Velocity anomaly
 
 Múltiplas transações incomuns
 
 
 ---
 
-Financial risk
+## Financial risk
 
 Probabilidade de saldo negativo
 
 
 ---
 
-14.3 Model techniques
+## 14.3 Model techniques
 
 Isolation Forest
 
@@ -757,7 +757,7 @@ pattern deviation models
 
 ---
 
-14.4 Outputs
+## 14.4 Outputs
 
 anomaly score
 
@@ -771,7 +771,7 @@ explanation
 
 ---
 
-14.5 Example
+## 14.5 Example
 
 {
   "risk_score": 0.82,
@@ -781,16 +781,16 @@ explanation
 
 ---
 
-15. Insight Generation Engine
+## 15. Insight Generation Engine
 
-15.1 Objetivo
+## 15.1 Objetivo
 
 Converter outputs técnicos em insights úteis ao usuário.
 
 
 ---
 
-Problema
+## Problema
 
 Model outputs não são UX.
 
@@ -803,7 +803,7 @@ Precisam virar:
 
 ---
 
-15.2 Inputs
+## 15.2 Inputs
 
 Recebe outputs de:
 
@@ -819,7 +819,7 @@ cashflow engine
 
 ---
 
-15.3 Outputs
+## 15.3 Outputs
 
 natural language insights
 
@@ -833,7 +833,7 @@ behavioral explanations
 
 ---
 
-15.4 Insight types
+## 15.4 Insight types
 
 trend insight
 
@@ -849,16 +849,16 @@ milestone insight
 
 ---
 
-16. Recommendation Engine
+## 16. Recommendation Engine
 
-16.1 Objetivo
+## 16.1 Objetivo
 
 Gerar recomendações financeiras personalizadas.
 
 
 ---
 
-16.2 Inputs
+## 16.2 Inputs
 
 Combina:
 
@@ -876,7 +876,7 @@ budget pressure
 
 ---
 
-16.3 Recommendation types
+## 16.3 Recommendation types
 
 Savings recommendation
 
@@ -887,7 +887,7 @@ Savings recommendation
 
 ---
 
-Risk recommendation
+## Risk recommendation
 
 > “Seu saldo ficará crítico em 9 dias”
 
@@ -896,7 +896,7 @@ Risk recommendation
 
 ---
 
-Goal recommendation
+## Goal recommendation
 
 > “Aumentando aporte em R$ 120 você antecipa sua meta”
 
@@ -905,7 +905,7 @@ Goal recommendation
 
 ---
 
-Budget recommendation
+## Budget recommendation
 
 > “Seu orçamento atual não é compatível com histórico”
 
@@ -914,7 +914,7 @@ Budget recommendation
 
 ---
 
-16.4 Recommendation ranking
+## 16.4 Recommendation ranking
 
 Sistema prioriza:
 
@@ -930,7 +930,7 @@ user relevance
 
 ---
 
-Score model
+## Score model
 
 priority_score =
 impact × urgency × confidence × personalization
@@ -938,14 +938,14 @@ impact × urgency × confidence × personalization
 
 ---
 
-17. Engine Orchestration Layer
+## 17. Engine Orchestration Layer
 
 Os motores não operam isoladamente.
 
 
 ---
 
-Exemplo de fluxo
+## Exemplo de fluxo
 
 Transactions
    ↓
@@ -964,7 +964,7 @@ AI Assistant
 
 ---
 
-Coordination rules
+## Coordination rules
 
 Cada engine pode:
 
@@ -980,7 +980,7 @@ gerar explainability metadata
 
 ---
 
-18. AI Core Systems Summary
+## 18. AI Core Systems Summary
 
 Engine	Objective
 
@@ -997,11 +997,11 @@ Recommendation Engine	Recomendar ações
 
 ---
 
-19. Conclusion
+## 19. Conclusion
 
 O FinanceAI utiliza uma arquitetura de AI multi-engine especializada, onde cada componente resolve um problema financeiro específico.
 
-Essa abordagem permite:
+## Essa abordagem permite:
 
 Maior precisão
 
