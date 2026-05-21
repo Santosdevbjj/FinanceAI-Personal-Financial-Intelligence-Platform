@@ -97,11 +97,11 @@ LLM Reasoning Layer
 Guardrails
      ↓
 Response Generation
-
+```
 
 ---
 
-Componentes principais
+## Componentes principais
 
 1. Intent Detection Layer
 
@@ -131,7 +131,7 @@ Componentes principais
 
 ---
 
-23. Intent Detection Layer
+## 23. Intent Detection Layer
 
 23.1 Objetivo
 
@@ -140,7 +140,7 @@ Detectar o que o usuário realmente quer fazer.
 
 ---
 
-Tipos de intenção
+## Tipos de intenção
 
 Query Intent
 
@@ -168,7 +168,7 @@ O que devo ajustar?
 
 ---
 
-Simulation Intent
+## Simulation Intent
 
 Cenários hipotéticos:
 
@@ -180,7 +180,7 @@ E se aumentar minha renda?
 
 ---
 
-Goal Intent
+## Goal Intent
 
 Perguntas sobre metas:
 
@@ -192,7 +192,7 @@ Como acelerar?
 
 ---
 
-Risk Intent
+## Risk Intent
 
 Perguntas de risco:
 
@@ -204,7 +204,7 @@ Estou gastando demais?
 
 ---
 
-Action Intent
+## Action Intent
 
 Comandos:
 
@@ -218,7 +218,7 @@ Ajustar meta
 
 ---
 
-23.2 Output
+## 23.2 Output
 
 {
   "intent": "simulation",
@@ -232,7 +232,7 @@ Ajustar meta
 
 ---
 
-24. Context Engine
+## 24. Context Engine
 
 24.1 Objetivo
 
@@ -241,7 +241,7 @@ Construir o contexto financeiro e conversacional necessário para o LLM responde
 
 ---
 
-Inputs
+## Inputs
 
 User message
 
@@ -265,12 +265,12 @@ Historical patterns
 
 ---
 
-Context layers
+## Context layers
 
 
 ---
 
-Layer 1 — Conversational Context
+## Layer 1 — Conversational Context
 
 Inclui:
 
@@ -284,7 +284,7 @@ references implícitas
 
 ---
 
-Layer 2 — Financial Context
+## Layer 2 — Financial Context
 
 Inclui:
 
@@ -302,7 +302,7 @@ previsões
 
 ---
 
-Layer 3 — Behavioral Context
+## Layer 3 — Behavioral Context
 
 Inclui:
 
@@ -318,7 +318,7 @@ sazonalidade
 
 ---
 
-Layer 4 — AI Context
+## Layer 4 — AI Context
 
 Inclui:
 
@@ -334,7 +334,7 @@ confidence metadata
 
 ---
 
-Context compression
+## Context compression
 
 Como contexto é limitado:
 
@@ -352,16 +352,16 @@ token budgeting
 
 ---
 
-25. Prompt Orchestration Layer
+## 25. Prompt Orchestration Layer
 
-25.1 Objetivo
+### 25.1 Objetivo
 
 Construir prompts dinâmicos e seguros para o LLM.
 
 
 ---
 
-Estrutura do prompt
+## Estrutura do prompt
 
 SYSTEM INSTRUCTIONS
 +
@@ -378,12 +378,12 @@ GUARDRAILS
 
 ---
 
-Prompt modules
+## Prompt modules
 
 
 ---
 
-Persona module
+## Persona module
 
 Define o papel:
 
@@ -394,7 +394,7 @@ Define o papel:
 
 ---
 
-Financial context module
+## Financial context module
 
 Insere:
 
@@ -410,7 +410,7 @@ metas
 
 ---
 
-Explainability module
+## Explainability module
 
 Exige:
 
@@ -424,7 +424,7 @@ justificativa
 
 ---
 
-Safety module
+## Safety module
 
 Bloqueia:
 
@@ -436,7 +436,7 @@ respostas financeiras perigosas
 
 ---
 
-UX module
+## UX module
 
 Controla:
 
@@ -450,16 +450,16 @@ concisão
 
 ---
 
-26. Tool Calling Layer
+## 26. Tool Calling Layer
 
-26.1 Objetivo
+### 26.1 Objetivo
 
 Permitir que o LLM use sistemas especializados em vez de “inventar” respostas.
 
 
 ---
 
-Ferramentas possíveis
+## Ferramentas possíveis
 
 Transaction Service
 
@@ -475,7 +475,7 @@ categorias
 
 ---
 
-Budget Engine
+## Budget Engine
 
 Consultar:
 
@@ -487,7 +487,7 @@ projeções
 
 ---
 
-Forecast Engine
+## Forecast Engine
 
 Consultar:
 
@@ -499,7 +499,7 @@ cashflow
 
 ---
 
-Goal Engine
+## Goal Engine
 
 Consultar:
 
@@ -511,7 +511,7 @@ otimização
 
 ---
 
-Risk Engine
+## Risk Engine
 
 Consultar:
 
@@ -523,7 +523,7 @@ alertas
 
 ---
 
-Recommendation Engine
+## Recommendation Engine
 
 Consultar:
 
@@ -533,7 +533,7 @@ recomendações priorizadas
 
 ---
 
-Exemplo de fluxo
+## Exemplo de fluxo
 
 User:
 
@@ -541,7 +541,7 @@ User:
 
 
 
-LLM:
+## LLM:
 
 Calls:
 
@@ -555,21 +555,21 @@ Calls:
 
 
 
-Then explains result.
+## Then explains result.
 
 
 ---
 
-27. RAG Architecture (Retrieval-Augmented Generation)
+## 27. RAG Architecture (Retrieval-Augmented Generation)
 
-27.1 Objetivo
+### 27.1 Objetivo
 
 Permitir que o LLM consulte dados e conhecimento em tempo real.
 
 
 ---
 
-Por que usar RAG?
+## Por que usar RAG?
 
 LLM puro não deve depender de memória interna para dados financeiros.
 
@@ -578,7 +578,7 @@ FinanceAI usa retrieval.
 
 ---
 
-Retrieval domains
+## Retrieval domains
 
 User financial data
 
@@ -594,7 +594,7 @@ goals
 
 ---
 
-Financial insights
+## Financial insights
 
 generated engine outputs
 
@@ -606,7 +606,7 @@ recommendations
 
 ---
 
-Knowledge base
+## Knowledge base
 
 help center
 
@@ -620,7 +620,7 @@ product documentation
 
 ---
 
-Arquitetura
+## Arquitetura
 
 User Query
     ↓
@@ -635,7 +635,7 @@ LLM
 
 ---
 
-Retrieval strategies
+## Retrieval strategies
 
 semantic search
 
@@ -651,7 +651,7 @@ ranking
 
 ---
 
-Ranking criteria
+## Ranking criteria
 
 relevance
 
@@ -665,21 +665,21 @@ privacy scope
 
 ---
 
-28. Memory Architecture
+## 28. Memory Architecture
 
-28.1 Objetivo
+### 28.1 Objetivo
 
 Permitir continuidade conversacional inteligente.
 
 
 ---
 
-Tipos de memória
+## Tipos de memória
 
 
 ---
 
-Session Memory
+### Session Memory
 
 Curto prazo:
 
@@ -699,7 +699,7 @@ Exemplo:
 
 ---
 
-User Preference Memory
+## User Preference Memory
 
 Persistente:
 
@@ -713,7 +713,7 @@ financial priorities
 
 ---
 
-Financial Behavioral Memory
+## Financial Behavioral Memory
 
 Semi-persistente:
 
@@ -727,9 +727,9 @@ risk signals
 
 ---
 
-AI Interaction Memory
+## AI Interaction Memory
 
-Aprende:
+### Aprende:
 
 accepted recommendations
 
@@ -741,7 +741,7 @@ rejected classifications
 
 ---
 
-29. Memory Constraints
+## 29. Memory Constraints
 
 A memória NÃO deve:
 
@@ -757,21 +757,21 @@ manter contexto sensível indefinidamente
 
 ---
 
-30. Financial Reasoning Layer
+## 30. Financial Reasoning Layer
 
-30.1 Objetivo
+### 30.1 Objetivo
 
 Permitir raciocínio financeiro estruturado.
 
 
 ---
 
-Tipos de reasoning
+## Tipos de reasoning
 
 
 ---
 
-Comparative reasoning
+## Comparative reasoning
 
 Exemplo:
 
@@ -782,7 +782,7 @@ Exemplo:
 
 ---
 
-Scenario reasoning
+## Scenario reasoning
 
 Exemplo:
 
@@ -793,7 +793,7 @@ Exemplo:
 
 ---
 
-Constraint reasoning
+## Constraint reasoning
 
 Exemplo:
 
@@ -804,7 +804,7 @@ Exemplo:
 
 ---
 
-Tradeoff reasoning
+## Tradeoff reasoning
 
 Exemplo:
 
@@ -815,7 +815,7 @@ Exemplo:
 
 ---
 
-Prioritization reasoning
+## Prioritization reasoning
 
 Exemplo:
 
@@ -826,7 +826,7 @@ Exemplo:
 
 ---
 
-31. Response Composer
+## 31. Response Composer
 
 Objetivo
 
@@ -835,7 +835,7 @@ Transformar outputs técnicos em UX conversacional.
 
 ---
 
-Estrutura
+## Estrutura
 
 A resposta pode conter:
 
@@ -858,15 +858,15 @@ A resposta pode conter:
 
 ---
 
-Exemplo
+## Exemplo
 
-Resposta ruim:
+### Resposta ruim:
 
 > “Risk score 0.78”
 
 
 
-Resposta ideal:
+### Resposta ideal:
 
 > “Seu risco de saldo negativo é moderado porque seus gastos variáveis aumentaram 24%.”
 
@@ -875,18 +875,18 @@ Resposta ideal:
 
 ---
 
-32. Guardrails Layer
+## 32. Guardrails Layer
 
-32.1 Objetivo
+### 32.1 Objetivo
 
 Impedir respostas inseguras, incorretas ou fora de política.
 
 
 ---
 
-Guardrails financeiros
+## Guardrails financeiros
 
-Bloquear:
+### Bloquear:
 
 aconselhamento irresponsável
 
@@ -900,9 +900,9 @@ inferências sem base
 
 ---
 
-Guardrails técnicos
+## Guardrails técnicos
 
-Bloquear:
+### Bloquear:
 
 hallucination
 
@@ -916,9 +916,9 @@ invalid actions
 
 ---
 
-Guardrails de UX
+## Guardrails de UX
 
-Evitar:
+### Evitar:
 
 linguagem confusa
 
@@ -930,14 +930,14 @@ excesso de jargão
 
 ---
 
-33. Confidence Handling
+## 33. Confidence Handling
 
 Toda resposta relevante deve incluir confidence metadata.
 
 
 ---
 
-Exemplo interno
+## Exemplo interno
 
 {
   "answer_confidence": 0.87,
@@ -948,9 +948,9 @@ Exemplo interno
 
 ---
 
-UX policy
+## UX policy
 
-Se confiança baixa:
+### Se confiança baixa:
 
 Não afirmar.
 
@@ -963,9 +963,9 @@ Exemplo:
 
 ---
 
-34. Hallucination Prevention
+## 34. Hallucination Prevention
 
-O LLM nunca deve:
+### O LLM nunca deve:
 
 inventar saldo
 
@@ -979,7 +979,7 @@ inferir fatos financeiros não recuperados
 
 ---
 
-Estratégias
+## Estratégias
 
 retrieval-only facts
 
@@ -995,28 +995,28 @@ schema validation
 
 ---
 
-35. Fail-safe Architecture
+## 35. Fail-safe Architecture
 
-Se LLM falhar:
+### Se LLM falhar:
 
 
 ---
 
-Fallback 1
+## Fallback 1
 
 Structured insight UI
 
 
 ---
 
-Fallback 2
+## Fallback 2
 
 Engine outputs sem linguagem conversacional
 
 
 ---
 
-Fallback 3
+## Fallback 3
 
 Graceful degradation
 
@@ -1029,14 +1029,14 @@ Mensagem:
 
 ---
 
-36. Multi-Model Strategy
+## 36. Multi-Model Strategy
 
 FinanceAI não precisa depender de um único LLM.
 
 
 ---
 
-Possível estratégia
+## Possível estratégia
 
 Fast model
 
@@ -1050,7 +1050,7 @@ summaries
 
 ---
 
-Deep reasoning model
+## Deep reasoning model
 
 Para:
 
@@ -1064,7 +1064,7 @@ tradeoffs
 
 ---
 
-Specialized classifiers
+## Specialized classifiers
 
 Para:
 
@@ -1078,7 +1078,7 @@ financial policy
 
 ---
 
-37. Cost Optimization Layer
+## 37. Cost Optimization Layer
 
 LLM é caro. A arquitetura deve otimizar.
 
@@ -1101,7 +1101,7 @@ response reuse
 
 ---
 
-38. Observability
+## 38. Observability
 
 Monitorar:
 
@@ -1121,7 +1121,7 @@ recommendation acceptance
 
 ---
 
-39. Conversational AI Summary
+## 39. Conversational AI Summary
 
 Component	Purpose
 
@@ -1139,7 +1139,7 @@ Response Composer	UX conversacional
 
 ---
 
-40. Conclusion
+## 40. Conclusion
 
 A camada LLM do FinanceAI não é apenas um chatbot.
 
@@ -1164,5 +1164,3 @@ converse, entenda, simule e tome decisões financeiras melhores em linguagem nat
 
 ---
 
-**Parte 3 concluída.**  
-A **Parte 4** será a parte de **ML Infrastructure (feature store, training pipelines, inference, monitoring, drift, MLOps)** — camada de produção enterprise.
