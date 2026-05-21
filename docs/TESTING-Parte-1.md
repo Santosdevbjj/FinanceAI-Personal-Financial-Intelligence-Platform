@@ -1,13 +1,5 @@
-Perfeito. Vamos gerar agora a Parte 1 completa do docs/TESTING.md, cobrindo a fundação da estratégia de testes da plataforma FinanceAI, em padrão FAANG / Google / Stripe / Netflix engineering.
+## Parte 1 — Estratégia Geral de Testes
 
-Pronto para colar no repositório:
-
-
----
-
-Parte 1 — Estratégia Geral de Testes
-
-# TESTING.md
 
 # 1. VISÃO GERAL
 
@@ -29,7 +21,7 @@ O objetivo é garantir que a plataforma opere em padrão:
 - Enterprise-grade
 - AI-native
 - Production-grade
-- FAANG-level engineering quality
+- Level engineering quality
 
 ---
 
@@ -188,10 +180,10 @@ A estratégia adota:
            │      Unit Tests         │
            └─────────────────────────┘
 
-
+``` 
 ---
 
-3.2 Distribuição Ideal
+## 3.2 Distribuição Ideal
 
 Tipo	Percentual
 
@@ -206,7 +198,7 @@ Chaos / Perf / Security	2%
 
 ---
 
-3.3 Justificativa
+## 3.3 Justificativa
 
 Mais testes unitários:
 
@@ -229,11 +221,11 @@ caros de manter
 
 ---
 
-4. ESTRATÉGIA DE CAMADAS DE TESTE
+## 4. ESTRATÉGIA DE CAMADAS DE TESTE
 
-4.1 Unit Layer
+### 4.1 Unit Layer
 
-Valida:
+#### Valida:
 
 funções
 
@@ -250,16 +242,16 @@ utils
 validators
 
 
-Objetivo:
+### Objetivo:
 
 Isolar comportamento.
 
 
 ---
 
-4.2 Integration Layer
+## 4.2 Integration Layer
 
-Valida:
+### Valida:
 
 service + DB
 
@@ -279,9 +271,9 @@ Validar integração real.
 
 ---
 
-4.3 Contract Layer
+## 4.3 Contract Layer
 
-Valida:
+### Valida:
 
 APIs
 
@@ -292,16 +284,16 @@ backward compatibility
 event contracts
 
 
-Objetivo:
+#### Objetivo:
 
 Evitar breaking changes.
 
 
 ---
 
-4.4 E2E Layer
+## 4.4 E2E Layer
 
-Valida:
+### Valida:
 
 User journey completo.
 
@@ -312,9 +304,9 @@ Login → importar transações → IA analisa → dashboard gera insights → r
 
 ---
 
-4.5 Security Layer
+## 4.5 Security Layer
 
-Valida:
+### Valida:
 
 auth
 
@@ -332,9 +324,9 @@ rate limit
 
 ---
 
-4.6 AI Validation Layer
+## 4.6 AI Validation Layer
 
-Valida:
+### Valida:
 
 recommendation correctness
 
@@ -350,9 +342,9 @@ fallback behavior
 
 ---
 
-4.7 Reliability Layer
+## 4.7 Reliability Layer
 
-Valida:
+### Valida:
 
 failures
 
@@ -368,11 +360,11 @@ infra resilience
 
 ---
 
-5. TEST ENVIRONMENTS
+## 5. TEST ENVIRONMENTS
 
-5.1 Local
+### 5.1 Local
 
-Objetivo:
+#### Objetivo:
 
 desenvolvimento individual
 
@@ -390,9 +382,9 @@ seeded data
 
 ---
 
-5.2 CI Environment
+## 5.2 CI Environment
 
-Objetivo:
+### Objetivo:
 
 pipeline validation
 
@@ -408,9 +400,9 @@ coverage analysis
 
 ---
 
-5.3 QA Environment
+## 5.3 QA Environment
 
-Objetivo:
+### Objetivo:
 
 functional validation
 
@@ -426,9 +418,9 @@ synthetic data
 
 ---
 
-5.4 Staging
+## 5.4 Staging
 
-Objetivo:
+### Objetivo:
 
 produção simulada
 
@@ -446,9 +438,9 @@ performance validation
 
 ---
 
-5.5 Production Verification
+## 5.5 Production Verification
 
-Objetivo:
+## Objetivo:
 
 validar pós deploy
 
@@ -464,9 +456,9 @@ canary validation
 
 ---
 
-6. TEST DATA STRATEGY
+## 6. TEST DATA STRATEGY
 
-6.1 Tipos de Dados
+###  6.1 Tipos de Dados
 
 Synthetic Data
 
@@ -484,9 +476,9 @@ fake transactions
 
 ---
 
-Masked Production-like Data
+## Masked Production-like Data
 
-Quando necessário:
+#### Quando necessário:
 
 dados anonimizados
 
@@ -502,7 +494,7 @@ compliance safe
 
 ---
 
-Edge Case Data
+### Edge Case Data
 
 Cenários extremos:
 
@@ -520,13 +512,16 @@ corrupção de payload
 
 ---
 
-6.2 Seed Strategy
+## 6.2 Seed Strategy
 
-Cada ambiente pode subir dados padrão:
+#### Cada ambiente pode subir dados padrão:
 
+```
 npm run seed:test
 
-Inclui:
+```
+
+### Inclui:
 
 usuários
 
@@ -542,9 +537,9 @@ metas financeiras
 
 ---
 
-6.3 Isolation
+## 6.3 Isolation
 
-Cada suíte deve:
+### Cada suíte deve:
 
 não depender de ordem
 
@@ -556,9 +551,9 @@ resetar dados
 
 ---
 
-7. QUALITY GATES
+## 7. QUALITY GATES
 
-7.1 Pull Request Gate
+### 7.1 Pull Request Gate
 
 Nenhum PR pode ser mergeado se falhar:
 
@@ -576,9 +571,9 @@ security scan
 
 ---
 
-7.2 Release Gate
+## 7.2 Release Gate
 
-Nenhuma release pode subir se falhar:
+### Nenhuma release pode subir se falhar:
 
 E2E
 
@@ -594,9 +589,9 @@ AI regression tests
 
 ---
 
-7.3 Production Gate
+## 7.3 Production Gate
 
-Canary só continua se:
+### Canary só continua se:
 
 error rate ok
 
@@ -610,9 +605,9 @@ AI confidence ok
 
 ---
 
-8. COVERAGE TARGETS
+## 8. COVERAGE TARGETS
 
-8.1 Cobertura mínima
+### 8.1 Cobertura mínima
 
 Área	Meta
 
@@ -627,9 +622,9 @@ Utilities	90%
 
 ---
 
-8.2 Coverage Rules
+## 8.2 Coverage Rules
 
-Não aceitável:
+### Não aceitável:
 
 coverage artificial
 
@@ -638,7 +633,7 @@ testar getters triviais
 mocks inúteis
 
 
-Aceitável:
+### Aceitável:
 
 behavior-driven tests
 
@@ -650,9 +645,9 @@ edge case validation
 
 ---
 
-8.3 Mutation Testing Target
+## 8.3 Mutation Testing Target
 
-Meta:
+### Meta:
 
 Área	Mutation Score
 
@@ -663,11 +658,11 @@ Financial logic	> 90%
 
 ---
 
-9. QUALITY METRICS
+### 9. QUALITY METRICS
 
-9.1 Engineering KPIs
+### 9.1 Engineering KPIs
 
-Monitorados:
+#### Monitorados:
 
 defect escape rate
 
@@ -683,7 +678,7 @@ release stability
 
 ---
 
-9.2 Indicadores
+## 9.2 Indicadores
 
 KPI	Meta
 
@@ -696,7 +691,7 @@ Critical bugs in prod	~0
 
 ---
 
-9.3 Mean Time Metrics
+## 9.3 Mean Time Metrics
 
 Métrica	Meta
 
@@ -708,11 +703,11 @@ E2E suite	< 20min
 
 ---
 
-10. TEST EXECUTION STRATEGY
+## 10. TEST EXECUTION STRATEGY
 
-10.1 Em Pull Request
+### 10.1 Em Pull Request
 
-Executar:
+#### Executar:
 
 lint
 
@@ -728,9 +723,9 @@ security scan
 
 ---
 
-10.2 Em Merge Main
+## 10.2 Em Merge Main
 
-Executar:
+### Executar:
 
 full suite
 
@@ -746,9 +741,9 @@ AI validation
 
 ---
 
-10.3 Nightly
+## 10.3 Nightly
 
-Executar:
+### Executar:
 
 full regression
 
@@ -764,9 +759,9 @@ mutation testing
 
 ---
 
-10.4 Pre-Release
+## 10.4 Pre-Release
 
-Executar:
+#### Executar:
 
 staging smoke
 
@@ -780,9 +775,9 @@ rollback simulation
 
 ---
 
-11. DEFINITION OF DONE
+## 11. DEFINITION OF DONE
 
-Uma feature só é considerada pronta se:
+#### Uma feature só é considerada pronta se:
 
 [ ] código implementado
 
@@ -808,11 +803,11 @@ Uma feature só é considerada pronta se:
 
 ---
 
-12. TESTING OWNERSHIP
+## 12. TESTING OWNERSHIP
 
-12.1 Desenvolvedor
+### 12.1 Desenvolvedor
 
-Responsável por:
+#### Responsável por:
 
 unit tests
 
@@ -824,7 +819,7 @@ local validation
 
 ---
 
-12.2 QA / Test Engineering
+## 12.2 QA / Test Engineering
 
 Responsável por:
 
@@ -838,9 +833,9 @@ regression
 
 ---
 
-12.3 Security Team
+## 12.3 Security Team
 
-Responsável por:
+### Responsável por:
 
 security validation
 
@@ -850,9 +845,9 @@ penetration tests
 
 ---
 
-12.4 AI Team
+## 12.4 AI Team
 
-Responsável por:
+### Responsável por:
 
 AI regression
 
@@ -864,9 +859,9 @@ recommendation quality
 
 ---
 
-12.5 SRE
+## 12.5 SRE
 
-Responsável por:
+### Responsável por:
 
 reliability tests
 
@@ -878,9 +873,9 @@ resilience validation
 
 ---
 
-13. CONCLUSÃO
+## 13. CONCLUSÃO
 
-A estratégia de testes do FinanceAI foi desenhada para:
+### A estratégia de testes do FinanceAI foi desenhada para:
 
 prevenir regressões
 
@@ -897,11 +892,11 @@ garantir confiabilidade
 reduzir incidentes em produção
 
 
-Modelo adotado:
+### Modelo adotado:
 
-FAANG-level quality engineering
+Level quality engineering
 
-Princípios:
+#### Princípios:
 
 automation-first
 
@@ -918,6 +913,3 @@ release confidence
 
 ---
 
-A **Parte 1 do `docs/TESTING.md` está completa**.
-
-Próximo passo: **Parte 2 — Unit Tests + Integration Tests (bem técnica e completa)**.
