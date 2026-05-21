@@ -169,7 +169,7 @@ PWA layer
 
 ---
 
-Backend API
+### Backend API
 
 Deployável como:
 
@@ -196,7 +196,7 @@ Notification API
 
 ---
 
-AI Services
+## AI Services
 
 Deployável como serviços independentes:
 
@@ -214,7 +214,7 @@ embeddings service
 
 ---
 
-Workers
+## Workers
 
 Deployáveis separadamente:
 
@@ -234,7 +234,7 @@ Webhook processors
 
 ---
 
-Data Layer
+## Data Layer
 
 Infra gerenciada:
 
@@ -252,25 +252,25 @@ Backup systems
 
 ---
 
-4. Estratégia Multi-Environment
+## 4. Estratégia Multi-Environment
 
 
 ---
 
-4.1 Ambientes Oficiais
+### 4.1 Ambientes Oficiais
 
 O sistema possui ambientes isolados.
 
 
 ---
 
-Local Development
+## Local Development
 
-Objetivo:
+### Objetivo:
 
 Desenvolvimento individual.
 
-Infra:
+### Infra:
 
 Docker Compose
 
@@ -281,7 +281,7 @@ Local Redis
 Mock AI services
 
 
-URL:
+### URL:
 
 http://localhost
 
@@ -299,13 +299,13 @@ Mock notifications
 
 ---
 
-Development (Cloud Dev)
+### Development (Cloud Dev)
 
-Objetivo:
+#### Objetivo:
 
 Ambiente compartilhado de desenvolvimento.
 
-Uso:
+## Uso:
 
 Integração entre devs
 
@@ -314,7 +314,7 @@ Testes internos
 Debug de cloud infra
 
 
-Características:
+## Características:
 
 Shared APIs
 
@@ -332,13 +332,13 @@ dev.financeai.internal
 
 ---
 
-QA Environment
+## QA Environment
 
-Objetivo:
+### Objetivo:
 
 Testes de qualidade.
 
-Uso:
+### Uso:
 
 QA manual
 
@@ -365,13 +365,13 @@ qa.financeai.internal
 
 ---
 
-Staging Environment
+## Staging Environment
 
-Objetivo:
+### Objetivo:
 
 Espelho quase idêntico à produção.
 
-Uso:
+### Uso:
 
 Pre-production validation
 
@@ -382,7 +382,7 @@ Security validation
 Performance tests
 
 
-Características:
+### Características:
 
 Same infra as production
 
@@ -393,20 +393,20 @@ Reduced scale
 Synthetic data
 
 
-URL:
+### URL:
 
 staging.financeai.com
 
 
 ---
 
-Production Environment
+### Production Environment
 
-Objetivo:
+#### Objetivo:
 
 Ambiente real de clientes.
 
-Características:
+### Características:
 
 High availability
 
@@ -421,7 +421,7 @@ Backup enabled
 DR replication
 
 
-URL:
+### URL:
 
 app.financeai.com
 api.financeai.com
@@ -429,15 +429,15 @@ api.financeai.com
 
 ---
 
-4.2 Ambiente Efêmero por Pull Request
+## 4.2 Ambiente Efêmero por Pull Request
 
 Cada PR pode gerar ambiente temporário.
 
-Exemplo:
+### Exemplo:
 
 pr-482.financeai.dev
 
-Uso:
+#### Uso:
 
 Review visual
 
@@ -453,19 +453,19 @@ Destroy automático após merge/close.
 
 ---
 
-5. Estratégia de Branches
+## 5. Estratégia de Branches
 
 
 ---
 
-5.1 Modelo Git
+## 5.1 Modelo Git
 
 Baseado em trunk-based delivery controlado.
 
 
 ---
 
-Branch Principal
+## Branch Principal
 
 main
 
@@ -478,7 +478,7 @@ Sempre estável
 Release-ready
 
 
-Deploy:
+### Deploy:
 
 main → production
 
@@ -494,7 +494,7 @@ Integração de features
 Pré-release
 
 
-Deploy:
+### Deploy:
 
 develop → dev / QA
 
@@ -503,12 +503,12 @@ develop → dev / QA
 
 feature/*
 
-Exemplo:
+### Exemplo:
 
 feature/ai-budget-prediction
 feature/auth-biometric-login
 
-Deploy:
+### Deploy:
 
 Preview environments
 
@@ -518,11 +518,11 @@ Preview environments
 
 hotfix/*
 
-Exemplo:
+### Exemplo:
 
 hotfix/payment-webhook-fix
 
-Deploy:
+### Deploy:
 
 Pipeline acelerado
 
@@ -534,11 +534,11 @@ Patch release
 
 release/*
 
-Exemplo:
+### Exemplo:
 
 release/v1.3.0
 
-Deploy:
+### Deploy:
 
 staging validation
 
@@ -548,14 +548,14 @@ release freeze
 
 ---
 
-6. Estratégia de Versionamento
+## 6. Estratégia de Versionamento
 
 
 ---
 
-6.1 Semantic Versioning
+### 6.1 Semantic Versioning
 
-Formato:
+#### Formato:
 
 MAJOR.MINOR.PATCH
 
@@ -569,7 +569,7 @@ Exemplo:
 
 ---
 
-MAJOR
+#### MAJOR
 
 Mudanças incompatíveis.
 
@@ -583,7 +583,7 @@ Schema incompatible changes
 
 ---
 
-MINOR
+###:MINOR
 
 Novas funcionalidades compatíveis.
 
@@ -599,7 +599,7 @@ Novas APIs
 
 ---
 
-PATCH
+### PATCH
 
 Correções.
 
@@ -615,15 +615,15 @@ Performance fix
 
 ---
 
-6.2 Docker Image Versioning
+## 6.2 Docker Image Versioning
 
-Formato:
+### Formato:
 
 financeai-api:v1.3.2
 financeai-web:v1.3.2
 financeai-worker:v1.3.2
 
-Também:
+### Também:
 
 latest
 commit-sha
@@ -638,17 +638,17 @@ financeai-api:build-1022
 
 ---
 
-7. Estratégia de Release
+### 7. Estratégia de Release
 
 
 ---
 
-7.1 Tipos de Release
+### 7.1 Tipos de Release
 
 
 ---
 
-Continuous Delivery
+### Continuous Delivery
 
 Deploy automático até staging.
 
@@ -659,29 +659,29 @@ Push → Test → Build → Security → Deploy Staging
 
 ---
 
-Controlled Production Release
+### Controlled Production Release
 
 Deploy controlado via approval.
 
-Fluxo:
+#### Fluxo:
 
 Staging approved → Canary → Full rollout
 
 
 ---
 
-Emergency Hotfix Release
+### Emergency Hotfix Release
 
 Deploy acelerado.
 
-Fluxo:
+#### Fluxo:
 
 Hotfix branch → Security minimal gate → Canary → Production
 
 
 ---
 
-7.2 Janela de Release
+## 7.2 Janela de Release
 
 Deploy em produção preferencialmente:
 
@@ -692,7 +692,7 @@ Equipe on-call ativa
 Observability acompanhando
 
 
-Evitar:
+## Evitar:
 
 Madrugada sem suporte
 
@@ -704,14 +704,14 @@ Grandes eventos de mercado
 
 ---
 
-8. Estratégia de Deployment por Serviço
+## 8. Estratégia de Deployment por Serviço
 
 
 ---
 
-8.1 Frontend
+## 8.1 Frontend
 
-Estratégia:
+### Estratégia:
 
 Blue/Green
 
@@ -720,7 +720,7 @@ CDN invalidation
 Edge rollout
 
 
-Deploy:
+### Deploy:
 
 Build → Static generation → Upload → CDN swap
 
@@ -731,9 +731,9 @@ Instantâneo.
 
 ---
 
-8.2 APIs
+### 8.2 APIs
 
-Estratégia:
+### Estratégia:
 
 Rolling deployment
 
@@ -742,16 +742,16 @@ Health probes
 Canary validation
 
 
-Deploy:
+### Deploy:
 
 10% → monitor → 50% → 100%
 
 
 ---
 
-8.3 AI Services
+## 8.3 AI Services
 
-Estratégia:
+### Estratégia:
 
 Shadow deployment
 
@@ -760,21 +760,21 @@ Canary model rollout
 Drift validation
 
 
-Deploy:
+### Deploy:
 
 new model → compare predictions → partial rollout
 
 
 ---
 
-8.4 Workers
+## 8.4 Workers
 
-Estratégia:
+### Estratégia:
 
 Graceful worker replacement
 
 
-Deploy:
+### Deploy:
 
 1. Stop intake
 
@@ -792,12 +792,12 @@ Deploy:
 
 ---
 
-9. Cloud Strategy
+## 9. Cloud Strategy
 
 
 ---
 
-9.1 Cloud Provider
+## 9.1 Cloud Provider
 
 Arquitetura cloud-agnostic, com referência principal:
 
@@ -808,16 +808,16 @@ GCP (compatível)
 Azure (compatível)
 
 
-Recomendação inicial:
+### Recomendação inicial:
 
 AWS.
 
 
 ---
 
-9.2 Regiões
+## 9.2 Regiões
 
-Produção inicial:
+### Produção inicial:
 
 Primary: us-east-1
 Secondary DR: us-west-2
@@ -832,9 +832,9 @@ Europe region
 
 ---
 
-9.3 Multi Availability Zone
+## 9.3 Multi Availability Zone
 
-Produção roda em:
+### Produção roda em:
 
 AZ-A
 
@@ -843,7 +843,7 @@ AZ-B
 AZ-C
 
 
-Benefícios:
+### Benefícios:
 
 Resiliência
 
@@ -855,14 +855,14 @@ Rolling maintenance
 
 ---
 
-10. Deployment Security Strategy
+## 10. Deployment Security Strategy
 
 
 ---
 
-10.1 Separação de Credenciais
+## 10.1 Separação de Credenciais
 
-Credenciais isoladas por ambiente:
+### Credenciais isoladas por ambiente:
 
 dev secrets
 
@@ -878,7 +878,7 @@ Nunca compartilhadas.
 
 ---
 
-10.2 Deploy Permissions
+## 10.2 Deploy Permissions
 
 Deploy de produção exige:
 
@@ -894,9 +894,9 @@ MFA
 
 ---
 
-10.3 Artifact Signing
+## 10.3 Artifact Signing
 
-Todas imagens devem ser:
+### Todas imagens devem ser:
 
 Signed
 
@@ -908,11 +908,11 @@ Immutable
 
 ---
 
-10.4 Secret Injection
+## 10.4 Secret Injection
 
 Secrets não ficam no código.
 
-Entrega via:
+### Entrega via:
 
 Secret Manager
 
@@ -926,12 +926,12 @@ Runtime injection
 
 ---
 
-11. Escalabilidade de Deployment
+## 11. Escalabilidade de Deployment
 
 
 ---
 
-11.1 Horizontal Scaling
+### 11.1 Horizontal Scaling
 
 Serviços escaláveis:
 
@@ -947,9 +947,9 @@ websocket nodes
 
 ---
 
-11.2 Autoscaling
+## 11.2 Autoscaling
 
-Baseado em:
+### Baseado em:
 
 CPU
 
@@ -965,7 +965,7 @@ Concurrent sessions
 
 ---
 
-11.3 Burst Handling
+## 11.3 Burst Handling
 
 Eventos de pico:
 
@@ -983,12 +983,12 @@ Sistema escala automaticamente.
 
 ---
 
-12. Deployment Governance
+## 12. Deployment Governance
 
 
 ---
 
-12.1 Regras Obrigatórias
+## 12.1 Regras Obrigatórias
 
 Nenhum deploy vai para produção sem:
 
@@ -1006,9 +1006,9 @@ Rollback path valid
 
 ---
 
-12.2 Auditoria
+## 12.2 Auditoria
 
-Todo deploy gera:
+### Todo deploy gera:
 
 Timestamp
 
@@ -1026,9 +1026,9 @@ Audit log
 
 ---
 
-12.3 Observability Gate
+## 12.3 Observability Gate
 
-Deploy só continua se:
+### Deploy só continua se:
 
 Error rate OK
 
@@ -1042,57 +1042,57 @@ No anomaly detected
 
 ---
 
-13. KPIs de Deployment
+## 13. KPIs de Deployment
 
 
 ---
 
-Deployment Frequency
+## Deployment Frequency
 
-Meta:
+### Meta:
 
 Múltiplos deploys por dia
 
 
 ---
 
-Change Failure Rate
+## Change Failure Rate
 
-Meta:
+### Meta:
 
 < 5%
 
 
 ---
 
-Mean Time To Recovery
+## Mean Time To Recovery
 
-Meta:
+### Meta:
 
 < 15 min
 
 
 ---
 
-Lead Time for Changes
+## Lead Time for Changes
 
-Meta:
+### Meta:
 
 < 1 hora para produção
 
 
 ---
 
-Rollback Time
+## Rollback Time
 
-Meta:
+### Meta:
 
 < 5 min
 
 
 ---
 
-14. Resumo Executivo
+## 14. Resumo Executivo
 
 A estratégia de deployment do FinanceAI é baseada em:
 
@@ -1117,7 +1117,8 @@ Full observability
 Enterprise governance
 
 
-Esse modelo permite escalar o produto com segurança, confiabilidade e velocidade em padrão FAANG.
+Esse modelo permite escalar o produto com segurança, confiabilidade e velocidade.
+
 
 ---
 
