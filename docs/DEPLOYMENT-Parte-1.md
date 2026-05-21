@@ -3,7 +3,7 @@
 
 # FinanceAI – Personal Financial Intelligence Platform
 
-## Estratégia de Deployment Enterprise (FAANG-Level)
+## Estratégia de Deployment Enterprise
 
 ---
 
