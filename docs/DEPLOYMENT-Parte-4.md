@@ -1002,7 +1002,7 @@ A estratégia de deployment operacional do FinanceAI é baseada em:
 - Realtime-safe deployments
 - Runtime validation
 
-Esse modelo garante escalabilidade, resiliência e deploy seguro em padrão FAANG.
+Esse modelo garante escalabilidade, resiliência e deploy seguro.
 
 
 ---
