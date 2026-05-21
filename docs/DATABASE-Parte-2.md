@@ -69,7 +69,7 @@ CREATE TABLE users (
     updated_at TIMESTAMP DEFAULT NOW(),
     deleted_at TIMESTAMP
 );
-
+```
 
 ---
 
