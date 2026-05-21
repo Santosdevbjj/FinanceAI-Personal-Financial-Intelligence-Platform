@@ -14,7 +14,7 @@ O FinanceAI utiliza uma estratégia de **Continuous Integration + Continuous Del
 - Observabilidade integrada
 - Rollback automatizado
 
-O pipeline segue princípios enterprise usados em organizações de escala FAANG.
+O pipeline segue princípios enterprise usados em organizações de alta escala.
 
 ---
 
