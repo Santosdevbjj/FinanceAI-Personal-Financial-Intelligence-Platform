@@ -1033,4 +1033,4 @@ Pronta para:
 - analytics
 - compliance
 - enterprise scale
-- arquitetura nível FAANG
+- arquitetura de alto nível
