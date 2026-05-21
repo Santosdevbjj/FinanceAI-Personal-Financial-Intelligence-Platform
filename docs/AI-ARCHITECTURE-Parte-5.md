@@ -260,12 +260,12 @@ Todo risco recebe score.
 AI Risk Score =
 impact × probability × detectability
 
-
+```
 ---
 
-Risk levels
+## Risk levels
 
-Score	Level
+### Score	Level
 
 0-20	Low
 21-50	Moderate
@@ -276,16 +276,16 @@ Score	Level
 
 ---
 
-75. Recommendation Safety Policy
+## 75. Recommendation Safety Policy
 
-75.1 Objetivo
+### 75.1 Objetivo
 
 Evitar recomendações potencialmente perigosas.
 
 
 ---
 
-Regras
+### Regras
 
 A IA não deve:
 
@@ -303,9 +303,9 @@ sugerir comportamento arriscado
 
 ---
 
-Exemplo
+## Exemplo
 
-Errado
+### Errado
 
 > “Cancele todos seus gastos de lazer.”
 
@@ -314,7 +314,7 @@ Errado
 
 ---
 
-Correto
+### Correto
 
 > “Há oportunidade de reduzir gastos em lazer se isso não comprometer sua rotina.”
 
@@ -323,9 +323,9 @@ Correto
 
 ---
 
-76. AI Compliance Layer
+## 76. AI Compliance Layer
 
-A IA deve operar em conformidade com:
+### A IA deve operar em conformidade com:
 
 LGPD
 
@@ -357,16 +357,16 @@ deletion support
 
 ---
 
-77. Privacy Governance for AI
+## 77. Privacy Governance for AI
 
-77.1 Dados sensíveis
+### 77.1 Dados sensíveis
 
 A IA lida com dados financeiros sensíveis.
 
 
 ---
 
-Proteções obrigatórias
+### Proteções obrigatórias
 
 encryption
 
@@ -384,7 +384,7 @@ secure logging
 
 ---
 
-PII restrictions
+### PII restrictions
 
 Prompts não devem conter:
 
@@ -402,7 +402,7 @@ secrets
 
 ---
 
-78. AI Prompt Privacy Policy
+## 78. AI Prompt Privacy Policy
 
 Antes de enviar contexto ao LLM:
 
@@ -411,37 +411,37 @@ Aplicar:
 
 ---
 
-Redaction
+### Redaction
 
 Remover PII.
 
 
 ---
 
-Tokenization
+## Tokenization
 
 Substituir identificadores.
 
 
 ---
 
-Context minimization
+### Context minimization
 
 Enviar só o necessário.
 
 
 ---
 
-Scope validation
+### Scope validation
 
 Verificar se contexto é permitido.
 
 
 ---
 
-79. Data Retention for AI
+## 79. Data Retention for AI
 
-Regras
+### Regras
 
 
 ---
@@ -453,7 +453,7 @@ Curto prazo.
 
 ---
 
-Feature data
+### Feature data
 
 Retenção conforme política.
 
@@ -467,7 +467,7 @@ Retenção limitada.
 
 ---
 
-Recommendation history
+### Recommendation history
 
 Controlada.
 
@@ -481,7 +481,7 @@ Devem apagar artefatos relacionados.
 
 ---
 
-80. AI Auditability
+## 80. AI Auditability
 
 Toda decisão importante deve ser auditável.
 
@@ -510,7 +510,7 @@ override events
 
 ---
 
-Exemplo
+### Exemplo
 
 {
   "decision_id": "AI-REC-2388",
@@ -522,16 +522,16 @@ Exemplo
 
 ---
 
-81. Explainability Governance
+## 81. Explainability Governance
 
 Toda recomendação deve ser explicável.
 
 
 ---
 
-Explicação mínima
+### Explicação mínima
 
-Responder:
+### Responder:
 
 1. O que foi detectado?
 
@@ -552,7 +552,7 @@ Responder:
 
 ---
 
-Explainability rejection policy
+### Explainability rejection policy
 
 Se explicação não for possível:
 
@@ -561,7 +561,7 @@ Não mostrar recomendação.
 
 ---
 
-82. Human Override Policy
+## 82. Human Override Policy
 
 Usuário sempre pode:
 
@@ -579,9 +579,9 @@ ajustar orçamento
 
 ---
 
-Override learning
+## Override learning
 
-Sistema aprende com:
+### Sistema aprende com:
 
 accepted
 
@@ -593,9 +593,9 @@ modified
 
 ---
 
-83. AI Incident Response
+## 83. AI Incident Response
 
-Incidentes possíveis
+### Incidentes possíveis
 
 false critical alert
 
@@ -645,14 +645,14 @@ Postmortem
 
 ---
 
-84. Kill Switch Architecture
+## 84. Kill Switch Architecture
 
 A plataforma deve possuir kill switches.
 
 
 ---
 
-Possíveis kill switches
+### Possíveis kill switches
 
 disable assistant
 
@@ -668,7 +668,7 @@ disable specific model
 
 ---
 
-Trigger cases
+### Trigger cases
 
 severe drift
 
@@ -684,14 +684,14 @@ prompt exploit
 
 ---
 
-85. AI Cost Governance
+## 85. AI Cost Governance
 
 LLM e ML têm custo operacional.
 
 
 ---
 
-Governance rules
+## Governance rules
 
 token budget
 
@@ -707,7 +707,7 @@ expensive model controls
 
 ---
 
-Alerts
+## Alerts
 
 Disparar alertas se:
 
@@ -723,9 +723,9 @@ tool loop detected
 
 ---
 
-86. AI Ethics Guidelines
+## 86. AI Ethics Guidelines
 
-A IA do FinanceAI deve evitar:
+### A IA do FinanceAI deve evitar:
 
 manipulação comportamental
 
@@ -741,23 +741,23 @@ incentivo irresponsável
 
 ---
 
-Princípio
+### Princípio
 
 AI must inform, not manipulate.
 
 
 ---
 
-87. AI UX Trust Layer
+## 87. AI UX Trust Layer
 
 Confiança é parte da arquitetura.
 
 
 ---
 
-UI deve mostrar
+## UI deve mostrar
 
-Quando aplicável:
+### Quando aplicável:
 
 confidence
 
@@ -773,14 +773,14 @@ optional user control
 
 ---
 
-88. AI Governance KPIs
+## 88. AI Governance KPIs
 
-Monitorar:
+### Monitorar:
 
 
 ---
 
-Safety KPIs
+### Safety KPIs
 
 harmful recommendation rate
 
@@ -792,7 +792,7 @@ unsafe outputs
 
 ---
 
-Trust KPIs
+### Trust KPIs
 
 recommendation acceptance
 
@@ -804,7 +804,7 @@ trust feedback
 
 ---
 
-Compliance KPIs
+### Compliance KPIs
 
 privacy incidents
 
@@ -816,7 +816,7 @@ retention compliance
 
 ---
 
-Operational KPIs
+### Operational KPIs
 
 model rollback frequency
 
@@ -828,9 +828,9 @@ incident MTTR
 
 ---
 
-89. AI Governance Committee (future scale)
+## 89. AI Governance Committee (future scale)
 
-Em escala maior, FinanceAI pode adotar:
+### Em escala maior, FinanceAI pode adotar:
 
 
 ---
@@ -851,7 +851,7 @@ Data Science
 
 ---
 
-Responsabilidades
+### Responsabilidades
 
 approve risky models
 
@@ -865,7 +865,7 @@ approve changes
 
 ---
 
-90. Future AI Roadmap
+## 90. Future AI Roadmap
 
 Near-term
 
@@ -907,7 +907,7 @@ voice financial assistant
 
 ---
 
-91. AI Governance Summary
+## 91. AI Governance Summary
 
 Area	Purpose
 
@@ -926,7 +926,7 @@ AI Roadmap	Evolução futura
 
 ---
 
-92. Final Conclusion
+## 92. Final Conclusion
 
 A arquitetura de IA do FinanceAI foi projetada para ser:
 
@@ -945,7 +945,7 @@ Responsável
 Financeiramente conservadora
 
 
-Ela combina:
+### Ela combina:
 
 AI Core Engines + LLM Intelligence + ML Infrastructure + Governance
 
@@ -955,7 +955,7 @@ Personal Financial Intelligence Platform
 
 Onde a IA não é apenas poderosa —
 
-ela é:
+### ela é:
 
 confiável
 
@@ -970,22 +970,3 @@ pronta para produção
 
 ---
 
-# `docs/AI-ARCHITECTURE.md` concluído (Partes 1 → 5)
-
-Esse documento agora ficou em nível **enterprise architecture / FAANG-style PRD engineering docs**, cobrindo:
-
-✅ AI Vision  
-✅ AI Core Engines  
-✅ LLM Architecture  
-✅ MLOps Infrastructure  
-✅ AI Governance & Responsible AI
-
-**Próximos docs recomendados para fechar o repositório:**
-
-- `docs/DEPLOYMENT.md`
-- `docs/OBSERVABILITY.md`
-- `docs/TESTING.md`
-- `docs/ROADMAP.md`
-- `docs/CONTRIBUTING.md`
-
-Minha recomendação: **`docs/DEPLOYMENT.md` deveria ser o próximo**, porque conecta tudo que já construímos à infraestrutura real de produção.
