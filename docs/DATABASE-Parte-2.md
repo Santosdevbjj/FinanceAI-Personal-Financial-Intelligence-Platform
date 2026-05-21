@@ -1,4 +1,4 @@
-# Core Tables (Core Domain Model)
+# Core Tables (Core Domain Model) - Parte 2
 
 Esta seção descreve as tabelas centrais da plataforma FinanceAI.
 
