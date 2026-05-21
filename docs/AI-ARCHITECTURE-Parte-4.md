@@ -52,21 +52,22 @@ Monitoring / Drift Detection
       ↓
 Retraining Loop
 
+```
 
 ---
 
-43. Feature Engineering Layer
+## 43. Feature Engineering Layer
 
-43.1 Objetivo
+### 43.1 Objetivo
 
 Transformar dados financeiros brutos em features utilizáveis pelos modelos.
 
 
 ---
 
-Inputs
+## Inputs
 
-Dados financeiros:
+### Dados financeiros:
 
 transactions
 
@@ -88,12 +89,12 @@ behavior patterns
 
 ---
 
-Feature categories
+## Feature categories
 
 
 ---
 
-Behavioral Features
+## Behavioral Features
 
 Capturam comportamento financeiro.
 
@@ -115,7 +116,7 @@ cash_withdrawal_pattern
 
 ---
 
-Temporal Features
+## Temporal Features
 
 Capturam efeito de tempo.
 
@@ -135,7 +136,7 @@ billing_cycle_position
 
 ---
 
-Goal Features
+## Goal Features
 
 Capturam progresso financeiro.
 
@@ -153,7 +154,7 @@ projected_goal_gap
 
 ---
 
-Risk Features
+## Risk Features
 
 Capturam sinais de risco.
 
@@ -171,7 +172,7 @@ balance_volatility
 
 ---
 
-Personalization Features
+## Personalization Features
 
 Capturam perfil individual.
 
@@ -189,18 +190,18 @@ financial_discipline_score
 
 ---
 
-44. Feature Store
+## 44. Feature Store
 
-44.1 Objetivo
+### 44.1 Objetivo
 
 Centralizar features reutilizáveis de forma consistente.
 
 
 ---
 
-Problema resolvido
+## Problema resolvido
 
-Evitar:
+### Evitar:
 
 features duplicadas
 
@@ -214,7 +215,7 @@ drift silencioso
 
 ---
 
-Arquitetura
+## Arquitetura
 
 Feature Store contém:
 
@@ -246,7 +247,7 @@ recommendations
 
 ---
 
-Exemplo
+### Exemplo
 
 feature: avg_food_spend_last_90_days
 offline: historical training
@@ -255,7 +256,7 @@ online: real-time inference
 
 ---
 
-Requisitos
+### Requisitos
 
 Feature Store deve suportar:
 
@@ -277,7 +278,7 @@ validation
 
 ---
 
-45. Feature Freshness Strategy
+## 45. Feature Freshness Strategy
 
 Nem toda feature precisa de mesma atualização.
 
@@ -298,9 +299,9 @@ anomaly signals
 
 ---
 
-Daily
+## Daily
 
-Atualização diária:
+### Atualização diária:
 
 budget pressure
 
@@ -312,9 +313,9 @@ monthly averages
 
 ---
 
-Weekly
+## Weekly
 
-Atualização semanal:
+### Atualização semanal:
 
 behavioral scoring
 
@@ -324,9 +325,9 @@ long-term patterns
 
 ---
 
-46. Training Pipelines
+## 46. Training Pipelines
 
-46.1 Objetivo
+### 46.1 Objetivo
 
 Automatizar treinamento de modelos.
 
@@ -338,9 +339,9 @@ Pipeline stages
 
 ---
 
-Stage 1 — Data extraction
+## Stage 1 — Data extraction
 
-Coleta:
+### Coleta:
 
 labeled data
 
@@ -352,9 +353,9 @@ feedback loops
 
 ---
 
-Stage 2 — Data validation
+## Stage 2 — Data validation
 
-Validar:
+### Validar:
 
 schema
 
@@ -368,30 +369,30 @@ leakage
 
 ---
 
-Stage 3 — Feature generation
+## Stage 3 — Feature generation
 
 Construção de features.
 
 
 ---
 
-Stage 4 — Model training
+## Stage 4 — Model training
 
 Treinamento.
 
 
 ---
 
-Stage 5 — Evaluation
+## Stage 5 — Evaluation
 
 Métricas.
 
 
 ---
 
-Stage 6 — Explainability validation
+## Stage 6 — Explainability validation
 
-Avaliação de:
+### Avaliação de:
 
 feature importance
 
@@ -403,21 +404,21 @@ financial reasonableness
 
 ---
 
-Stage 7 — Registry candidate
+## Stage 7 — Registry candidate
 
 Modelo elegível para deploy.
 
 
 ---
 
-47. Training Frequency
+## 47. Training Frequency
 
 Cada engine possui frequência própria.
 
 
 ---
 
-Engine	Frequency
+## Engine	Frequency
 
 Transaction Categorization	Weekly
 Spending Prediction	Weekly
@@ -431,7 +432,7 @@ Recommendation Ranking	Continuous
 
 ---
 
-48. Training Infrastructure
+## 48. Training Infrastructure
 
 Batch training
 
@@ -447,7 +448,7 @@ anomaly systems
 
 ---
 
-Incremental training
+## Incremental training
 
 Usado para:
 
@@ -461,9 +462,9 @@ feedback loops
 
 ---
 
-Online learning (future roadmap)
+## Online learning (future roadmap)
 
-Possível uso para:
+### Possível uso para:
 
 personalization engines
 
@@ -473,16 +474,16 @@ recommendation adaptation
 
 ---
 
-49. Model Registry
+## 49. Model Registry
 
-49.1 Objetivo
+### 49.1 Objetivo
 
 Gerenciar lifecycle dos modelos.
 
 
 ---
 
-Registry armazena
+## Registry armazena
 
 model version
 
@@ -502,7 +503,7 @@ rollback metadata
 
 ---
 
-Exemplo
+### Exemplo
 
 spending_prediction_model_v2.4
 accuracy: 89%
@@ -512,19 +513,19 @@ status: production
 
 ---
 
-50. Model Validation Gate
+### 50. Model Validation Gate
 
 Nenhum modelo entra em produção automaticamente.
 
 
 ---
 
-Validation criteria
+### Validation criteria
 
 
 ---
 
-Performance
+### Performance
 
 precision
 
@@ -542,7 +543,7 @@ ranking quality
 
 ---
 
-Stability
+### Stability
 
 output consistency
 
@@ -552,7 +553,7 @@ edge-case behavior
 
 ---
 
-Explainability
+### Explainability
 
 feature sanity
 
@@ -562,7 +563,7 @@ decision transparency
 
 ---
 
-Financial safety
+### Financial safety
 
 recommendation safety
 
@@ -572,7 +573,7 @@ false alarm rate
 
 ---
 
-Bias audit
+### Bias audit
 
 fairness consistency
 
@@ -580,16 +581,16 @@ fairness consistency
 
 ---
 
-51. Deployment Architecture
+## 51. Deployment Architecture
 
 Deployment modes
 
 
 ---
 
-Batch deployment
+## Batch deployment
 
-Para:
+### Para:
 
 nightly predictions
 
@@ -601,9 +602,9 @@ summaries
 
 ---
 
-Real-time deployment
+## Real-time deployment
 
-Para:
+### Para:
 
 categorization
 
@@ -615,9 +616,9 @@ assistant responses
 
 ---
 
-Streaming deployment
+## Streaming deployment
 
-Para futuro:
+### Para futuro:
 
 instant alerts
 
@@ -627,9 +628,9 @@ event-driven intelligence
 
 ---
 
-52. Inference Layer
+## 52. Inference Layer
 
-52.1 Objetivo
+### 52.1 Objetivo
 
 Executar modelos em produção.
 
@@ -641,7 +642,7 @@ Inference types
 
 ---
 
-Synchronous inference
+## Synchronous inference
 
 User request → immediate response
 
@@ -657,7 +658,7 @@ risk scoring
 
 ---
 
-Asynchronous inference
+### Asynchronous inference
 
 Background processing
 
@@ -671,7 +672,7 @@ recommendations
 
 ---
 
-Inference architecture
+### Inference architecture
 
 API Request
    ↓
@@ -690,14 +691,14 @@ Response
 
 ---
 
-53. Prediction Post-processing
+## 53. Prediction Post-processing
 
 Predições brutas não vão direto ao usuário.
 
 
 ---
 
-Pós-processamento inclui
+## Pós-processamento inclui
 
 confidence gating
 
@@ -715,14 +716,14 @@ explainability enrichment
 
 ---
 
-54. Explainability Layer
+## 54. Explainability Layer
 
 Cada predição deve carregar metadata explicável.
 
 
 ---
 
-Explainability artifacts
+## Explainability artifacts
 
 feature importance
 
@@ -738,7 +739,7 @@ supporting factors
 
 ---
 
-Exemplo
+### Exemplo
 
 {
   "prediction": "budget risk",
@@ -752,9 +753,9 @@ Exemplo
 
 ---
 
-55. Model Monitoring
+## 55. Model Monitoring
 
-55.1 Objetivo
+### 55.1 Objetivo
 
 Detectar degradação em produção.
 
@@ -766,7 +767,7 @@ Métricas monitoradas
 
 ---
 
-Prediction quality
+## Prediction quality
 
 accuracy
 
@@ -780,7 +781,7 @@ error rate
 
 ---
 
-Operational metrics
+## Operational metrics
 
 latency
 
@@ -794,7 +795,7 @@ throughput
 
 ---
 
-UX metrics
+## UX metrics
 
 user corrections
 
@@ -806,7 +807,7 @@ acceptance rate
 
 ---
 
-Financial metrics
+## Financial metrics
 
 false alerts
 
@@ -818,9 +819,9 @@ recommendation effectiveness
 
 ---
 
-56. Drift Detection
+## 56. Drift Detection
 
-56.1 Objetivo
+### 56.1 Objetivo
 
 Detectar quando modelo começa a ficar incorreto.
 
@@ -832,7 +833,7 @@ Tipos de drift
 
 ---
 
-Data drift
+## Data drift
 
 Mudança em features.
 
@@ -848,7 +849,7 @@ mudança de comportamento
 
 ---
 
-Concept drift
+## Concept drift
 
 Mudança no significado do padrão.
 
@@ -862,7 +863,7 @@ economia muda
 
 ---
 
-Behavioral drift
+## Behavioral drift
 
 Mudança individual do usuário.
 
@@ -878,9 +879,9 @@ novo padrão de gastos
 
 ---
 
-57. Drift Signals
+## 57. Drift Signals
 
-Monitorar:
+### Monitorar:
 
 distribution shift
 
@@ -896,7 +897,7 @@ anomaly inflation
 
 ---
 
-58. Drift Response Strategy
+## 58. Drift Response Strategy
 
 
 ---
@@ -922,16 +923,16 @@ Rollback or retrain immediately
 
 ---
 
-59. AI Observability Platform
+## 59. AI Observability Platform
 
 Monitoramento centralizado.
 
 
 ---
 
-Dashboard deve mostrar
+## Dashboard deve mostrar
 
-Por engine:
+### Por engine:
 
 health
 
@@ -951,16 +952,16 @@ retraining status
 
 ---
 
-60. Shadow Testing
+## 60. Shadow Testing
 
-Antes de trocar modelos:
+### Antes de trocar modelos:
 
 Novo modelo roda em paralelo.
 
 
 ---
 
-Comparar
+### Comparar
 
 old predictions
 
@@ -974,14 +975,14 @@ user impact
 
 ---
 
-61. Canary Deployment
+## 61. Canary Deployment
 
 Deploy gradual.
 
 
 ---
 
-Estratégia
+### Estratégia
 
 1% → 5% → 20% → 100%
 
@@ -990,16 +991,16 @@ Com rollback automático.
 
 ---
 
-62. Rollback Strategy
+## 62. Rollback Strategy
 
-Se modelo falhar:
+### Se modelo falhar:
 
 
 ---
 
-Trigger rollback
+## Trigger rollback
 
-Se:
+### Se:
 
 confidence collapse
 
@@ -1015,7 +1016,7 @@ user impact detected
 
 ---
 
-63. AI Security in ML Infrastructure
+## 63. AI Security in ML Infrastructure
 
 Modelos devem ser protegidos.
 
@@ -1054,14 +1055,14 @@ audit logs
 
 ---
 
-64. Cost Optimization
+## 64. Cost Optimization
 
 ML também custa dinheiro.
 
 
 ---
 
-Técnicas
+### Técnicas
 
 batch where possible
 
@@ -1077,16 +1078,16 @@ inference quotas
 
 ---
 
-65. AI Platform SRE
+## 65. AI Platform SRE
 
 Princípios de confiabilidade operacional.
 
 
 ---
 
-SLOs
+## SLOs
 
-Exemplos:
+### Exemplos:
 
 Metric	Target
 
@@ -1100,7 +1101,7 @@ Drift alert detection	<15 min
 
 ---
 
-66. Incident Management
+## 66. Incident Management
 
 Incidentes possíveis:
 
@@ -1136,7 +1137,7 @@ audit
 
 ---
 
-67. ML Infrastructure Summary
+## 67. ML Infrastructure Summary
 
 Layer	Purpose
 
@@ -1155,7 +1156,7 @@ Rollback	Recuperação segura
 
 ---
 
-68. Conclusion
+## 68. Conclusion
 
 A infraestrutura de ML do FinanceAI foi desenhada para operar em produção com padrões enterprise.
 
@@ -1178,5 +1179,3 @@ Essa base permite que os AI engines sejam tratados como sistemas de produção c
 
 ---
 
-**Parte 4 concluída.**  
-A **Parte 5** fecha o documento com **AI Governance / Compliance / Privacy / Responsible AI Ops / Future AI Roadmap**.
