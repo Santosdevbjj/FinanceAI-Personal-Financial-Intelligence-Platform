@@ -158,11 +158,13 @@ describe("POST /transactions", () => {
 });
 
 
+```
+
 ---
 
-20. Authentication & Authorization Testing
+## 20. Authentication & Authorization Testing
 
-20.1 Authentication
+### 20.1 Authentication
 
 Testar:
 
@@ -182,7 +184,7 @@ MFA flows
 
 ---
 
-20.2 Authorization
+## 20.2 Authorization
 
 Testar:
 
@@ -198,7 +200,7 @@ premium feature gating
 
 ---
 
-20.3 Casos críticos
+## 20.3 Casos críticos
 
 
 ---
@@ -233,16 +235,16 @@ forced login
 
 ---
 
-21. Contract Testing
+## 21. Contract Testing
 
-21.1 Objetivo
+### 21.1 Objetivo
 
 Garantir que contratos entre serviços não sejam quebrados.
 
 
 ---
 
-21.2 Contratos testados
+## 21.2 Contratos testados
 
 frontend ↔ backend
 
@@ -258,7 +260,7 @@ service ↔ service
 
 ---
 
-21.3 Validações
+## 21.3 Validações
 
 
 ---
@@ -291,7 +293,7 @@ Sem breaking changes.
 
 ---
 
-21.4 Ferramentas
+## 21.4 Ferramentas
 
 Pact
 
@@ -303,7 +305,7 @@ OpenAPI schema validation
 
 ---
 
-21.5 Pipeline rules
+## 21.5 Pipeline rules
 
 CI deve falhar se:
 
@@ -319,16 +321,16 @@ schema incompatível
 
 ---
 
-22. Database Testing
+## 22. Database Testing
 
-22.1 Objetivo
+### 22.1 Objetivo
 
 Garantir integridade dos dados.
 
 
 ---
 
-22.2 Escopo
+## 22.2 Escopo
 
 Testar:
 
@@ -352,7 +354,7 @@ soft delete behavior
 
 ---
 
-22.3 Integrity tests
+## 22.3 Integrity tests
 
 
 ---
@@ -397,7 +399,7 @@ transaction type válido
 
 ---
 
-22.4 Migration testing
+## 22.4 Migration testing
 
 Validar:
 
@@ -413,7 +415,7 @@ zero data corruption
 
 ---
 
-22.5 Data consistency testing
+## 22.5 Data consistency testing
 
 Validar:
 
@@ -431,7 +433,7 @@ audit logs
 
 ---
 
-22.6 Index testing
+## 22.6 Index testing
 
 Validar:
 
@@ -445,9 +447,9 @@ query plans aceitáveis
 
 ---
 
-23. Transaction Testing
+## 23. Transaction Testing
 
-23.1 Objetivo
+### 23.1 Objetivo
 
 Garantir atomicidade.
 
@@ -470,7 +472,7 @@ retries
 
 ---
 
-23.2 Casos críticos
+## 23.2 Casos críticos
 
 
 ---
@@ -505,7 +507,7 @@ rollback ou compensação segura
 
 ---
 
-23.3 Idempotency testing
+## 23.3 Idempotency testing
 
 Validar:
 
@@ -525,7 +527,7 @@ sem duplicação
 
 ---
 
-23.4 Concurrency testing
+## 23.4 Concurrency testing
 
 Validar:
 
@@ -541,7 +543,7 @@ deadlock handling
 
 ---
 
-24. Repository Testing
+## 24. Repository Testing
 
 Objetivo
 
@@ -568,16 +570,16 @@ transactions
 
 ---
 
-25. Queue Testing
+## 25. Queue Testing
 
-25.1 Objetivo
+### 25.1 Objetivo
 
 Garantir processamento assíncrono confiável.
 
 
 ---
 
-25.2 Testar
+## 25.2 Testar
 
 enqueue
 
@@ -597,7 +599,7 @@ poison messages
 
 ---
 
-25.3 Casos obrigatórios
+## 25.3 Casos obrigatórios
 
 
 ---
@@ -644,7 +646,7 @@ reprocessing
 
 ---
 
-25.4 Idempotent job testing
+## 25.4 Idempotent job testing
 
 Mesmo job processado duas vezes:
 
@@ -655,7 +657,7 @@ efeito único
 
 ---
 
-25.5 Queue ordering
+## 25.5 Queue ordering
 
 Se necessário:
 
@@ -669,16 +671,16 @@ partition ordering
 
 ---
 
-26. Cache Testing
+## 26. Cache Testing
 
-26.1 Objetivo
+### 26.1 Objetivo
 
 Validar comportamento Redis/cache.
 
 
 ---
 
-26.2 Testar
+## 26.2 Testar
 
 cache set
 
@@ -696,7 +698,7 @@ fallback behavior
 
 ---
 
-26.3 Casos críticos
+## 26.3 Casos críticos
 
 
 ---
@@ -743,7 +745,7 @@ graceful degradation
 
 ---
 
-26.4 Session cache testing
+## 26.4 Session cache testing
 
 Validar:
 
@@ -757,16 +759,16 @@ expiration
 
 ---
 
-27. Event-Driven Testing
+## 27. Event-Driven Testing
 
-27.1 Objetivo
+### 27.1 Objetivo
 
 Validar arquitetura orientada a eventos.
 
 
 ---
 
-27.2 Escopo
+## 27.2 Escopo
 
 Testar:
 
@@ -788,7 +790,7 @@ schema compatibility
 
 ---
 
-27.3 Casos críticos
+## 27.3 Casos críticos
 
 
 ---
@@ -820,7 +822,7 @@ Persistência + analytics.
 
 ---
 
-27.4 Event schema validation
+## 27.4 Event schema validation
 
 Validar:
 
@@ -836,7 +838,7 @@ metadata
 
 ---
 
-27.5 Consumer failure testing
+## 27.5 Consumer failure testing
 
 Se consumer falhar:
 
@@ -852,7 +854,7 @@ observability
 
 ---
 
-27.6 Replay testing
+## 27.6 Replay testing
 
 Reprocessamento deve ser:
 
@@ -864,7 +866,7 @@ idempotente
 
 ---
 
-28. Webhook Testing
+## 28. Webhook Testing
 
 Testar
 
@@ -884,7 +886,7 @@ malformed payload
 
 ---
 
-29. Backend Performance Validation
+## 29. Backend Performance Validation
 
 Validar:
 
@@ -902,7 +904,7 @@ worker throughput
 
 ---
 
-30. Backend Quality Gates
+## 30. Backend Quality Gates
 
 Pipeline deve falhar se:
 
@@ -924,7 +926,7 @@ API tests fail
 
 ---
 
-31. Definition of Done (Backend Testing)
+## 31. Definition of Done (Backend Testing)
 
 Backend feature só está pronta quando:
 
