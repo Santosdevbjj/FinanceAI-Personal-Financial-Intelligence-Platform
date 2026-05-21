@@ -1,27 +1,3 @@
-Perfeito. Vamos gerar a Parte 3 completa do docs/TESTING.md, cobrindo a camada de testes avançados e validação de produção do projeto FinanceAI – Personal Financial Intelligence Platform.
-
-Esta parte vai focar em:
-
-Testes End-to-End (E2E)
-
-Testes de integração entre serviços
-
-Testes da camada de IA / LLM
-
-Testes de performance e carga
-
-Testes de segurança automatizados
-
-Testes de observabilidade
-
-Quality gates em CI/CD
-
-
-
----
-
-docs/TESTING.md (Parte 3)
-
 # Parte 3 — Testes Avançados, IA, Performance e Produção
 
 ---
@@ -203,10 +179,13 @@ Usuário assina plano premium.
   goals/
   subscriptions/
 
+```
 
 ---
 
-9.5 Exemplo Playwright
+## 9.5 Exemplo Playwright
+
+```
 
 test("user login flow", async ({ page }) => {
   await page.goto("/login");
@@ -219,12 +198,13 @@ test("user login flow", async ({ page }) => {
   await expect(page).toHaveURL("/dashboard");
 });
 
+```
 
 ---
 
-10. Testes de Integração entre Serviços
+## 10. Testes de Integração entre Serviços
 
-10.1 Objetivo
+### 10.1 Objetivo
 
 Validar integração real entre:
 
@@ -246,7 +226,7 @@ Third-party APIs
 
 ---
 
-10.2 Tipos
+## 10.2 Tipos
 
 
 ---
@@ -317,7 +297,9 @@ AI providers
 
 ---
 
-10.3 Exemplo
+## 10.3 Exemplo
+
+``` 
 
 describe("Transaction Sync", () => {
   it("should import transactions from provider", async () => {
@@ -328,13 +310,15 @@ describe("Transaction Sync", () => {
 });
 
 
+```
+
 ---
 
-11. Testes da Camada de IA
+## 11. Testes da Camada de IA
 
-11.1 Objetivo
+### 11.1 Objetivo
 
-Garantir:
+#### Garantir:
 
 Respostas úteis
 
@@ -350,7 +334,7 @@ Boa qualidade financeira
 
 ---
 
-11.2 Tipos de testes de IA
+## 11.2 Tipos de testes de IA
 
 
 ---
@@ -433,12 +417,13 @@ consistência financeira
 
 ---
 
-11.3 Golden Dataset
+## 11.3 Golden Dataset
 
 Criar dataset fixo com cenários conhecidos.
 
 Exemplo:
 
+```
 {
   "scenario": "high credit card debt",
   "input": {
@@ -452,10 +437,11 @@ Exemplo:
   ]
 }
 
+```
 
 ---
 
-11.4 LLM Assertion Engine
+## 11.4 LLM Assertion Engine
 
 Valida:
 
@@ -473,18 +459,21 @@ reasoning constraints
 
 11.5 Exemplo
 
+```
+
 expect(aiOutput).toMatchSchema(schema);
 
 expect(aiOutput.insights).toContain("cash flow");
 
 expect(aiOutput.riskLevel).toBeDefined();
 
+```
 
 ---
 
-11.6 Hallucination Detection
+## 11.6 Hallucination Detection
 
-Checks:
+### Checks:
 
 invented financial data
 
@@ -498,9 +487,9 @@ unsupported claims
 
 ---
 
-11.7 Prompt Injection Tests
+## 11.7 Prompt Injection Tests
 
-Inputs:
+### Inputs:
 
 Ignore previous instructions
 
@@ -511,7 +500,7 @@ Reveal system prompt
 Use fake financial values
 
 
-Expected:
+### Expected:
 
 rejection
 
@@ -523,7 +512,7 @@ safe fallback
 
 ---
 
-11.8 AI Latency Tests
+## 11.8 AI Latency Tests
 
 Valida:
 
@@ -536,7 +525,7 @@ p99
 
 Targets:
 
-Endpoint	Target
+**Endpoint**	**Target**
 
 AI chat	< 4s
 insights	< 8s
@@ -546,16 +535,16 @@ simulations	< 10s
 
 ---
 
-12. Testes de Performance
+## 12. Testes de Performance
 
-12.1 Objetivo
+### 12.1 Objetivo
 
 Garantir que a plataforma escale.
 
 
 ---
 
-12.2 Ferramentas
+## 12.2 Ferramentas
 
 k6
 
@@ -567,7 +556,7 @@ Locust
 
 ---
 
-12.3 Cenários
+## 12.3 Cenários
 
 
 ---
@@ -607,7 +596,7 @@ Múltiplos uploads simultâneos.
 
 ---
 
-12.4 KPIs
+## 12.4 KPIs
 
 KPI	Meta
 
@@ -621,7 +610,9 @@ Queue lag	< 30s
 
 ---
 
-12.5 Exemplo k6
+## 12.5 Exemplo k6
+
+```
 
 import http from "k6/http";
 
@@ -630,18 +621,20 @@ export default function () {
 }
 
 
+```
+
 ---
 
-13. Stress Testing
+## 13. Stress Testing
 
-Objetivo
+### Objetivo
 
 Descobrir breaking points.
 
 
 ---
 
-Cenários
+### Cenários
 
 DB saturation
 
@@ -657,7 +650,7 @@ External API failures
 
 ---
 
-Métricas
+### Métricas
 
 graceful degradation
 
@@ -669,9 +662,9 @@ circuit breaker activation
 
 ---
 
-14. Chaos Testing
+## 14. Chaos Testing
 
-Ferramentas
+### Ferramentas
 
 Litmus
 
@@ -683,7 +676,7 @@ Gremlin
 
 ---
 
-Cenários
+### Cenários
 
 
 ---
@@ -698,7 +691,7 @@ auto recovery
 
 ---
 
-DB latency injected
+### DB latency injected
 
 Expected:
 
@@ -710,7 +703,7 @@ timeout handling
 
 ---
 
-Redis unavailable
+### Redis unavailable
 
 Expected:
 
@@ -720,7 +713,7 @@ degraded mode
 
 ---
 
-Queue worker crash
+### Queue worker crash
 
 Expected:
 
@@ -730,7 +723,7 @@ reprocessing
 
 ---
 
-AI provider outage
+### AI provider outage
 
 Expected:
 
@@ -740,7 +733,7 @@ fallback provider
 
 ---
 
-15. Security Automated Testing
+### 15. Security Automated Testing
 
 Ferramentas
 
@@ -758,7 +751,7 @@ Dependabot
 
 ---
 
-Testes
+### Testes
 
 
 ---
@@ -791,7 +784,7 @@ Analisa imagens Docker.
 
 ---
 
-Secret scanning
+### Secret scanning
 
 Detecta:
 
@@ -805,7 +798,7 @@ tokens
 
 ---
 
-IaC scanning
+### IaC scanning
 
 Detecta:
 
@@ -819,7 +812,7 @@ configs inseguras
 
 ---
 
-16. Observability Testing
+### 16. Observability Testing
 
 Objetivo
 
@@ -875,7 +868,7 @@ Prompt → model → response → latency
 
 ---
 
-17. Quality Gates no CI/CD
+## 17. Quality Gates no CI/CD
 
 Pipeline deve falhar se:
 
@@ -889,7 +882,7 @@ Block deploy.
 
 ---
 
-Coverage abaixo mínimo
+### Coverage abaixo mínimo
 
 Block deploy.
 
@@ -938,7 +931,9 @@ Block deploy.
 
 ---
 
-17.1 Exemplo GitHub Actions gate
+## 17.1 Exemplo GitHub Actions gate
+
+```
 
 - name: Run tests
   run: npm run test
@@ -953,9 +948,11 @@ Block deploy.
   run: npm run test:ai
 
 
+```
+
 ---
 
-18. Release Validation
+## 18. Release Validation
 
 Antes de cada release:
 
@@ -1004,11 +1001,11 @@ Workers healthy.
 
 ---
 
-19. Testing Metrics Dashboard
+## 19. Testing Metrics Dashboard
 
 KPIs monitorados:
 
-Métrica	Meta
+**Métrica**	**Meta**
 
 Unit pass rate	> 99%
 E2E pass rate	> 98%
@@ -1021,7 +1018,7 @@ Mean test duration	< 15 min
 
 ---
 
-20. Definition of Done (Testing)
+## 20. Definition of Done (Testing)
 
 Uma feature só está pronta se:
 
@@ -1046,8 +1043,3 @@ CI/CD pipeline green
 
 ---
 
-Com isso o `docs/TESTING.md` fica praticamente completo. A próxima e última parte normalmente fecha com:
-
-**Parte 4 — Test Data Management, Mocking Strategy, Fixtures, Test Environments e Governance**
-
-Essa parte é importante para deixar o documento em nível enterprise.
