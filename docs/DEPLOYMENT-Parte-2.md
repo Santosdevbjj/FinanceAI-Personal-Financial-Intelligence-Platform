@@ -971,4 +971,4 @@ O CI/CD do FinanceAI é baseado em:
 - Fast rollback
 - Enterprise observability
 
-Essa arquitetura garante releases seguros, rápidos e auditáveis em padrão FAANG.
+Essa arquitetura garante releases seguros, rápidos e auditáveis.
