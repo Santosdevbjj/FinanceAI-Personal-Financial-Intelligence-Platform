@@ -1,4 +1,4 @@
-# DATABASE — FinanceAI Personal Financial Intelligence Platform
+# DATABASE — FinanceAI Personal Financial Intelligence Platform - Parte 1
 
 Version: 1.0  
 Status: Production Database Specification  
