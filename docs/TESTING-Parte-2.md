@@ -1,32 +1,4 @@
-Perfeito. Vamos gerar agora a Parte 2 completa do docs/TESTING.md, cobrindo a camada mais importante da base de qualidade do FinanceAI:
-
-Unit Tests
-
-Component Tests
-
-Service Tests
-
-Repository Tests
-
-Mocking Strategy
-
-Integration Tests
-
-Contract Testing
-
-Mutation Testing
-
-Flaky Test Prevention
-
-Coverage enforcement
-
-
-Essa é a parte que sustenta a engenharia em padrão Google / Stripe / Netflix / FAANG.
-
-
----
-
-Parte 2 — Unit Tests & Integration Tests
+## Parte 2 — Unit Tests & Integration Tests
 
 # 14. UNIT TESTING
 
@@ -136,10 +108,10 @@ describe("calculateBudgetStatus", () => {
   });
 });
 
-
+```
 ---
 
-15.3 Regras
+## 15.3 Regras
 
 Unit test deve ser:
 
@@ -157,13 +129,16 @@ pequeno
 
 ---
 
-15.4 Naming Convention
+## 15.4 Naming Convention
 
-Formato:
+### Formato:
 
+```
 should + expected behavior + condition
 
-Exemplo:
+``` 
+
+#### Exemplo:
 
 should calculate remaining balance correctly
 
@@ -175,11 +150,11 @@ should trigger fallback when AI fails
 
 ---
 
-16. BUSINESS LOGIC TESTING
+## 16. BUSINESS LOGIC TESTING
 
-16.1 Finance Rules
+### 16.1 Finance Rules
 
-Testar:
+#### Testar:
 
 budget calculations
 
@@ -197,7 +172,7 @@ savings goals
 
 ---
 
-16.2 Cenários Obrigatórios
+## 16.2 Cenários Obrigatórios
 
 Happy Path
 
@@ -234,10 +209,11 @@ Valores monetários
 
 ---
 
-16.3 Exemplo
+## 16.3 Exemplo
 
-Testar:
+### Testar:
 
+``` 
 0
 negative values
 very large numbers
@@ -245,12 +221,14 @@ currency precision
 decimal rounding
 overflow scenarios
 
+``` 
+
 
 ---
 
-17. FINANCIAL CALCULATION TESTING
+## 17. FINANCIAL CALCULATION TESTING
 
-17.1 Alta Criticidade
+### 17.1 Alta Criticidade
 
 Financial logic exige:
 
@@ -259,9 +237,9 @@ cobertura máxima
 
 ---
 
-17.2 Regras
+## 17.2 Regras
 
-Testar:
+### Testar:
 
 decimal rounding
 
@@ -279,9 +257,9 @@ projections
 
 ---
 
-17.3 Precisão
+## 17.3 Precisão
 
-Nunca usar:
+### Nunca usar:
 
 floating point direto sem proteção
 
@@ -295,9 +273,9 @@ Big.js
 
 ---
 
-17.4 Casos Obrigatórios
+## 17.4 Casos Obrigatórios
 
-Caso	Obrigatório
+**Caso**	**Obrigatório**
 
 zero	sim
 decimal precision	sim
@@ -309,11 +287,11 @@ rounding	sim
 
 ---
 
-18. FRONTEND COMPONENT TESTING
+## 18. FRONTEND COMPONENT TESTING
 
-18.1 Objetivo
+### 18.1 Objetivo
 
-Validar:
+#### Validar:
 
 renderização
 
@@ -329,7 +307,7 @@ accessibility
 
 ---
 
-18.2 Ferramentas
+## 18.2 Ferramentas
 
 React Testing Library
 
@@ -341,7 +319,7 @@ Vitest
 
 ---
 
-18.3 Testar
+## 18.3 Testar
 
 Render
 
@@ -378,8 +356,9 @@ roles / aria
 
 ---
 
-18.4 Exemplo
+## 18.4 Exemplo
 
+```
 it("should submit transaction form", async () => {
   render(<TransactionForm />);
 
@@ -390,14 +369,15 @@ it("should submit transaction form", async () => {
   expect(mockSubmit).toHaveBeenCalled();
 });
 
+```
 
 ---
 
-19. HOOK TESTING
+## 19. HOOK TESTING
 
-19.1 Testar
+### 19.1 Testar
 
-Custom hooks:
+#### Custom hooks:
 
 state transitions
 
@@ -413,7 +393,7 @@ fallback behavior
 
 ---
 
-19.2 Ferramenta
+## 19.2 Ferramenta
 
 renderHook()
 
@@ -421,25 +401,28 @@ renderHook()
 
 ---
 
-19.3 Exemplo
+## 19.3 Exemplo
+
+```
 
 const { result } = renderHook(() => useBudget());
 
 expect(result.current.loading).toBe(true);
 
+```
 
 ---
 
-20. REPOSITORY TESTING
+## 20. REPOSITORY TESTING
 
-20.1 Objetivo
+### 20.1 Objetivo
 
 Validar camada de acesso a dados.
 
 
 ---
 
-20.2 Testar
+## 20.2 Testar
 
 CRUD
 
@@ -457,9 +440,9 @@ ordering
 
 ---
 
-20.3 Regras
+## 20.3 Regras
 
-Preferência:
+#### Preferência:
 
 DB isolado de teste
 
@@ -468,16 +451,16 @@ ou mock controlado
 
 ---
 
-21. SERVICE TESTING
+## 21. SERVICE TESTING
 
-21.1 Objetivo
+### 21.1 Objetivo
 
 Testar serviços isolados.
 
 
 ---
 
-21.2 Testar
+## 21.2 Testar
 
 orchestration
 
@@ -495,11 +478,11 @@ transformations
 
 ---
 
-21.3 Exemplo
+## 21.3 Exemplo
 
-AI recommendation service:
+### AI recommendation service:
 
-testar:
+#### testar:
 
 provider success
 
@@ -515,9 +498,9 @@ low confidence score
 
 ---
 
-22. MOCKING STRATEGY
+## 22. MOCKING STRATEGY
 
-22.1 Filosofia
+#### 22.1 Filosofia
 
 Mockar apenas dependências externas.
 
@@ -529,7 +512,7 @@ core business logic
 
 ---
 
-22.2 Pode Mockar
+## 22.2 Pode Mockar
 
 APIs externas
 
@@ -549,7 +532,7 @@ push provider
 
 ---
 
-22.3 Não Deve Mockar
+## 22.3 Não Deve Mockar
 
 calculation logic
 
@@ -563,9 +546,9 @@ internal business decisions
 
 ---
 
-22.4 Mock Rules
+## 22.4 Mock Rules
 
-Mocks devem ser:
+#### Mocks devem ser:
 
 deterministic
 
@@ -577,20 +560,24 @@ explicit
 
 ---
 
-23. TEST FIXTURES
+## 23. TEST FIXTURES
 
-23.1 Factory Pattern
+### 23.1 Factory Pattern
 
-Usar:
+#### Usar:
 
+```
 createUser()
 createTransaction()
 createBudget()
 
+```
+
+
 
 ---
 
-23.2 Benefícios
+## 23.2 Benefícios
 
 consistência
 
@@ -602,31 +589,31 @@ menos duplicação
 
 ---
 
-23.3 Faker
+## 23.3 Faker
 
-Usar apenas quando:
+### Usar apenas quando:
 
 dados randômicos forem úteis
 
-Nunca para:
+#### Nunca para:
 
 financial precision tests
 
 
 ---
 
-24. INTEGRATION TESTING
+## 24. INTEGRATION TESTING
 
-24.1 Objetivo
+### 24.1 Objetivo
 
 Validar múltiplos componentes reais interagindo.
 
 
 ---
 
-24.2 Escopo
+## 24.2 Escopo
 
-Testar:
+### Testar:
 
 API + DB
 
@@ -644,7 +631,7 @@ webhooks + persistence
 
 ---
 
-24.3 Não é E2E
+## 24.3 Não é E2E
 
 Integration testa parte integrada.
 
@@ -653,11 +640,11 @@ Não fluxo completo.
 
 ---
 
-25. INTEGRATION ENVIRONMENT
+## 25. INTEGRATION ENVIRONMENT
 
 25.1 Infra
 
-Usar:
+#### Usar:
 
 Docker containers
 
@@ -671,7 +658,7 @@ queue real
 
 ---
 
-25.2 Ferramentas
+## 25.2 Ferramentas
 
 Testcontainers
 
@@ -681,18 +668,18 @@ Docker Compose test env
 
 ---
 
-25.3 Dados
+## 25.3 Dados
 
-Cada teste:
+#### Cada teste:
 
 setup → execute → teardown
 
 
 ---
 
-26. API INTEGRATION TESTS
+## 26. API INTEGRATION TESTS
 
-26.1 Validar
+### 26.1 Validar
 
 request parsing
 
@@ -710,60 +697,60 @@ response schema
 
 ---
 
-26.2 Casos
+## 26.2 Casos
 
-Success
+#### Success
 
 200 / 201
 
 
 ---
 
-Invalid Input
+#### Invalid Input
 
 400
 
 
 ---
 
-Unauthorized
+#### Unauthorized
 
 401
 
 
 ---
 
-Forbidden
+#### Forbidden
 
 403
 
 
 ---
 
-Not Found
+#### Not Found
 
 404
 
 
 ---
 
-Conflict
+#### Conflict
 
 409
 
 
 ---
 
-Server Failure
+#### Server Failure
 
 500
 
 
 ---
 
-27. DATABASE INTEGRATION TESTS
+## 27. DATABASE INTEGRATION TESTS
 
-27.1 Testar
+### 27.1 Testar
 
 insert
 
@@ -783,9 +770,9 @@ unique violations
 
 ---
 
-27.2 Migration Safety
+## 27.2 Migration Safety
 
-Testar:
+### Testar:
 
 schema compatibility
 
@@ -797,9 +784,9 @@ rollback viability
 
 ---
 
-27.3 Query Tests
+## 27.3 Query Tests
 
-Validar:
+#### Validar:
 
 joins
 
@@ -813,11 +800,11 @@ pagination
 
 ---
 
-28. CACHE INTEGRATION TESTS
+## 28. CACHE INTEGRATION TESTS
 
-28.1 Redis
+### 28.1 Redis
 
-Validar:
+#### Validar:
 
 read/write
 
@@ -831,7 +818,7 @@ fallback
 
 ---
 
-28.2 Casos
+## 28.2 Casos
 
 cache hit
 
@@ -845,9 +832,9 @@ Redis unavailable
 
 ---
 
-29. QUEUE INTEGRATION TESTS
+## 29. QUEUE INTEGRATION TESTS
 
-29.1 Validar
+### 29.1 Validar
 
 enqueue
 
@@ -863,7 +850,7 @@ duplicate protection
 
 ---
 
-29.2 Casos
+## 29.2 Casos
 
 success
 
@@ -877,9 +864,9 @@ timeout
 
 ---
 
-30. WEBHOOK INTEGRATION TESTS
+## 30. WEBHOOK INTEGRATION TESTS
 
-30.1 Testar
+### 30.1 Testar
 
 signature validation
 
@@ -895,16 +882,16 @@ duplicate event handling
 
 ---
 
-31. CONTRACT TESTING
+## 31. CONTRACT TESTING
 
-31.1 Objetivo
+### 31.1 Objetivo
 
 Evitar breaking changes.
 
 
 ---
 
-31.2 Validar
+## 31.2 Validar
 
 request schema
 
@@ -918,7 +905,7 @@ event payloads
 
 ---
 
-31.3 Ferramentas
+## 31.3 Ferramentas
 
 Pact
 
@@ -930,7 +917,7 @@ OpenAPI validation
 
 ---
 
-31.4 Backward Compatibility
+## 31.4 Backward Compatibility
 
 Mudanças devem ser:
 
@@ -941,11 +928,11 @@ Sempre que possível.
 
 ---
 
-32. EVENT CONTRACT TESTING
+## 32. EVENT CONTRACT TESTING
 
-32.1 Eventos
+### 32.1 Eventos
 
-Validar:
+#### Validar:
 
 schema
 
@@ -957,7 +944,7 @@ consumer expectations
 
 ---
 
-32.2 Casos
+## 32.2 Casos
 
 missing field
 
@@ -969,16 +956,16 @@ version mismatch
 
 ---
 
-33. MUTATION TESTING
+## 33. MUTATION TESTING
 
-33.1 Objetivo
+### 33.1 Objetivo
 
 Medir qualidade real dos testes.
 
 
 ---
 
-33.2 Ferramenta
+## 33.2 Ferramenta
 
 Stryker
 
@@ -986,14 +973,14 @@ Stryker
 
 ---
 
-33.3 Validar
+## 33.3 Validar
 
 Se testes falham quando lógica é alterada.
 
 
 ---
 
-33.4 Mutation Score Targets
+## 33.4 Mutation Score Targets
 
 Área	Meta
 
@@ -1005,16 +992,16 @@ Security logic	> 90%
 
 ---
 
-34. FLAKY TEST PREVENTION
+## 34. FLAKY TEST PREVENTION
 
-34.1 Problema
+### 34.1 Problema
 
 Flaky tests reduzem confiança.
 
 
 ---
 
-34.2 Causas comuns
+## 34.2 Causas comuns
 
 race conditions
 
@@ -1030,9 +1017,9 @@ async mal controlado
 
 ---
 
-34.3 Prevenção
+## 34.3 Prevenção
 
-Usar:
+#### Usar:
 
 fake timers
 
@@ -1046,70 +1033,93 @@ retries apenas para infra
 
 ---
 
-35. TEST PERFORMANCE
+## 35. TEST PERFORMANCE
 
 35.1 Unit Test Target
 
-Tempo:
+#### Tempo:
 
+```
 < 100ms por teste
+
+```
+
 
 
 ---
 
-35.2 Integration Test Target
+## 35.2 Integration Test Target
 
-Tempo:
+#### Tempo:
+
+```
 
 < 2s por teste
 
+```
+
+
 
 ---
 
-35.3 CI Target
+## 35.3 CI Target
 
-Tempo:
+#### Tempo:
+
+```
 
 < 15 min total
 
+```
+
+
 
 ---
 
-36. COVERAGE ENFORCEMENT
+## 36. COVERAGE ENFORCEMENT
 
-36.1 Blocking Rules
+### 36.1 Blocking Rules
 
 PR falha se coverage abaixo do target.
 
 
 ---
 
-36.2 Exemplo
+### 36.2 Exemplo
+
+```
 
 coverage:
   branches: 90
   functions: 90
   lines: 90
 
+```
+
+
 
 ---
 
-36.3 Critical Modules
+## 36.3 Critical Modules
 
-Regras especiais:
+### Regras especiais:
 
 financial modules:
 
+```
+
 95%+
+
+```
 
 
 ---
 
-37. CI EXECUTION STRATEGY
+## 37. CI EXECUTION STRATEGY
 
-37.1 PR
+### 37.1 PR
 
-Executar:
+#### Executar:
 
 unit
 
@@ -1123,9 +1133,9 @@ coverage
 
 ---
 
-37.2 Main Branch
+## 37.2 Main Branch
 
-Executar:
+### Executar:
 
 full integration
 
@@ -1137,9 +1147,9 @@ extended suite
 
 ---
 
-37.3 Nightly
+## 37.3 Nightly
 
-Executar:
+### Executar:
 
 full mutation
 
@@ -1149,7 +1159,7 @@ full regression
 
 ---
 
-38. CONCLUSÃO
+## 38. CONCLUSÃO
 
 A estratégia de testes unitários e de integração do FinanceAI foi desenhada para:
 
@@ -1166,7 +1176,7 @@ reduzir flaky tests
 aumentar confiança de deploy
 
 
-Princípios:
+#### Princípios:
 
 isolation first
 
@@ -1179,12 +1189,9 @@ strong coverage
 mutation-driven quality
 
 
-Padrão:
+#### Padrão:
 
-FAANG-level engineering quality
+Level engineering quality
 
 ---
 
-**Parte 2 do `docs/TESTING.md` concluída.**
-
-Próximo passo: **Parte 3 — E2E / Frontend / Mobile / Accessibility / Visual Regression Testing**.
