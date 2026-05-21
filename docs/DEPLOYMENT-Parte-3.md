@@ -1,34 +1,4 @@
-Perfeito. Vamos gerar a Parte 3 completa do docs/DEPLOYMENT.md, cobrindo a parte de Infraestrutura como Código (IaC) em padrão FAANG / enterprise-grade.
-
-Esta seção vai definir:
-
-Terraform
-
-Kubernetes
-
-Helm
-
-Secrets management
-
-Network architecture
-
-Service mesh
-
-Storage provisioning
-
-Cluster architecture
-
-Infra security
-
-Policy as Code
-
-
-
----
-
-docs/DEPLOYMENT.md
-
-Parte 3 — Infraestrutura como Código (IaC)
+## Parte 3 — Infraestrutura como Código (IaC)
 
 # 31. Infraestrutura como Código (IaC)
 
@@ -1004,11 +974,8 @@ A estratégia de IaC do FinanceAI é baseada em:
 - Infra observability
 - Disaster recovery ready
 
-Esse modelo garante uma infraestrutura moderna, segura, reproduzível e escalável em padrão FAANG.
+Esse modelo garante uma infraestrutura moderna, segura, reproduzível e escalável.
 
 
 ---
 
-Parte 3 concluída.
-
-A próxima será a Parte 4 — Deploy Backend / Frontend / AI Services, que detalha o deployment operacional de cada serviço da plataforma.
