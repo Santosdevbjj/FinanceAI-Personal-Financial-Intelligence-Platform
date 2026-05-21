@@ -98,7 +98,7 @@ Formato:
 
 ---
 
-Distributed Tracing
+## Distributed Tracing
 
 Ferramenta:
 
@@ -127,7 +127,7 @@ Client → Gateway → Auth → API → AI Service → DB
 
 ---
 
-15.3 Métricas Críticas
+## 15.3 Métricas Críticas
 
 Infra
 
@@ -185,7 +185,7 @@ Error rate	< 0.5%
 
 ---
 
-Database
+## Database
 
 Monitorar:
 
@@ -241,9 +241,9 @@ fallback	< 3%
 
 ---
 
-16. ALERTING
+## 16. ALERTING
 
-16.1 Níveis
+### 16.1 Níveis
 
 INFO
 
@@ -257,7 +257,7 @@ backup completed
 
 ---
 
-WARNING
+### WARNING
 
 Exemplo:
 
@@ -271,7 +271,7 @@ DB nearing threshold
 
 ---
 
-CRITICAL
+### CRITICAL
 
 Exemplo:
 
@@ -301,7 +301,7 @@ security breach
 
 ---
 
-16.2 Canais
+### 16.2 Canais
 
 Alert routing:
 
@@ -319,20 +319,22 @@ Ops Dashboard
 
 ---
 
-16.3 Alert Rules
+## 16.3 Alert Rules
 
-Exemplo:
+### Exemplo:
 
+```
 - alert: HighErrorRate
   expr: rate(http_errors[5m]) > 0.05
   for: 5m
 
+``` 
 
 ---
 
-17. RUNBOOKS OPERACIONAIS
+## 17. RUNBOOKS OPERACIONAIS
 
-17.1 API DOWN
+### 17.1 API DOWN
 
 Sintoma
 
@@ -341,7 +343,7 @@ Sintoma
 readiness failed
 
 
-Diagnóstico
+### Diagnóstico
 
 Verificar:
 
@@ -356,7 +358,7 @@ auth
 logs
 
 
-Ação
+### Ação
 
 1. restart unhealthy pods
 
@@ -374,14 +376,14 @@ Ação
 
 ---
 
-17.2 DATABASE LATENCY
+## 17.2 DATABASE LATENCY
 
 Sintoma
 
 response slow
 
 
-Diagnóstico
+### Diagnóstico
 
 Verificar:
 
@@ -406,7 +408,7 @@ optimize indexes
 
 ---
 
-17.3 AI ENGINE FAILURE
+## 17.3 AI ENGINE FAILURE
 
 Sintoma
 
@@ -427,7 +429,7 @@ use cached recommendation
 
 ---
 
-17.4 QUEUE BACKLOG
+## 17.4 QUEUE BACKLOG
 
 Sintoma
 
@@ -446,9 +448,9 @@ throttle producers
 
 ---
 
-18. BACKUP E RESTORE
+## 18. BACKUP E RESTORE
 
-18.1 Tipos de Backup
+### 18.1 Tipos de Backup
 
 PostgreSQL
 
@@ -490,7 +492,7 @@ offline recovery copy
 
 ---
 
-18.2 Política
+## 18.2 Política
 
 Tipo	Frequência	Retenção
 
@@ -503,7 +505,7 @@ Archive	mensal	12 meses
 
 ---
 
-18.3 Restore Test
+## 18.3 Restore Test
 
 Periodicidade:
 
@@ -524,9 +526,9 @@ application boot
 
 ---
 
-19. DISASTER RECOVERY
+## 19. DISASTER RECOVERY
 
-19.1 Objetivos
+### 19.1 Objetivos
 
 Métrica	Meta
 
@@ -537,7 +539,7 @@ RPO	< 5 min
 
 ---
 
-19.2 Cenários
+## 19.2 Cenários
 
 Region failure
 
@@ -549,7 +551,7 @@ failover secondary region
 
 ---
 
-DB corruption
+## DB corruption
 
 Resposta:
 
@@ -559,7 +561,7 @@ PITR recovery
 
 ---
 
-Secret compromise
+## Secret compromise
 
 Resposta:
 
@@ -569,7 +571,7 @@ rotate all credentials
 
 ---
 
-AI provider outage
+## AI provider outage
 
 Resposta:
 
@@ -579,7 +581,7 @@ fallback provider
 
 ---
 
-Kubernetes cluster failure
+## Kubernetes cluster failure
 
 Resposta:
 
@@ -589,16 +591,16 @@ infra redeploy IaC
 
 ---
 
-19.3 Multi-Region Strategy
+## 19.3 Multi-Region Strategy
 
 Primary:
 
-Region A
+### Region A
 
 
 Secondary:
 
-Region B
+### Region B
 
 
 Replication:
@@ -614,32 +616,32 @@ DNS failover
 
 ---
 
-20. BLUE/GREEN E CANARY DEPLOYMENTS
+## 20. BLUE/GREEN E CANARY DEPLOYMENTS
 
-20.1 Blue/Green
+### 20.1 Blue/Green
 
-Blue:
+#### Blue:
 
 current production
 
-Green:
+#### Green:
 
 new version
 
-Flow:
+#### Flow:
 
 Deploy Green → health check → switch traffic → monitor → finalize
 
-Rollback:
+#### Rollback:
 
 instant traffic return
 
 
 ---
 
-20.2 Canary
+## 20.2 Canary
 
-Traffic:
+### Traffic:
 
 5%
 
@@ -652,7 +654,7 @@ Traffic:
 100%
 
 
-Monitor:
+### Monitor:
 
 errors
 
@@ -661,7 +663,7 @@ latency
 business KPIs
 
 
-Abort if:
+### Abort if:
 
 thresholds exceeded
 
@@ -669,14 +671,14 @@ thresholds exceeded
 
 ---
 
-20.3 Feature Flags
+## 20.3 Feature Flags
 
-Ferramenta:
+### Ferramenta:
 
 LaunchDarkly / Unleash
 
 
-Uso:
+### Uso:
 
 gradual rollout
 
@@ -688,11 +690,11 @@ emergency disable
 
 ---
 
-21. SRE — SLI / SLO / ERROR BUDGET
+## 21. SRE — SLI / SLO / ERROR BUDGET
 
-21.1 Availability
+### 21.1 Availability
 
-SLI:
+#### SLI:
 
 successful requests / total requests
 
@@ -703,9 +705,9 @@ SLO:
 
 ---
 
-21.2 Latency
+## 21.2 Latency
 
-SLI:
+### SLI:
 
 P95 latency
 
@@ -716,9 +718,9 @@ SLO:
 
 ---
 
-21.3 AI Inference
+## 21.3 AI Inference
 
-SLI:
+### SLI:
 
 successful inference
 
@@ -729,9 +731,9 @@ SLO:
 
 ---
 
-21.4 Data Consistency
+## 21.4 Data Consistency
 
-SLI:
+## SLI:
 
 valid transactions
 
@@ -742,13 +744,13 @@ SLO:
 
 ---
 
-21.5 Error Budget
+## 21.5 Error Budget
 
-Exemplo:
+### Exemplo:
 
 99.95% uptime
 
-Permite:
+#### Permite:
 
 ~21 min downtime / mês
 
@@ -764,18 +766,18 @@ reliability sprint
 
 ---
 
-22. INCIDENT RESPONSE
+## 22. INCIDENT RESPONSE
 
-22.1 Processo
+### 22.1 Processo
 
 Detection → Classification → Mitigation → Recovery → Postmortem
 
 
 ---
 
-22.2 Severidade
+## 22.2 Severidade
 
-Level	Descrição
+### Level	Descrição
 
 SEV1	produção indisponível
 SEV2	função crítica degradada
@@ -786,9 +788,9 @@ SEV4	issue menor
 
 ---
 
-22.3 War Room
+## 22.3 War Room
 
-Criar:
+### Criar:
 
 Incident Commander
 
@@ -804,9 +806,9 @@ Product
 
 ---
 
-22.4 Postmortem
+## 22.4 Postmortem
 
-Template:
+### Template:
 
 timeline
 
@@ -824,9 +826,9 @@ Sem blame.
 
 ---
 
-23. FINOPS / CUSTOS
+## 23. FINOPS / CUSTOS
 
-23.1 Monitoramento
+### 23.1 Monitoramento
 
 Custos monitorados:
 
@@ -846,9 +848,9 @@ observability
 
 ---
 
-23.2 Alertas Financeiros
+## 23.2 Alertas Financeiros
 
-Thresholds:
+### Thresholds:
 
 80%
 
@@ -857,14 +859,14 @@ Thresholds:
 100%
 
 
-Budget:
+### Budget:
 
 mensal por ambiente
 
 
 ---
 
-23.3 Otimizações
+## 23.3 Otimizações
 
 autoscaling
 
@@ -882,9 +884,9 @@ model routing
 
 ---
 
-24. CHECKLIST FINAL DE GO-LIVE
+## 24. CHECKLIST FINAL DE GO-LIVE
 
-Infra
+### Infra
 
 [ ] Kubernetes healthy
 
@@ -900,7 +902,7 @@ Infra
 
 ---
 
-Security
+### Security
 
 [ ] secrets rotated
 
@@ -916,7 +918,7 @@ Security
 
 ---
 
-Database
+### Database
 
 [ ] backups validated
 
@@ -930,7 +932,7 @@ Database
 
 ---
 
-AI
+### AI
 
 [ ] fallback configured
 
@@ -944,7 +946,7 @@ AI
 
 ---
 
-Observability
+### Observability
 
 [ ] dashboards ready
 
@@ -958,7 +960,7 @@ Observability
 
 ---
 
-Operations
+### Operations
 
 [ ] runbooks reviewed
 
@@ -972,47 +974,47 @@ Operations
 
 ---
 
-25. CONCLUSÃO
+## 25. CONCLUSÃO
 
-A estratégia de deployment da FinanceAI foi desenhada para padrão enterprise/FAANG:
+A estratégia de deployment da FinanceAI foi desenhada para padrão:
 
-altamente escalável
+• altamente escalável
 
-resiliente
+• resiliente
 
-observável
+• observável
 
-segura
+• segura
 
-multi-environment
+• multi-environment
 
-multi-region ready
+• multi-region ready
 
-AI-ready
+• AI-ready
 
-FinOps optimized
+• FinOps optimized
 
-SRE-driven
-
-
-O deployment suporta:
-
-milhões de usuários
-
-alta disponibilidade
-
-zero downtime deployments
-
-disaster recovery
-
-enterprise governance
-
-AI-native operations
+• SRE-driven
 
 
-Status:
+### O deployment suporta:
 
-PRODUCTION GRADE FAANG-LEVEL READY
+• milhões de usuários
+
+• alta disponibilidade
+
+• zero downtime deployments
+
+• disaster recovery
+
+• enterprise governance
+
+• AI-native operations
+
+
+## Status:
+
+#### PRODUCTION GRADE FAANG-LEVEL READY
 
 ---
 
