@@ -1,4 +1,4 @@
-docs/DATA_ANALYTICS_ARCHITECTURE.md
+
 
 
 ---
@@ -38,7 +38,7 @@ financial intelligence pipelines
 predictive modeling
 
 
-This architecture defines a FAANG-level analytical and AI data platform designed for:
+This architecture defines a level analytical and AI data platform designed for:
 
 low-latency insights
 
