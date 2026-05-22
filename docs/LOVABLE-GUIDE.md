@@ -1,11 +1,4 @@
-Perfeito. Vou gerar agora o arquivo completo:
-
-docs/LOVABLE-GUIDE.md
-
-
----
-
-LOVABLE GUIDE
+## LOVABLE GUIDE
 
 Enterprise Engineering Guide for Building Production-Grade Applications with Lovable
 
@@ -1243,4 +1236,3 @@ Human architecture
 
 ---
 
-End of docs/LOVABLE-GUIDE.md
