@@ -1,31 +1,3 @@
-Perfeito. Vamos gerar agora a Parte 6 completa do docs/TESTING.md.
-
-Esta seção cobre:
-
-Parte 6 — Security Testing
-
-Cobertura completa de:
-
-SAST
-
-DAST
-
-Dependency scanning
-
-Secrets scanning
-
-Pen testing
-
-Auth testing
-
-OWASP testing
-
-
-
----
-
-docs/TESTING.md (Parte 6)
-
 # Parte 6 — Security Testing
 
 ---
@@ -221,7 +193,7 @@ Esperado:
 
 blocked
 
-
+```
 ---
 
 51. Dependency Scanning (SCA)
