@@ -1,5 +1,3 @@
-docs/ENTERPRISE_RISK_ARCHITECTURE.md
-
 # Enterprise Risk Architecture
 
 ## 1. Overview
@@ -956,6 +954,6 @@ Operational continuity
 
 Governance maturity
 
-FAANG-grade risk visibility
+Grade risk visibility
 
 Enterprise-grade trust
