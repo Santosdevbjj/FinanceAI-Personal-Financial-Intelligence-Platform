@@ -152,11 +152,11 @@ fallback controlado
 
 SLA mantido
 
-
+```
 
 ---
 
-76.5 Ferramentas
+## 76.5 Ferramentas
 
 k6
 
@@ -170,16 +170,16 @@ Gatling
 
 ---
 
-77. Stress Testing
+## 77. Stress Testing
 
-77.1 Objetivo
+### 77.1 Objetivo
 
 Descobrir limites reais do sistema.
 
 
 ---
 
-77.2 Testar
+## 77.2 Testar
 
 Aumentar carga até:
 
@@ -197,7 +197,7 @@ cascading failures
 
 ---
 
-77.3 Perguntas respondidas
+## 77.3 Perguntas respondidas
 
 Qual o breaking point?
 
@@ -211,7 +211,7 @@ Recovery funciona?
 
 ---
 
-77.4 Casos críticos
+## 77.4 Casos críticos
 
 
 ---
@@ -254,9 +254,9 @@ retry safe
 
 ---
 
-78. Spike Testing
+## 78. Spike Testing
 
-78.1 Objetivo
+### 78.1 Objetivo
 
 Validar picos súbitos de tráfego.
 
@@ -268,7 +268,7 @@ Exemplos
 
 ---
 
-Payday traffic spike
+### Payday traffic spike
 
 Carga:
 
@@ -284,7 +284,7 @@ sem collapse
 
 ---
 
-Marketing campaign burst
+### Marketing campaign burst
 
 Esperado:
 
@@ -294,7 +294,7 @@ burst tolerance
 
 ---
 
-AI recommendation sudden usage
+### AI recommendation sudden usage
 
 Esperado:
 
@@ -304,7 +304,7 @@ controlled degradation
 
 ---
 
-78.2 Validar
+## 78.2 Validar
 
 autoscaling reaction
 
@@ -318,16 +318,16 @@ DB protection
 
 ---
 
-79. Soak Testing
+## 79. Soak Testing
 
-79.1 Objetivo
+### 79.1 Objetivo
 
 Validar estabilidade de longa duração.
 
 
 ---
 
-Duração típica
+### Duração típica
 
 6h
 
@@ -341,7 +341,7 @@ Duração típica
 
 ---
 
-Detectar
+### Detectar
 
 memory leaks
 
@@ -359,7 +359,7 @@ performance drift
 
 ---
 
-Casos obrigatórios
+### Casos obrigatórios
 
 
 ---
@@ -376,7 +376,7 @@ estabilidade
 
 ---
 
-Queue soak
+### Queue soak
 
 Processamento contínuo.
 
@@ -388,7 +388,7 @@ sem drift
 
 ---
 
-AI orchestration soak
+### AI orchestration soak
 
 Uso prolongado.
 
@@ -400,16 +400,16 @@ stable latency
 
 ---
 
-80. Volume Testing
+## 80. Volume Testing
 
-Objetivo
+### Objetivo
 
 Validar comportamento com grande volume de dados.
 
 
 ---
 
-Testar
+### Testar
 
 milhões de transações
 
@@ -425,7 +425,7 @@ dashboards pesados
 
 ---
 
-Detectar
+### Detectar
 
 query degradation
 
@@ -437,16 +437,16 @@ indexing issues
 
 ---
 
-81. Scalability Testing
+## 81. Scalability Testing
 
-81.1 Objetivo
+## 81.1 Objetivo
 
 Validar escalabilidade horizontal/vertical.
 
 
 ---
 
-Testar
+### Testar
 
 scale-out
 
@@ -476,7 +476,7 @@ state consistency
 
 ---
 
-82. API Performance Testing
+## 82. API Performance Testing
 
 Testar
 
@@ -494,8 +494,9 @@ pagination performance
 
 ---
 
-SLA exemplo
+## SLA exemplo
 
+```
 Endpoint	p95 SLA
 
 Auth	< 300ms
@@ -504,11 +505,12 @@ Transactions	< 500ms
 AI Insights	< 3s
 Reports	< 2s
 
+```
 
 
 ---
 
-83. Database Performance Testing
+## 83. Database Performance Testing
 
 Validar
 
@@ -530,7 +532,7 @@ replica lag
 
 ---
 
-Casos críticos
+## Casos críticos
 
 
 ---
@@ -545,7 +547,7 @@ acceptable latency
 
 ---
 
-Concurrent writes
+## Concurrent writes
 
 Esperado:
 
@@ -555,7 +557,7 @@ sem deadlock crítico
 
 ---
 
-Open Finance sync peak
+### Open Finance sync peak
 
 Esperado:
 
@@ -565,7 +567,7 @@ DB stability
 
 ---
 
-84. Queue Performance Testing
+## 84. Queue Performance Testing
 
 Testar
 
@@ -597,7 +599,7 @@ retry rate
 
 ---
 
-85. Cache Performance Testing
+## 85. Cache Performance Testing
 
 Validar
 
@@ -615,9 +617,9 @@ Redis saturation
 
 ---
 
-86. AI Performance Testing
+## 86. AI Performance Testing
 
-86.1 Objetivo
+### 86.1 Objetivo
 
 IA é parte crítica do FinanceAI.
 
@@ -642,26 +644,28 @@ fallback latency
 
 ---
 
-Métricas
+### Métricas
 
 Métrica	Exemplo
 
+```
 TTFT	Time to First Token
 Total latency	full answer
 Token/sec	throughput
 Fallback latency	degraded path
 Retrieval latency	RAG
 
+```
 
 
 ---
 
-Casos críticos
+### Casos críticos
 
 
 ---
 
-OpenAI degraded
+#### OpenAI degraded
 
 Esperado:
 
@@ -671,7 +675,7 @@ fallback SLA aceitável
 
 ---
 
-Token explosion
+#### Token explosion
 
 Esperado:
 
@@ -681,7 +685,7 @@ protection
 
 ---
 
-Retrieval slowdown
+#### Retrieval slowdown
 
 Esperado:
 
@@ -691,7 +695,7 @@ bounded latency
 
 ---
 
-87. Frontend UX Performance Testing
+## 87. Frontend UX Performance Testing
 
 Testar
 
@@ -709,7 +713,7 @@ dashboard responsiveness
 
 ---
 
-Core Web Vitals
+### Core Web Vitals
 
 Validar:
 
@@ -725,7 +729,7 @@ TTFB
 
 ---
 
-88. Mobile Performance Testing
+## 88. Mobile Performance Testing
 
 Validar
 
@@ -745,9 +749,9 @@ background sync
 
 ---
 
-89. Reliability Testing
+## 89. Reliability Testing
 
-89.1 Objetivo
+### 89.1 Objetivo
 
 Garantir comportamento previsível sob falhas.
 
@@ -772,7 +776,7 @@ failover
 
 ---
 
-89.2 Reliability metrics
+## 89.2 Reliability metrics
 
 Monitorar:
 
@@ -790,16 +794,16 @@ retry success
 
 ---
 
-90. Chaos Engineering
+## 90. Chaos Engineering
 
-90.1 Objetivo
+### 90.1 Objetivo
 
 Introduzir falhas controladas.
 
 
 ---
 
-Filosofia
+#### Filosofia
 
 Não assumir que produção é perfeita.
 
@@ -808,9 +812,11 @@ Validar falha real.
 
 ---
 
-90.2 Tipos de chaos experiments
+## 90.2 Tipos de chaos experiments
 
-Experimento	Objetivo
+#### Experimento	Objetivo
+
+```
 
 Kill pod	restart resilience
 DB latency	graceful degradation
@@ -821,11 +827,12 @@ DNS failure	dependency robustness
 AI provider outage	model fallback
 Secret rotation failure	auth resilience
 
+```
 
 
 ---
 
-90.3 Ferramentas
+## 90.3 Ferramentas
 
 Litmus
 
@@ -839,9 +846,9 @@ AWS FIS
 
 ---
 
-91. Failure Injection Testing
+## 91. Failure Injection Testing
 
-91.1 Objetivo
+### 91.1 Objetivo
 
 Injetar falhas específicas.
 
@@ -868,7 +875,7 @@ dependency unavailable
 
 ---
 
-Casos críticos
+#### Casos críticos
 
 
 ---
@@ -915,7 +922,7 @@ retry + recovery
 
 ---
 
-92. Resilience Pattern Testing
+## 92. Resilience Pattern Testing
 
 Validar
 
@@ -935,7 +942,7 @@ fallback strategies
 
 ---
 
-93. Recovery Testing
+## 93. Recovery Testing
 
 Objetivo
 
@@ -976,7 +983,7 @@ no duplicate execution
 
 ---
 
-94. Disaster Simulation Testing
+## 94. Disaster Simulation Testing
 
 Testar
 
@@ -1004,7 +1011,7 @@ DR procedures funcionam
 
 ---
 
-95. Reliability Under Partial Failure
+## 95. Reliability Under Partial Failure
 
 Validar
 
@@ -1022,7 +1029,7 @@ sem cascade failure
 
 ---
 
-96. Observability Validation
+## 96. Observability Validation
 
 Testar se falhas geram:
 
@@ -1042,24 +1049,27 @@ incident visibility
 
 ---
 
-97. Error Budget Testing
+## 97. Error Budget Testing
 
 Validar
 
-SLOs:
+#### SLOs:
 
 Métrica	Exemplo
+
+```
 
 Availability	99.9%
 API latency	SLA
 AI availability	99.5%
 Error rate	< threshold
 
+```
 
 
 ---
 
-98. Release Reliability Testing
+## 98. Release Reliability Testing
 
 Antes de release:
 
@@ -1077,9 +1087,9 @@ failover validation
 
 ---
 
-99. Performance Quality Gates
+## 99. Performance Quality Gates
 
-CI/CD deve falhar se:
+### CI/CD deve falhar se:
 
 SLA quebrado
 
@@ -1099,7 +1109,7 @@ chaos experiment crítico falhar
 
 ---
 
-100. Definition of Done (Performance / Reliability)
+## 100. Definition of Done (Performance / Reliability)
 
 Feature só está pronta quando:
 
