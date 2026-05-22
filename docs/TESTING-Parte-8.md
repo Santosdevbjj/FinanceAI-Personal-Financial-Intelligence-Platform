@@ -86,10 +86,11 @@ artifact generation
 ↓
 release gate
 
+```
 
 ---
 
-102.2 Princípios
+## 102.2 Princípios
 
 Pipeline deve ser:
 
@@ -107,7 +108,9 @@ blocking by default
 
 ---
 
-102.3 Exemplo GitHub Actions
+## 102.3 Exemplo GitHub Actions
+
+```
 
 name: Testing Pipeline
 
@@ -150,11 +153,13 @@ jobs:
         run: npm run test:e2e
 
 
+```
+
 ---
 
-103. Quality Gates
+## 103. Quality Gates
 
-103.1 Objetivo
+### 103.1 Objetivo
 
 Criar critérios automáticos de bloqueio.
 
