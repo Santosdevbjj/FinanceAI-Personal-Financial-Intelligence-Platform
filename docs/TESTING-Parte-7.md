@@ -1,31 +1,3 @@
-Perfeito. Vamos gerar agora a Parte 7 completa do docs/TESTING.md.
-
-Esta seção cobre:
-
-Parte 7 — Performance / Chaos / Reliability
-
-Cobertura completa de:
-
-Load testing
-
-Stress testing
-
-Spike testing
-
-Soak testing
-
-Chaos engineering
-
-resilience tests
-
-failure injection
-
-
-
----
-
-docs/TESTING.md (Parte 7)
-
 # Parte 7 — Performance / Chaos / Reliability
 
 ---
@@ -1154,4 +1126,3 @@ quality gates green
 
 ---
 
-Perfeito. Agora falta a **Parte 8 — CI/CD Quality Gates + Final Checklist**, que fecha o `docs/TESTING.md` inteiro.
