@@ -1,1238 +1,1112 @@
-## LOVABLE GUIDE
+## GUIA DO LOVABLE (LOVABLE GUIDE)
 
-Enterprise Engineering Guide for Building Production-Grade Applications with Lovable
-
-
----
-
-1. Introduction
-
-1.1 What is Lovable
-
-Lovable is an AI-native application builder designed to accelerate software development by transforming prompts into working application code.
-
-Lovable combines:
-
-UI generation
-
-Backend scaffolding
-
-Database modeling
-
-API wiring
-
-Full-stack integration
-
-Design system generation
-
-Hosting/deployment assistance
-
-
-Its goal is to reduce engineering time by allowing developers to describe systems declaratively.
-
+Guia de Engenharia Corporativa para Construção de Aplicações em Nível de Produção com o Lovable
 
 ---
 
-1.2 Lovable Is Not Magic
+1. Introdução
 
-Lovable is not:
+1.1 O que é o Lovable
 
-a software architect
+O Lovable é um construtor de aplicações nativo de IA (AI-native) projetado para acelerar o desenvolvimento de software, transformando comandos (prompts) em código de aplicação funcional.
 
-a security engineer
+O Lovable combina:
 
-a systems designer
+Geração de UI (Interface do Usuário)
 
-a production SRE
+Estruturação de backend (scaffolding)
 
-a compliance engine
+Modelagem de banco de dados
 
-a business analyst
+Conexão de APIs
 
+Integração full-stack
 
-Lovable generates based on patterns.
+Geração de sistemas de design (design systems)
 
-Humans remain responsible for:
+Assistência de hospedagem/implantação (deployment)
 
-architecture
-
-security
-
-scalability
-
-compliance
-
-correctness
-
-performance
-
-domain modeling
-
-
+Seu objetivo é reduzir o tempo de engenharia, permitindo que os desenvolvedores descrevam os sistemas de forma declarativa.
 
 ---
 
-1.3 Where Lovable Excels
+1.2 Lovable Não É Mágica
 
-Lovable performs extremely well for:
+O Lovable não é:
 
-UI Generation
+um arquiteto de software
 
-Examples:
+um engenheiro de segurança
 
-dashboards
+um designer de sistemas
 
-CRUD apps
+um SRE de produção
 
-admin panels
+un mecanismo de conformidade (compliance)
 
-SaaS interfaces
+um analista de negócios
 
-forms
+O Lovable gera código com base em padrões.
 
-landing pages
+Os seres humanos continuam responsáveis por:
 
-responsive layouts
+arquitetura
 
+segurança
 
+escalabilidade
+
+conformidade
+
+correção (correctness)
+
+desempenho
+
+modelagem de domínio
 
 ---
 
-Rapid Prototyping
+1.3 Onde o Lovable se Destaca
 
-Examples:
+O Lovable tem um desempenho extremamente bom para:
+
+Geração de UI
+
+Exemplos:
+
+painéis (dashboards)
+
+aplicativos CRUD
+
+painéis administrativos
+
+interfaces SaaS
+
+formulários
+
+páginas de destino (landing pages)
+
+layouts responsivos
+
+---
+
+Prototipagem Rápida
+
+Exemplos:
 
 MVPs
 
-startup prototypes
+protótipos de startups
 
-proof of concepts
+provas de conceito (PoCs)
 
-internal tools
+ferramentas internas
 
-design validation
-
-
+validação de design
 
 ---
 
-Developer Acceleration
+Aceleração do Desenvolvedor
 
-Examples:
+Exemplos:
 
-component scaffolding
+estruturação de componentes (scaffolding)
 
-repetitive code generation
+geração de código repetitivo (boilerplate)
 
-API clients
+clientes de API
 
-form validation
+validação de formulários
 
-auth integration
+integração de autenticação (auth)
 
-CRUD patterns
-
-
+padrões CRUD
 
 ---
 
-1.4 Where Lovable Fails
+1.4 Onde o Lovable Falha
 
-Lovable often struggles with:
+O Lovable costuma ter dificuldades com:
 
-Complex Architecture
+Arquitetura Complexa
 
-Examples:
+Exemplos:
 
-distributed systems
+sistemas distribuídos
 
-event-driven systems
+sistemas orientados a eventos
 
-complex domain models
+modelos de domínio complexos
 
-fintech ledgers
+ledgers de fintech (livros-razão)
 
-treasury systems
+sistemas de tesouraria
 
-low-latency systems
-
-
+sistemas de baixa latência
 
 ---
 
-Security
+Segurança
 
-AI-generated code often misses:
+O código gerado por IA frequentemente deixa passar:
 
-secure defaults
+padrões seguros (secure defaults)
 
-secret management
+gerenciamento de segredos/chaves (secrets)
 
-authorization boundaries
+limites de autorização
 
-abuse prevention
+prevenção de abusos
 
-threat modeling
-
-
+modelagem de ameaças
 
 ---
 
-Scale
+Escala
 
-Generated code may fail under:
+O código gerado pode falhar sob:
 
-concurrency
+concorrência
 
-multi-tenant scaling
+escala multi-inquilino (multi-tenant)
 
-high traffic
+alto tráfego
 
-complex state synchronization
+sincronização de estado complexa
 
-distributed transactions
-
-
+transações distribuídas
 
 ---
 
-1.5 Engineering Philosophy
+1.5 Filosofia de Engenharia
 
-Use Lovable as:
+Use o Lovable como:
 
-> AI-assisted engineering
+> Engenharia assistida por IA
 
+Nunca como:
 
-
-Never as:
-
-> AI-owned architecture
-
-
-
+> Arquitetura de propriedade da IA (AI-owned)
 
 ---
 
-2. Lovable Development Philosophy
+2. Filosofia de Desenvolvimento Lovable
 
-2.1 Prompt-Driven Development
+2.1 Desenvolvimento Orientado a Prompts (Prompt-Driven Development)
 
-Lovable works best when engineering is expressed as:
+O Lovable funciona melhor quando a engenharia é expressa como:
 
-Intent
-→ Architecture
+Intenção
+→ Arquitetura
 → Prompt
-→ Generation
-→ Review
-→ Refactor
-→ Productionization
-
-
----
-
-2.2 Human-in-the-Loop
-
-Critical engineering decisions must remain human-controlled.
-
-Humans define:
-
-domain boundaries
-
-security
-
-scalability
-
-infrastructure
-
-compliance
-
-architecture
-
-deployment strategy
-
-
-AI assists implementation.
-
+→ Geração
+→ Revisão
+→ Refatoração
+→ Produção
 
 ---
 
-2.3 Iterative Engineering
+2.2 Humano no Circuito (Human-in-the-Loop)
 
-Do NOT prompt entire systems in one shot.
+As decisões críticas de engenharia devem permanecer controladas por humanos.
+
+Os humanos definem:
+
+limites de domínio
+
+segurança
+
+escalabilidade
+
+infraestrutura
+
+conformidade
+
+arquitetura
+
+estratégia de implantação
+
+A IA auxilia na implementação.
+
+---
+
+2.3 Engenharia Iterativa
+
+NÃO faça o prompt de sistemas inteiros de uma só vez (one shot).
 
 Use:
 
-architecture prompts
+prompts de arquitetura
 
-feature prompts
+prompts de funcionalidades (features)
 
-component prompts
+prompts de componentes
 
-review prompts
+prompts de revisão
 
-refactor prompts
-
-
+prompts de refatoração
 
 ---
 
-3. Prompt Engineering for Lovable
+3. Engenharia de Prompts para o Lovable
 
-3.1 Core Prompt Structure
+3.1 Estrutura Essencial do Prompt
 
-Strong prompts contain:
+Prompts fortes contêm:
 
-Context
+Contexto
 
-What system is being built.
+Qual sistema está sendo construído.
 
-Constraints
+Restrições
 
-Rules Lovable must follow.
+Regras que o Lovable deve seguir.
 
-Output expectation
+Expectativa de saída (output)
 
-What code should be generated.
+Que código deve ser gerado.
 
-Non-goals
+Não-objetivos (non-goals)
 
-What Lovable must avoid.
-
+O que o Lovable deve evitar.
 
 ---
 
-3.2 Prompt Template
+3.2 Modelo de Prompt (Template)
 
-Example:
+Exemplo:
 
-Build a responsive admin dashboard.
+Construa um painel administrativo responsivo.
 
-Requirements:
+Requisitos:
 - React
 - TypeScript
 - Tailwind
-- Dark mode support
-- Mobile responsive
-- Reusable components
+- Suporte a modo escuro (dark mode)
+- Responsivo para dispositivos móveis
+- Componentes reutilizáveis
 
-Do NOT:
-- use inline styles
-- duplicate logic
-- use fake API code
-- ignore accessibility
-
-
----
-
-3.3 Context Layering
-
-Prompt in layers:
-
-Layer 1
-
-Architecture
-
-Layer 2
-
-Design system
-
-Layer 3
-
-Domain logic
-
-Layer 4
-
-Component generation
-
-Layer 5
-
-Integration
-
+NÃO:
+- use estilos inline
+- duplique lógica
+- use código de API falso (mocked/fake)
+- ignore a acessibilidade
 
 ---
 
-3.4 Bad Prompt Example
+3.3 Camadas de Contexto (Context Layering)
 
-Bad:
+Crie prompts em camadas:
 
-Build me a fintech app
+Camada 1
 
-This creates:
+Arquitetura
 
-hidden assumptions
+Camada 2
 
-wrong architecture
+Sistema de design (design system)
 
-poor domain modeling
+Camada 3
 
-insecure code
+Lógica de domínio
 
+Camada 4
 
+Geração de componentes
+
+Camada 5
+
+Integração
 
 ---
 
-3.5 Good Prompt Example
+3.4 Exemplo de Prompt Ruim
 
-Good:
+Ruim:
 
-Build a fintech wallet dashboard.
+Crie um aplicativo de fintech para mim
 
-Requirements:
-- customer wallet balance
-- transaction history
-- ledger-based balance display
+Isso gera:
+
+suposições ocultas
+
+arquitetura errada
+
+modelagem de domínio ruim
+
+código inseguro
+
+---
+
+3.5 Exemplo de Prompt Bom
+
+Bom:
+
+Construa um painel de carteira (wallet) para fintech.
+
+Requisitos:
+- saldo da carteira do cliente
+- histórico de transações
+- exibição de saldo baseada em livro-razão (ledger)
 - React + TypeScript
-- reusable components
-- loading states
-- empty states
-- mobile responsive
+- componentes reutilizáveis
+- estados de carregamento (loading)
+- estados vazios (empty states)
+- responsivo para dispositivos móveis
 
-Backend APIs already exist.
-Use REST API integration.
-
-
----
-
-4. Project Architecture Before Prompting
-
-4.1 Define Domain Model First
-
-Before prompting define:
-
-entities
-
-relationships
-
-business rules
-
-lifecycle states
-
-invariants
-
-
+As APIs de backend já existem.
+Use integração via API REST.
 
 ---
 
-4.2 Define Data Model
+4. Arquitetura do Projeto Antes do Prompt
 
-Specify:
+4.1 Defina o Modelo de Domínio Primeiro
 
-tables
+Antes de criar o prompt, defina:
 
-keys
+entidades
 
-indexes
+relacionamentos
 
-constraints
+regras de negócio
 
-audit columns
+estados do ciclo de vida
 
-tenancy model
-
-
+invariantes
 
 ---
 
-4.3 Define Architecture Boundaries
+4.2 Defina o Modelo de Dados
 
-Define:
+Especifique:
+
+tabelas
+
+chaves (keys)
+
+índices
+
+restrições (constraints)
+
+colunas de auditoria
+
+modelo de controle de inquilinos (tenancy)
+
+---
+
+4.3 Defina os Limites da Arquitetura
+
+Defina:
 
 frontend
 
 backend
 
-auth
+autenticação (auth)
 
-database
+banco de dados
 
 APIs
 
-queues
+filas (queues)
 
-events
+eventos
 
-observability
-
-
+observabilidade
 
 ---
 
-4.4 Define UX Before Generation
+4.4 Defina o UX Antes da Geração
 
-Specify:
+Especifique:
 
-flows
+fluxos
 
-screens
+telas
 
-navigation
+navegação
 
-empty states
+estados vazios
 
-errors
+erros
 
-accessibility
+acessibilidade
 
-responsive behavior
-
-
+comportamento responsivo
 
 ---
 
-5. Front-End Generation Best Practices
+5. Boas Práticas para Geração de Front-End
 
-5.1 Component-Level Prompting
+5.1 Prompts em Nível de Componente
 
-Prompt components individually.
+Crie prompts para os componentes individualmente.
 
-Bad:
+Ruim:
 
-Build whole app
+Construa o aplicativo inteiro
 
-Good:
+Bom:
 
-Build reusable transaction table component
-
+Construa um componente de tabela de transações reutilizável
 
 ---
 
-5.2 Front-End Prompt Rules
+5.2 Regras de Prompt para Front-End
 
-Specify:
+Especifique:
 
 framework
 
-state strategy
+estratégia de estado
 
-accessibility
+acessibilidade
 
-responsive rules
+regras de responsividade
 
-component patterns
+padrões de componentes
 
-design tokens
-
-
+tokens de design
 
 ---
 
-5.3 UI Prompt Example
+5.3 Exemplo de Prompt de UI
 
-Build a wallet balance card component.
+Construa um componente de cartão de saldo de carteira.
 
-Requirements:
-- balance amount
-- currency
-- trend indicator
-- loading state
-- error state
-- responsive
-- dark mode
+Requisitos:
+- valor do saldo
+- moeda
+- indicador de tendência
+- estado de carregamento (loading)
+- estado de erro
+- responsivo
+- modo escuro
 - Tailwind
-- reusable
-
+- reutilizável
 
 ---
 
-5.4 State Management Prompting
+5.4 Prompts para Gerenciamento de Estado
 
-Always define:
+Sempre defina:
 
-local state
+estado local
 
-global state
+estado global
 
-async state
+estado assíncrono
 
-loading
+carregamento (loading)
 
 cache
 
-invalidation
+invalidação
 
-retries
-
-
+tentativas automáticas (retries)
 
 ---
 
-5.5 Accessibility Prompting
+5.5 Prompts para Acessibilidade
 
-Specify:
+Especifique:
 
-keyboard navigation
+navegação por teclado
 
-aria labels
+rótulos aria (aria labels)
 
-focus states
+estados de foco (focus)
 
-semantic HTML
+HTML semântico
 
-screen reader compatibility
-
-
+compatibilidade com leitores de tela
 
 ---
 
-6. Back-End Generation Best Practices
+6. Boas Práticas para Geração de Back-End
 
-6.1 Backend Prompt Structure
+6.1 Estrutura de Prompt para Backend
 
-Specify:
+Especifique:
 
 framework
 
-auth model
+modelo de autenticação
 
-DB model
+modelo de banco de dados (DB)
 
-validation
+validação
 
-logging
+registro de logs
 
-error handling
-
-
+tratamento de erros
 
 ---
 
-6.2 API Prompt Example
+6.2 Exemplo de Prompt de API
 
-Generate REST API endpoint for wallet transfer.
+Gere um endpoint de API REST para transferência de carteira.
 
-Requirements:
-- authentication
-- idempotency
-- validation
-- ledger write
-- audit log
-- transaction safety
-- rollback on failure
-
-
----
-
-6.3 Validation Prompting
-
-Always require:
-
-schema validation
-
-type validation
-
-business rule validation
-
-abuse prevention
-
-
+Requisitos:
+- autenticação
+- idempotência
+- validação
+- gravação no livro-razão (ledger)
+- log de auditoria
+- segurança transacional
+- reversão (rollback) em caso de falha
 
 ---
 
-6.4 Error Handling
+6.3 Prompts para Validação
 
-Specify:
+Sempre exija:
 
-typed errors
+validação de esquema (schema)
 
-retry safety
+validação de tipos
 
-idempotency
+validação de regras de negócio
 
-rollback behavior
-
-observability logging
-
-
+prevenção de abusos
 
 ---
 
-7. Database Prompting
+6.4 Tratamento de Erros
 
-7.1 Schema Prompting
+Especifique:
 
-Prompt:
+erros tipados
 
-entities
+segurança em tentativas (retry safety)
 
-constraints
+idempotência
 
-foreign keys
+comportamento de rollback
 
-indexes
-
-tenancy
-
-audit columns
-
-
+logs para observabilidade
 
 ---
 
-7.2 Good Schema Prompt Example
+7. Prompts para Banco de Dados
 
-Design Postgres schema for wallet ledger.
+7.1 Prompts para Esquema (Schema)
 
-Requirements:
-- immutable entries
-- debit/credit
-- double-entry accounting
-- account hierarchy
-- indexes
-- audit timestamps
+Insira no prompt:
 
+entidades
 
----
+restrições (constraints)
 
-7.3 Always Require
+chaves estrangeiras
 
-created_at
+índices
 
-updated_at
+multilocação (tenancy)
 
-deleted_at (if needed)
-
-audit actor
-
-versioning
-
-indexes
-
-constraints
-
-
+colunas de auditoria
 
 ---
 
-8. Security Prompting
+7.2 Exemplo de Prompt de Esquema Bom
 
-8.1 Security Must Be Explicit
+Projete um esquema Postgres para livro-razão (ledger) de carteira.
 
-Never assume Lovable adds security.
-
-Prompt explicitly for:
-
-auth
-
-RBAC
-
-validation
-
-secret handling
-
-logging
-
-abuse prevention
-
-
+Requisitos:
+- entradas imutáveis
+- débito/crédito
+- contabilidade de dupla entrada
+- hierarquia de contas
+- índices
+- marcações de tempo (timestamps) de auditoria
 
 ---
 
-8.2 Security Prompt Example
+7.3 Sempre Exija
 
-Generate secure API endpoint.
+created_at (criado_em)
 
-Requirements:
-- JWT validation
+updated_at (atualizado_em)
+
+deleted_at (excluído_em - se necessário)
+
+autor da auditoria (audit actor)
+
+controle de versão
+
+índices
+
+restrições (constraints)
+
+---
+
+8. Prompts para Segurança
+
+8.1 A Segurança Deve Ser Explícita
+
+Nunca presuma que o Lovable adicionará segurança por conta própria.
+
+Crie prompts explícitos para:
+
+autenticação (auth)
+
+RBAC (controle de acesso baseado em funções)
+
+validação
+
+manipulação de segredos (secrets)
+
+registro de logs
+
+prevenção de abusos
+
+---
+
+8.2 Exemplo de Prompt de Segurança
+
+Gere um endpoint de API seguro.
+
+Requisitos:
+- validação de JWT
 - RBAC
-- rate limiting
-- audit log
-- input validation
-- no secret leakage
-
-
----
-
-8.3 Security Checklist
-
-Require:
-
-OWASP-safe patterns
-
-injection prevention
-
-CSRF protection
-
-auth enforcement
-
-validation
-
-output sanitization
-
-
+- limitação de taxa (rate limiting)
+- log de auditoria
+- validação de entrada (input validation)
+- sem vazamento de segredos (secrets)
 
 ---
 
-9. Refactoring with Lovable
+8.3 Lista de Verificação (Checklist) de Segurança
 
-9.1 Refactor Prompting
+Exija:
 
-Use Lovable for:
+padrões seguros contra OWASP
 
-split components
+prevenção de injeção (injection)
 
-simplify logic
+proteção contra CSRF
 
-optimize performance
+aplicação de autenticação
 
-improve readability
+validação
 
-reduce duplication
-
-
+higienização de saída (output sanitization)
 
 ---
 
-9.2 Refactor Example
+9. Refatoração com o Lovable
 
-Refactor this component.
+9.1 Prompts para Refatoração
 
-Requirements:
-- extract reusable hooks
-- reduce re-renders
-- improve readability
-- preserve behavior
+Use o Lovable para:
 
+dividir componentes
+
+simplificar a lógica
+
+otimizar o desempenho
+
+melhorar a legibilidade
+
+reduzir a duplicação
 
 ---
 
-10. Prompt Recipes
+9.2 Exemplo de Refatoração
 
+Refatore este componente.
+
+Requisitos:
+- extrair hooks reutilizáveis
+- reduzir renderizações desnecessárias (re-renders)
+- melhorar a legibilidade
+- preservar o comportamento original
 
 ---
 
-10.1 SaaS App Prompt
+10. Receitas de Prompts (Prompt Recipes)
 
-Build SaaS admin dashboard.
+---
 
-Requirements:
-- auth
-- billing page
-- analytics
-- settings
-- responsive
+10.1 Prompt para Aplicativo SaaS
+
+Construa um painel administrativo SaaS.
+
+Requisitos:
+- autenticação (auth)
+- página de faturamento (billing)
+- análise de dados (analytics)
+- configurações (settings)
+- responsivo
 - TypeScript
 
+---
+
+10.2 Prompt para Aplicativo de Fintech
+
+Construa um painel de carteira.
+
+Requisitos:
+- saldo
+- transações
+- exibição baseada em livro-razão (ledger)
+- UI de transferência
+- integração segura com API
 
 ---
 
-10.2 Fintech App Prompt
+10.3 Prompt para Marketplace
 
-Build wallet dashboard.
+Construa uma página de listagem de produtos para marketplace.
 
-Requirements:
-- balance
-- transactions
-- ledger-based display
-- transfer UI
-- secure API integration
-
+Requisitos:
+- filtros
+- busca
+- modal de detalhes
+- chamada para ação (CTA) de checkout
 
 ---
 
-10.3 Marketplace Prompt
+10.4 Prompt para Ferramenta Interna (Internal Tool)
 
-Build marketplace listing page.
+Construa um painel de operações (ops).
 
-Requirements:
-- filters
-- search
-- detail modal
-- checkout CTA
-
-
----
-
-10.4 Internal Tool Prompt
-
-Build ops dashboard.
-
-Requirements:
-- tables
-- filters
-- actions
-- role-based access
-
+Requisitos:
+- tabelas
+- filtros
+- ações
+- acesso baseado em funções (role-based access)
 
 ---
 
-11. Anti-Patterns
+11. Antipadrões (Anti-Patterns)
 
-11.1 One-Shot Whole App Prompting
+11.1 Prompts de "Um Clique" para o Aplicativo Inteiro (One-Shot Whole App)
 
-Bad:
+Ruim:
 
-Build my startup
+Construa a minha startup
 
-Creates chaos.
-
-
----
-
-11.2 Hidden Assumptions
-
-Never omit:
-
-auth
-
-DB model
-
-API rules
-
-architecture boundaries
-
-
+Isso cria o caos.
 
 ---
 
-11.3 Security Blind Spots
+11.2 Suposições Ocultas
 
-AI-generated code often misses:
+Nunca omita:
 
-auth edge cases
+autenticação (auth)
 
-abuse controls
+modelo de banco de dados (DB)
 
-secret exposure
+regras de API
 
-logging gaps
-
-
+limites da arquitetura
 
 ---
 
-11.4 No Human Review
+11.3 Pontos Cegos de Segurança
 
-Never deploy raw generated code.
+O código gerado por IA frequentemente deixa passar:
 
+casos extremos (edge cases) de autenticação
+
+controles de abuso
+
+exposição de segredos (secrets)
+
+lacunas nos logs
 
 ---
 
-12. Enterprise Workflow with Lovable
+11.4 Ausência de Revisão Humana
 
-12.1 Recommended Workflow
+Nunca implante (deploy) código gerado bruto.
 
-Discovery
+---
+
+12. Fluxo de Trabalho Corporativo com o Lovable
+
+12.1 Fluxo de Trabalho Recomendado
+
+Descoberta
    ↓
-Architecture
+Arquitetura
    ↓
-Prompt Planning
+Planejamento de Prompts
    ↓
-Generation
+Geração
    ↓
-Review
+Revisão
    ↓
-Refactor
+Refatoração
    ↓
-Security Review
+Revisão de Segurança
    ↓
-Testing
+Testes
    ↓
-Deploy
-
+Implantação (Deploy)
 
 ---
 
-12.2 Human Review Layers
+12.2 Camadas de Revisão Humana
 
-Review:
+Revise:
 
-architecture
+arquitetura
 
-security
+segurança
 
-domain correctness
+correção do domínio
 
-performance
+desempenho
 
-scalability
+escalabilidade
 
-observability
-
-
+observabilidade
 
 ---
 
-13. Lovable + Tooling Stack
+13. Lovable + Ecossistema de Ferramentas (Tooling Stack)
 
 13.1 Lovable + Supabase
 
-Good for:
+Bom para:
 
-auth
+autenticação (auth)
 
 Postgres
 
-storage
+armazenamento (storage)
 
 edge functions
-
-
 
 ---
 
 13.2 Lovable + Clerk
 
-Good for:
+Bom para:
 
-auth
+autenticação (auth)
 
-identity
+identidade
 
 RBAC
-
-
 
 ---
 
 13.3 Lovable + Stripe
 
-Good for:
+Bom para:
 
-billing
+faturamento (billing)
 
-subscriptions
+assinaturas
 
-payments
-
-
+pagamentos
 
 ---
 
 13.4 Lovable + Postgres
 
-Good for:
+Bom para:
 
-production relational systems
-
-
+sistemas relacionais de produção
 
 ---
 
 13.5 Lovable + Vercel
 
-Good for:
+Bom para:
 
-frontend hosting
+hospedagem de frontend
 
-edge deployment
-
-
+implantação em borda (edge deployment)
 
 ---
 
 13.6 Lovable + GitHub
 
-Good for:
+Bom para:
 
-version control
+controle de versão
 
-PR review
+revisão de Pull Requests (PR)
 
 CI/CD
 
+---
 
+14. Lista de Verificação de Prontidão para Produção (Production Readiness Checklist)
+
+Antes da produção, valide:
 
 ---
 
-14. Production Readiness Checklist
+Arquitetura
 
-Before production validate:
+limites definidos
 
+serviços definidos
 
----
-
-Architecture
-
-boundaries defined
-
-services defined
-
-DB modeled
-
-
+banco de dados modelado
 
 ---
 
-Security
+Segurança
 
-auth verified
+autenticação verificada
 
-RBAC verified
+RBAC verificado
 
-secrets safe
+segredos (secrets) protegidos
 
-validation complete
-
-
+validação concluída
 
 ---
 
-Performance
+Desempenho
 
-profiling done
+análise de perfil (profiling) realizada
 
-DB indexes checked
+índices do banco de dados checados
 
-caching reviewed
-
-
+estratégia de cache revisada
 
 ---
 
-Observability
+Observabilidade
 
 logs
 
-metrics
+métricas
 
-alerts
+alertas
 
-tracing
-
-
+rastreamento (tracing)
 
 ---
 
-Testing
+Testes
 
-unit tests
+testes unitários
 
-integration tests
+testes de integração
 
-e2e tests
+testes de ponta a ponta (e2e)
 
-failure testing
-
-
+testes de falha (resiliência)
 
 ---
 
-Governance
+Governança
 
-audit logs
+logs de auditoria
 
-deployment approvals
+aprovações de implantação
 
-rollback plans
-
-
+planos de contingência/reversão (rollback)
 
 ---
 
-15. Prompt Engineering Cheatsheet
+15. Guia Rápido (Cheatsheet) de Engenharia de Prompts
 
-Always Include
+Sempre Inclua
 
 framework
 
-architecture
+arquitetura
 
-constraints
+restrições
 
-design requirements
+requisitos de design
 
-validation
+validação
 
-security
+segurança
 
-error handling
+tratamento de erros
 
-output expectations
-
-
+expectativas de saída (output)
 
 ---
 
-Always Avoid
+Sempre Evite
 
-vague prompts
+prompts vagos
 
-whole-app prompts
+prompts para o aplicativo inteiro
 
-hidden assumptions
+suposições ocultas
 
-security omission
+omissão de segurança
 
-architecture ambiguity
-
-
+ambiguidade na arquitetura
 
 ---
 
-16. Architecture Principles
+16. Princípios de Arquitetura
 
-Lovable must be used under these principles:
-
-
----
-
-Principle 1
-
-AI assists implementation.
-
-Humans own architecture.
-
+O Lovable deve ser usado sob estes princípios:
 
 ---
 
-Principle 2
+Princípio 1
 
-Security must be explicitly prompted.
+A IA auxilia na implementação.
 
-
----
-
-Principle 3
-
-Generated code must be reviewed.
-
+Os humanos são os donos da arquitetura.
 
 ---
 
-Principle 4
+Princípio 2
 
-Refactoring is mandatory.
-
-
----
-
-Principle 5
-
-Production readiness is not generated automatically.
-
+A segurança deve ser solicitada explicitamente no prompt.
 
 ---
 
-Principle 6
+Princípio 3
 
-Prompt engineering is architecture engineering.
-
-
----
-
-17. Final Recommendation
-
-Lovable is best used as:
-
-> a force multiplier for engineers
-
-
-
-Not as:
-
-> a replacement for engineering
-
-
-
-The winning model is:
-
-Human architecture
-+ AI acceleration
-+ deterministic review
-+ security controls
-+ production hardening
-= production-grade systems
-
+Todo código gerado deve ser revisado.
 
 ---
 
+Princípio 4
+
+A refatoração é obrigatória.
+
+---
+
+Princípio 5
+
+A prontidão para produção não é gerada automaticamente.
+
+---
+
+Princípio 6
+
+Engenharia de prompts é engenharia de arquitetura.
+
+---
+
+17. Recomendação Final
+
+O Lovable é melhor utilizado como:
+
+> um multiplicador de força para engenheiros
+
+Não como:
+
+> um substituto para a engenharia
+
+O modelo vencedor é:
+
+Arquitetura humana
++ Aceleração por IA
++ Revisão determinística
++ Controles de segurança
++ Endurecimento (hardening) para produção
+= Sistemas em nível de produção
+
+---
