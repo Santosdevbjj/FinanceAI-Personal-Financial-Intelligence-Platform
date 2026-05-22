@@ -1,27 +1,3 @@
-Perfeito. Vamos gerar agora a Parte 8 completa do docs/TESTING.md, encerrando o documento.
-
-Esta seção cobre:
-
-Parte 8 — CI/CD Quality Gates + Final Checklist
-
-Cobertura completa de:
-
-GitHub Actions testing pipeline
-
-blocking rules
-
-release gates
-
-coverage enforcement
-
-final go-live checklist
-
-
-
----
-
-docs/TESTING.md (Parte 8)
-
 # Parte 8 — CI/CD Quality Gates + Final Checklist
 
 ---
@@ -785,4 +761,3 @@ production readiness review aprovado
 
 ---
 
-Perfeito. Com isso o **`docs/TESTING.md` está 100% completo (Partes 1 → 8 finalizadas)**.
