@@ -166,7 +166,7 @@ Criar critérios automáticos de bloqueio.
 
 ---
 
-103.2 Tipos de gates
+## 103.2 Tipos de gates
 
 Gate	Bloqueia quando
 
@@ -183,26 +183,36 @@ Release gate	checklist incompleto
 
 ---
 
-103.3 Blocking philosophy
+## 103.3 Blocking philosophy
 
 Por padrão:
 
+```
 fail closed
+
+```
+
 
 Não:
 
+```
 warn and continue
+
+```
+
 
 Para itens críticos.
 
 
 ---
 
-104. Coverage Enforcement
+## 104. Coverage Enforcement
 
-104.1 Coverage thresholds
+### 104.1 Coverage thresholds
 
 Exemplo:
+
+```
 
 Tipo	Threshold
 
@@ -213,23 +223,27 @@ Critical services	>= 95%
 Financial logic	>= 98%
 
 
+```
 
 ---
 
-104.2 Mutation thresholds
+## 104.2 Mutation thresholds
 
 Área	Threshold
+
+```
 
 Core domain	>= 80%
 Financial logic	>= 90%
 
+```
 
 
 ---
 
-104.3 Coverage blocking rule
+## 104.3 Coverage blocking rule
 
-CI falha se:
+### CI falha se:
 
 threshold não atingido
 
@@ -241,7 +255,7 @@ mutation below threshold
 
 ---
 
-105. Security Release Gates
+## 105. Security Release Gates
 
 Release bloqueado se:
 
@@ -263,9 +277,9 @@ AI security issue
 
 ---
 
-106. AI Quality Gates
+## 106. AI Quality Gates
 
-106.1 Release bloqueado se
+### 106.1 Release bloqueado se
 
 hallucination rate > threshold
 
@@ -283,20 +297,22 @@ regression detectada
 
 ---
 
-106.2 Threshold exemplo
+## 106.2 Threshold exemplo
 
 Métrica	Gate
 
+``` 
 Safety	> 99.5%
 Groundedness	> 95%
 Hallucination	< 1%
 Recommendation relevance	> 90%
 
+```
 
 
 ---
 
-107. Performance Gates
+## 107. Performance Gates
 
 Release bloqueado se:
 
@@ -316,7 +332,7 @@ error rate acima threshold
 
 ---
 
-108. Reliability Gates
+##108. Reliability Gates
 
 Release bloqueado se:
 
@@ -334,7 +350,7 @@ resilience thresholds falham
 
 ---
 
-109. Contract / Compatibility Gates
+## 109. Contract / Compatibility Gates
 
 Bloquear se:
 
@@ -350,7 +366,7 @@ event schema incompatível
 
 ---
 
-110. Compliance Gates
+## 110. Compliance Gates
 
 Bloquear se:
 
@@ -366,7 +382,7 @@ retention policy inconsistente
 
 ---
 
-111. Branch Protection Rules
+## 111. Branch Protection Rules
 
 Obrigatório:
 
@@ -386,7 +402,7 @@ status checks mandatory
 
 ---
 
-112. Pull Request Quality Checklist
+## 112. Pull Request Quality Checklist
 
 Todo PR deve validar:
 
@@ -410,7 +426,7 @@ security impact revisado
 
 ---
 
-113. Artifact Validation
+## 113. Artifact Validation
 
 Validar antes de release:
 
@@ -428,7 +444,7 @@ checksum validation
 
 ---
 
-114. Staging Release Validation
+## 114. Staging Release Validation
 
 Deploy em staging só é aprovado se:
 
@@ -448,7 +464,7 @@ observability ok
 
 ---
 
-115. Canary Release Gates
+## 115. Canary Release Gates
 
 Antes de expandir rollout
 
@@ -484,7 +500,7 @@ increased failures
 
 ---
 
-116. Production Readiness Review (PRR)
+## 116. Production Readiness Review (PRR)
 
 Checklist obrigatório:
 
@@ -506,9 +522,9 @@ AI risk review concluído
 
 ---
 
-117. Final Go-Live Checklist
+## 117. Final Go-Live Checklist
 
-Produto
+#### Produto
 
 feature completa
 
@@ -522,7 +538,7 @@ legal/compliance ok
 
 ---
 
-Código
+#### Código
 
 lint green
 
@@ -538,7 +554,7 @@ contracts ok
 
 ---
 
-Segurança
+#### Segurança
 
 SAST green
 
@@ -552,7 +568,7 @@ pentest findings tratados
 
 ---
 
-AI
+#### AI
 
 hallucination acceptable
 
@@ -568,7 +584,7 @@ fallback validado
 
 ---
 
-Infra
+#### Infra
 
 autoscaling validado
 
@@ -582,7 +598,7 @@ DR validado
 
 ---
 
-Observability
+#### Observability
 
 dashboards prontos
 
@@ -596,7 +612,7 @@ logs auditáveis
 
 ---
 
-Operação
+#### Operação
 
 on-call definido
 
@@ -610,7 +626,7 @@ incident procedures testadas
 
 ---
 
-118. Release Blocking Rules
+## 118. Release Blocking Rules
 
 Deploy NÃO pode acontecer se:
 
@@ -630,7 +646,7 @@ security critical aberta
 
 ---
 
-119. Post-Release Validation
+## 119. Post-Release Validation
 
 Após deploy:
 
@@ -652,7 +668,7 @@ business KPI validation
 
 ---
 
-120. Hypercare Validation
+## 120. Hypercare Validation
 
 Nas primeiras horas:
 
@@ -676,7 +692,7 @@ cost spikes
 
 ---
 
-121. Incident Rollback Criteria
+## 121. Incident Rollback Criteria
 
 Rollback automático ou manual se:
 
@@ -696,7 +712,7 @@ availability breach
 
 ---
 
-122. Continuous Quality Feedback Loop
+## 122. Continuous Quality Feedback Loop
 
 Aprendizados de produção devem alimentar:
 
@@ -716,7 +732,7 @@ quality gates
 
 ---
 
-123. Testing Governance Metrics
+## 123. Testing Governance Metrics
 
 Monitorar continuamente:
 
@@ -735,9 +751,9 @@ MTTR	operação
 
 ---
 
-124. Final Definition of Done (Testing)
+## 124. Final Definition of Done (Testing)
 
-O FinanceAI está pronto para produção quando:
+#### O FinanceAI está pronto para produção quando:
 
 unit tests green
 
