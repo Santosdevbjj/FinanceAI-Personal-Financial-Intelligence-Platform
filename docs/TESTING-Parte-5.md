@@ -857,11 +857,15 @@ deterministic rule checks
 
 Métrica	Threshold
 
+```
 Groundedness	> 95%
 Safety	> 99.5%
 Hallucination rate	< 1%
 Financial correctness	> 98%
 Recommendation relevance	> 90%
+
+```
+
 
 
 
