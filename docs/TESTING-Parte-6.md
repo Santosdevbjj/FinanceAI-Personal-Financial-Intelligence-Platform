@@ -196,16 +196,16 @@ blocked
 ```
 ---
 
-51. Dependency Scanning (SCA)
+## 51. Dependency Scanning (SCA)
 
-51.1 Objetivo
+### 51.1 Objetivo
 
 Detectar vulnerabilidades em dependências.
 
 
 ---
 
-51.2 Escopo
+## 51.2 Escopo
 
 Validar:
 
@@ -225,7 +225,7 @@ GitHub Actions dependencies
 
 ---
 
-51.3 Detectar
+## 51.3 Detectar
 
 CVEs
 
@@ -241,7 +241,7 @@ typosquatting risks
 
 ---
 
-51.4 Ferramentas
+## 51.4 Ferramentas
 
 Snyk
 
@@ -257,7 +257,7 @@ OSV Scanner
 
 ---
 
-51.5 Blocking rules
+## 51.5 Blocking rules
 
 CI falha se:
 
@@ -271,16 +271,16 @@ malicious package detectado
 
 ---
 
-52. Secrets Scanning
+## 52. Secrets Scanning
 
-52.1 Objetivo
+### 52.1 Objetivo
 
 Detectar exposição de segredos.
 
 
 ---
 
-52.2 Procurar por
+## 52.2 Procurar por
 
 API keys
 
@@ -304,7 +304,7 @@ webhook secrets
 
 ---
 
-52.3 Ferramentas
+## 52.3 Ferramentas
 
 Gitleaks
 
@@ -316,12 +316,12 @@ GitHub Secret Scanning
 
 ---
 
-52.4 Casos críticos
+## 52.4 Casos críticos
 
 
 ---
 
-Secret em commit
+### Secret em commit
 
 Esperado:
 
@@ -330,7 +330,7 @@ build fail
 
 ---
 
-Secret em IaC
+### Secret em IaC
 
 Esperado:
 
@@ -339,7 +339,7 @@ blocked
 
 ---
 
-Secret em logs
+### Secret em logs
 
 Esperado:
 
@@ -348,16 +348,16 @@ critical incident
 
 ---
 
-53. Authentication Testing
+## 53. Authentication Testing
 
-53.1 Objetivo
+### 53.1 Objetivo
 
 Garantir robustez de autenticação.
 
 
 ---
 
-53.2 Testar
+## 53.2 Testar
 
 login
 
@@ -381,57 +381,67 @@ token replay prevention
 
 ---
 
-53.3 Casos críticos
+## 53.3 Casos críticos
 
 
 ---
 
-Invalid password
+### Invalid password
 
 Esperado:
 
+```
+401
+``` 
+
+---
+
+### Expired token
+
+Esperado:
+
+```
 401
 
+```
 
 ---
 
-Expired token
+### Revoked token
 
 Esperado:
 
-401
-
-
----
-
-Revoked token
-
-Esperado:
-
+```
 access denied
 
+```
+
 
 ---
 
-Replay token
+### Replay token
 
 Esperado:
 
+```
 blocked
+
+```
+
 
 
 ---
 
-54. Authorization Testing
+## 54. Authorization Testing
 
-54.1 Objetivo
+### 54.1 Objetivo
 
 Garantir least privilege.
 
 
 ---
 
-54.2 Testar
+## 54.2 Testar
 
 RBAC
 
@@ -449,48 +459,60 @@ internal service auth
 
 ---
 
-54.3 Casos críticos
+## 54.3 Casos críticos
 
 
 ---
 
-User acessando recurso de outro tenant
+### User acessando recurso de outro tenant
 
 Esperado:
 
+```
 403 Forbidden
 
+```
+
 
 ---
 
-Non-admin acessando admin endpoint
+### Non-admin acessando admin endpoint
 
 Esperado:
 
+```
+
 blocked
+
+```
 
 
 ---
 
-Horizontal privilege escalation
+### Horizontal privilege escalation
 
 Esperado:
 
+```
 blocked
 
+```
 
 ---
 
-Vertical privilege escalation
+### Vertical privilege escalation
 
 Esperado:
 
+```
 blocked
+
+```
 
 
 ---
 
-55. Session Security Testing
+## 55. Session Security Testing
 
 Testar
 
@@ -512,16 +534,16 @@ token rotation
 
 ---
 
-56. API Security Testing
+## 56. API Security Testing
 
-56.1 Objetivo
+### 56.1 Objetivo
 
 Validar APIs contra ataques.
 
 
 ---
 
-56.2 Testar
+## 56.2 Testar
 
 injection
 
@@ -543,9 +565,9 @@ mass assignment
 
 ---
 
-56.3 OWASP API Top Risks
+## 56.3 OWASP API Top Risks
 
-Cobertura obrigatória:
+#### Cobertura obrigatória:
 
 API1 Broken Object Level Authorization
 
@@ -571,9 +593,9 @@ API10 Unsafe Consumption
 
 ---
 
-57. OWASP Web Security Testing
+## 57. OWASP Web Security Testing
 
-Cobertura obrigatória
+#### Cobertura obrigatória
 
 Injection
 
@@ -599,7 +621,7 @@ Logging failures
 
 ---
 
-58. Input Validation Security Testing
+## 58. Input Validation Security Testing
 
 Testar
 
@@ -621,7 +643,7 @@ payload smuggling
 
 ---
 
-59. File Upload Security Testing
+## 59. File Upload Security Testing
 
 Testar
 
@@ -643,12 +665,14 @@ malware signatures
 
 Esperado:
 
+```
 blocked
 
+```
 
 ---
 
-60. Cryptography Testing
+## 60. Cryptography Testing
 
 Validar
 
@@ -684,7 +708,7 @@ broken signatures
 
 ---
 
-61. Infrastructure Security Testing
+## 61. Infrastructure Security Testing
 
 Testar
 
@@ -718,7 +742,7 @@ Prowler
 
 ---
 
-62. Container Security Testing
+## 62. Container Security Testing
 
 Validar
 
@@ -738,7 +762,7 @@ insecure capabilities
 
 ---
 
-63. Cloud Security Testing
+## 63. Cloud Security Testing
 
 Testar
 
@@ -758,7 +782,7 @@ audit logging
 
 ---
 
-64. Logging & Audit Security Testing
+## 64. Logging & Audit Security Testing
 
 Validar
 
@@ -776,16 +800,16 @@ suspicious event logging
 
 ---
 
-65. AI Security Testing
+## 65. AI Security Testing
 
-65.1 Objetivo
+### 65.1 Objetivo
 
 Testar segurança de componentes AI.
 
 
 ---
 
-65.2 Testar
+## 65.2 Testar
 
 prompt injection
 
@@ -805,7 +829,7 @@ unsafe recommendations
 
 ---
 
-Casos críticos
+### Casos críticos
 
 Input:
 
@@ -840,7 +864,7 @@ blocked
 
 ---
 
-66. Prompt Security Testing
+## 66. Prompt Security Testing
 
 Testar
 
@@ -858,7 +882,7 @@ tool misuse attempts
 
 ---
 
-67. Adversarial Security Testing
+## 67. Adversarial Security Testing
 
 Testar
 
@@ -880,9 +904,9 @@ AI adversarial prompts
 
 ---
 
-68. Penetration Testing
+## 68. Penetration Testing
 
-68.1 Objetivo
+### 68.1 Objetivo
 
 Executar testes manuais especializados.
 
@@ -911,7 +935,7 @@ mobile
 
 ---
 
-Frequência
+### Frequência
 
 Tipo	Frequência
 
@@ -923,7 +947,7 @@ Pre-major release	mandatory
 
 ---
 
-69. Security Chaos Testing
+## 69. Security Chaos Testing
 
 Testar cenários
 
@@ -941,7 +965,7 @@ compromised token simulation
 
 ---
 
-70. Security Monitoring Validation
+## 70. Security Monitoring Validation
 
 Validar alertas
 
@@ -961,7 +985,7 @@ AI abuse patterns
 
 ---
 
-71. Security Quality Gates
+## 71. Security Quality Gates
 
 CI/CD deve falhar se:
 
@@ -985,7 +1009,7 @@ AI security failure
 
 ---
 
-72. Security Severity Policy
+## 72. Security Severity Policy
 
 Severidade	Regra
 
@@ -998,9 +1022,9 @@ Low	backlog
 
 ---
 
-73. Definition of Done (Security Testing)
+## 73. Definition of Done (Security Testing)
 
-Feature só está pronta quando:
+### Feature só está pronta quando:
 
 SAST green
 
@@ -1027,6 +1051,3 @@ CI security gates green
 
 ---
 
-Perfeito. Agora a sequência correta segue para:
-
-**Parte 7 — Performance / Chaos / Reliability** ⚡
