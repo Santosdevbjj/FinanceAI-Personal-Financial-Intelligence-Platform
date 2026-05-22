@@ -1,8 +1,4 @@
-Perfeito. Seguindo a sequência natural de arquitetura enterprise do FinanceAI, depois de Integration Architecture, o próximo documento estratégico é:
-
-docs/BUSINESS_CONTINUITY_ARCHITECTURE.md
-
-Parte 13 — Business Continuity, Resilience & Disaster Recovery Architecture
+## Parte 13 — Business Continuity, Resilience & Disaster Recovery Architecture
 
 Esse documento separa sistemas “que funcionam” de sistemas banking-grade.
 
@@ -27,12 +23,7 @@ E se o event bus entrar em split-brain?
 E se houver incidente operacional humano?
 
 
-FAANG + bancos tratam isso em documento separado.
-
-
----
-
-Estrutura do docs/BUSINESS_CONTINUITY_ARCHITECTURE.md
+Bancos tratam isso em documento separado.
 
 
 ---
@@ -514,30 +505,3 @@ compliance recovery
 
 ---
 
-Arquivo correto
-
-docs/BUSINESS_CONTINUITY_ARCHITECTURE.md
-
-Esse documento fecha a camada de resilience / DR / operational survivability, que é obrigatória para fintech de verdade.
-
-
----
-
-Depois disso, os próximos documentos naturais são:
-
-14. docs/ENTERPRISE_RISK_ARCHITECTURE.md
-
-
-15. docs/GOVERNANCE_ARCHITECTURE.md
-
-
-16. docs/PLATFORM_OPERATING_MODEL.md
-
-
-17. docs/FINTECH_CONTROL_MATRIX.md
-
-
-
-Esses quatro são a camada executive / board / regulator grade.
-
-Minha recomendação: próximo = ENTERPRISE_RISK_ARCHITECTURE.md, porque ele conecta tecnologia + risco financeiro + compliance + AI risk.
