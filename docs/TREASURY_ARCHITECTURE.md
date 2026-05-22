@@ -2560,5 +2560,1867 @@ Stress Survival Horizon
 
 
 
+---
+
+4. Liquidity Management Architecture
+
+4.1 Overview
+
+Liquidity management is a core treasury capability responsible for ensuring that the institution maintains sufficient cash and near-cash resources to meet:
+
+Operational obligations
+
+Settlement commitments
+
+Regulatory reserve requirements
+
+Unexpected stress scenarios
+
+Capital deployment strategies
+
+Investment and treasury optimization objectives
+
+
+The platform must provide:
+
+Real-time liquidity visibility
+
+Intraday liquidity monitoring
+
+Cash positioning
+
+Forecasting
+
+Funding optimization
+
+Multi-entity treasury orchestration
+
+Stress liquidity simulation
+
+Regulatory liquidity controls
+
+
+
+---
+
+4.2 Liquidity Domains
+
+Treasury liquidity is divided into distinct operating domains.
+
+Operational Liquidity
+
+Short-term liquidity required for daily operations.
+
+Examples:
+
+Payroll
+
+Vendor payments
+
+Settlement obligations
+
+Tax obligations
+
+Internal transfers
+
+Customer withdrawals
+
+
+Characteristics:
+
+High-frequency
+
+Predictable
+
+Short horizon
+
+Operational risk sensitive
+
+
+
+---
+
+Strategic Liquidity
+
+Liquidity allocated for strategic balance sheet decisions.
+
+Examples:
+
+Investment deployment
+
+Capital allocation
+
+Debt repayment
+
+Reserve repositioning
+
+Strategic acquisitions
+
+Treasury optimization
+
+
+Characteristics:
+
+Medium/long horizon
+
+Decision-driven
+
+Yield sensitive
+
+
+
+---
+
+Contingency Liquidity
+
+Liquidity reserved for crisis and stress situations.
+
+Examples:
+
+Bank run scenarios
+
+Market dislocation
+
+Counterparty failure
+
+Settlement disruption
+
+Operational incidents
+
+Regulatory intervention scenarios
+
+
+Characteristics:
+
+Highly controlled
+
+Restricted access
+
+Crisis governance required
+
+
+
+---
+
+Regulatory Liquidity
+
+Liquidity maintained to satisfy legal and prudential obligations.
+
+Examples:
+
+Reserve requirements
+
+LCR assets
+
+HQLA pools
+
+Central bank collateral
+
+Segregated customer funds
+
+Safeguarded balances
+
+
+Characteristics:
+
+Compliance driven
+
+Restricted usage
+
+Continuously monitored
+
+
+
+---
+
+4.3 Liquidity Position Model
+
+Treasury must maintain liquidity state across multiple dimensions.
+
+Position Dimensions
+
+Liquidity Position
+ ├── Legal Entity
+ ├── Currency
+ ├── Account
+ ├── Region
+ ├── Counterparty
+ ├── Instrument
+ ├── Time Bucket
+ ├── Availability Status
+ ├── Restriction Class
+ └── Regulatory Classification
+
+
+---
+
+Liquidity States
+
+Funds can exist in states:
+
+State	Description
+
+Available	Immediately deployable
+Restricted	Regulatory/legal restriction
+Reserved	Allocated but not settled
+Pending	In-flight liquidity
+Encumbered	Collateralized/pledged
+Forecasted	Expected future liquidity
+Stress Buffer	Reserved contingency funds
+
+
+
+---
+
+4.4 Real-Time Cash Positioning Engine
+
+Treasury must continuously compute actual cash position.
+
+Inputs
+
+Sources include:
+
+Bank balances
+
+Internal ledgers
+
+Settlement queues
+
+Payment pipelines
+
+Receivable schedules
+
+Market funding positions
+
+Investment maturity ladders
+
+Collateral positions
+
+FX settlement exposure
+
+Treasury funding lines
+
+
+
+---
+
+Computation Formula
+
+Net Liquidity Position =
+Opening Cash
++ Incoming Confirmed Cash
++ Forecasted Inflows
+- Pending Outflows
+- Reserved Liquidity
+- Regulatory Locks
+- Settlement Exposure
+- Stress Buffer Allocation
+
+
+---
+
+Positioning Frequencies
+
+Frequency	Use Case
+
+Real-time	Critical cash operations
+Intraday	Treasury operations
+Hourly	Monitoring
+Daily	Reporting
+Forecast horizon	Strategic liquidity planning
+
+
+
+---
+
+4.5 Liquidity Forecasting Architecture
+
+Treasury forecasting combines deterministic and probabilistic models.
+
+
+---
+
+Forecast Inputs
+
+Deterministic Inputs
+
+Known events:
+
+Payroll
+
+Loan maturities
+
+Scheduled settlements
+
+Bond coupons
+
+Tax deadlines
+
+Vendor payments
+
+Debt obligations
+
+Regulatory transfers
+
+
+
+---
+
+Probabilistic Inputs
+
+Behavior-based estimates:
+
+Customer withdrawal behavior
+
+Deposit attrition
+
+Payment velocity
+
+Merchant settlement behavior
+
+Market stress reactions
+
+Counterparty delay probabilities
+
+
+
+---
+
+Forecast Horizons
+
+Horizon	Purpose
+
+T+0	Intraday
+T+1	Next-day liquidity
+T+7	Short-term
+T+30	Treasury planning
+T+90	Strategic planning
+T+365	Balance sheet optimization
+
+
+
+---
+
+Forecast Engine Outputs
+
+Forecast Result
+ ├── Expected Cash Position
+ ├── Confidence Bands
+ ├── Stress Scenarios
+ ├── Funding Gap Detection
+ ├── Buffer Adequacy
+ ├── Regulatory Exposure
+ └── Capital Efficiency Signals
+
+
+---
+
+4.6 Liquidity Buffer Architecture
+
+Treasury must maintain liquidity safety layers.
+
+
+---
+
+Buffer Layers
+
+Layer 1 — Immediate Operational Buffer
+
+Purpose:
+
+Absorb intraday liquidity shocks.
+
+Examples:
+
+Withdrawal spikes
+
+Settlement mismatch
+
+Payment queue bursts
+
+
+Characteristics:
+
+High availability
+
+Cash or central bank reserves
+
+
+
+---
+
+Layer 2 — Short-Term Stress Buffer
+
+Purpose:
+
+Absorb short horizon stress.
+
+Examples:
+
+Counterparty delays
+
+Market funding disruptions
+
+Intraday settlement failure
+
+
+Characteristics:
+
+Near-cash instruments
+
+HQLA
+
+
+
+---
+
+Layer 3 — Crisis Liquidity Buffer
+
+Purpose:
+
+Institution survival in severe stress.
+
+Examples:
+
+Bank run
+
+Funding market freeze
+
+systemic event
+
+
+Characteristics:
+
+Governance protected
+
+Board-level release controls
+
+
+
+---
+
+4.7 Funding Gap Detection Engine
+
+Treasury continuously detects projected deficits.
+
+
+---
+
+Gap Computation
+
+Funding Gap =
+Projected Outflows
+- Available Liquidity
+- Expected Inflows
+- Contingent Funding Sources
+
+
+---
+
+Severity Classification
+
+Severity	Meaning
+
+Low	Normal gap
+Moderate	Treasury action needed
+High	Funding intervention required
+Critical	Crisis escalation
+
+
+
+---
+
+Automated Responses
+
+Possible actions:
+
+Internal cash sweep
+
+Funding line drawdown
+
+Investment liquidation
+
+Payment throttling
+
+Treasury hedge execution
+
+Escalation workflow
+
+Regulatory notification trigger
+
+
+
+---
+
+4.8 Intraday Liquidity Monitoring
+
+Intraday liquidity is critical for modern treasury operations.
+
+
+---
+
+Monitoring Metrics
+
+Treasury monitors:
+
+Opening position
+
+Current position
+
+Lowest intraday balance
+
+Payment queue pressure
+
+Settlement concentration
+
+Counterparty concentration
+
+Peak usage
+
+Funding line utilization
+
+Collateral consumption
+
+stress reserve usage
+
+
+
+---
+
+Alert Thresholds
+
+Threshold	Trigger
+
+Warning	Early deterioration
+Action	Treasury intervention
+Critical	Crisis process start
+
+
+
+---
+
+4.9 Multi-Currency Liquidity Management
+
+Treasury must manage liquidity by currency.
+
+
+---
+
+Core Requirements
+
+Per-currency visibility for:
+
+Functional currency
+
+Settlement currency
+
+Reserve currency
+
+Customer currency
+
+Hedged positions
+
+Cross-border obligations
+
+
+
+---
+
+FX Liquidity Risks
+
+Risks include:
+
+FX settlement mismatch
+
+Currency funding shortages
+
+FX market closure
+
+Cross-currency basis widening
+
+trapped local liquidity
+
+
+
+---
+
+Treasury Controls
+
+Controls include:
+
+Currency-specific limits
+
+FX contingency buffers
+
+Hedging thresholds
+
+settlement reserve rules
+
+regional restrictions
+
+
+
+---
+
+4.10 Liquidity Concentration Risk Controls
+
+Treasury must prevent excessive liquidity dependence.
+
+
+---
+
+Concentration Dimensions
+
+Dimension	Examples
+
+Bank	Cash concentration
+Region	Geographic concentration
+Currency	Currency dependency
+Counterparty	Funding concentration
+Instrument	Asset class dependence
+
+
+
+---
+
+Control Actions
+
+Diversification thresholds
+
+hard limits
+
+exposure alerts
+
+contingency funding diversification
+
+counterparty substitution planning
+
+
+
+---
+
+4.11 Stress Liquidity Simulation
+
+Treasury must model crisis scenarios.
+
+
+---
+
+Scenario Examples
+
+Customer Run Scenario
+
+Stress:
+
+Mass withdrawals
+
+payment surge
+
+deposit flight
+
+
+
+---
+
+Counterparty Failure
+
+Stress:
+
+Funding source collapse
+
+settlement delays
+
+collateral freeze
+
+
+
+---
+
+Market Freeze
+
+Stress:
+
+no short-term funding
+
+FX liquidity disruption
+
+asset liquidity discount
+
+
+
+---
+
+Operational Crisis
+
+Stress:
+
+payment system outage
+
+treasury operational disruption
+
+liquidity visibility degradation
+
+
+
+---
+
+Simulation Outputs
+
+Stress Result
+ ├── Survival Horizon
+ ├── Buffer Consumption
+ ├── Funding Deficit
+ ├── Regulatory Breach Risk
+ ├── Emergency Action Requirements
+ └── Recovery Path
+
+
+---
+
+4.12 Liquidity Governance Controls
+
+Liquidity management requires governance controls.
+
+
+---
+
+Key Controls
+
+Minimum liquidity thresholds
+
+crisis reserve lock controls
+
+approval gates for buffer usage
+
+funding escalation workflow
+
+treasury override controls
+
+board-level crisis triggers
+
+regulator reporting controls
+
+
+
+---
+
+Segregation of Duties
+
+Role	Responsibility
+
+Treasury Ops	Daily liquidity
+Treasury Risk	Monitoring
+Finance	Forecast validation
+CRO	Risk oversight
+CFO	Funding decisions
+Board	Crisis approval
+
+
+
+---
+
+4.13 Audit & Observability
+
+Liquidity systems must provide full traceability.
+
+
+---
+
+Audit Requirements
+
+Capture:
+
+balance source lineage
+
+forecast inputs
+
+funding decisions
+
+stress scenario execution
+
+manual overrides
+
+liquidity breaches
+
+emergency actions
+
+approvals
+
+
+
+---
+
+Observability Metrics
+
+Track:
+
+liquidity latency
+
+forecast accuracy
+
+false alert rate
+
+funding utilization
+
+reserve depletion speed
+
+intraday risk spikes
+
+
+
+---
+
+4.14 Architecture Principles
+
+Treasury liquidity architecture must be:
+
+Real-time
+
+Resilient
+
+Explainable
+
+Stress-aware
+
+Regulatory compliant
+
+Multi-currency capable
+
+Crisis-operable
+
+Highly observable
+
+Audit-grade
+
+Board-governable
+
+
+
+---
+
+
+
+
+
+
+
+
+
+
+
+
+---
+
+5. Funding & Capital Markets Architecture
+
+5.1 Overview
+
+Funding architecture defines how treasury secures, manages, allocates, and optimizes liquidity sources required to sustain institutional operations under both normal and stressed conditions.
+
+Treasury funding architecture must support:
+
+Intraday liquidity funding
+
+Operational cash funding
+
+Strategic capital deployment
+
+Emergency liquidity sourcing
+
+Capital market access
+
+Debt issuance management
+
+Funding diversification
+
+Counterparty optimization
+
+Funding cost minimization
+
+Regulatory funding compliance
+
+
+The architecture must operate across:
+
+Multiple legal entities
+
+Multiple jurisdictions
+
+Multiple currencies
+
+Multiple counterparties
+
+Multiple instruments
+
+Multiple liquidity horizons
+
+
+
+---
+
+5.2 Funding Domain Model
+
+Treasury funding operates across distinct domains.
+
+Funding Architecture
+ ├── Internal Funding
+ ├── External Funding
+ ├── Emergency Funding
+ ├── Capital Markets Funding
+ ├── Collateralized Funding
+ ├── Central Bank Funding
+ ├── Strategic Funding
+ └── Contingent Funding
+
+
+---
+
+5.3 Internal Funding Architecture
+
+Internal funding optimizes liquidity already available within the institution.
+
+
+---
+
+Internal Funding Sources
+
+Examples:
+
+Internal account surplus
+
+Treasury reserve pools
+
+Affiliate liquidity
+
+Regional liquidity pools
+
+Central treasury allocation
+
+Excess operational balances
+
+Sweep balances
+
+Treasury surplus cash
+
+Settlement reserve optimization
+
+
+
+---
+
+Internal Funding Flows
+
+Entity Surplus
+      ↓
+Regional Treasury Pool
+      ↓
+Central Treasury
+      ↓
+Funding Allocation
+      ↓
+Operational Entity
+
+
+---
+
+Controls
+
+Internal funding requires:
+
+Intercompany transfer approval
+
+legal entity restrictions
+
+tax impact validation
+
+transfer pricing controls
+
+FX controls
+
+jurisdictional restrictions
+
+reserve protection logic
+
+
+
+---
+
+5.4 External Funding Architecture
+
+External funding provides market-access liquidity.
+
+
+---
+
+Funding Sources
+
+Treasury may use:
+
+Source	Characteristics
+
+Bank credit lines	Flexible
+Revolving facilities	Short-term
+Commercial paper	Money market funding
+Repo funding	Collateralized
+Debt issuance	Medium/long-term
+Institutional funding	Negotiated
+Capital markets	Strategic funding
+Syndicated facilities	Large funding
+Warehouse lines	Structured funding
+
+
+
+---
+
+Funding Selection Factors
+
+Treasury evaluates:
+
+Cost of funds
+
+tenor
+
+collateral requirement
+
+availability
+
+counterparty quality
+
+market conditions
+
+legal constraints
+
+currency availability
+
+speed of access
+
+
+
+---
+
+5.5 Funding Instrument Taxonomy
+
+Treasury funding instruments must be classified.
+
+
+---
+
+Short-Term Instruments
+
+Examples:
+
+Overnight funding
+
+repo
+
+intraday lines
+
+CP issuance
+
+liquidity swaps
+
+committed facilities
+
+
+Characteristics:
+
+Liquidity support
+
+short duration
+
+rate sensitive
+
+
+
+---
+
+Medium-Term Instruments
+
+Examples:
+
+term loans
+
+revolving facilities
+
+structured funding
+
+warehouse financing
+
+
+Characteristics:
+
+operational funding support
+
+strategic liquidity
+
+
+
+---
+
+Long-Term Instruments
+
+Examples:
+
+bond issuance
+
+subordinated debt
+
+hybrid capital
+
+strategic financing
+
+
+Characteristics:
+
+capital structure impact
+
+balance sheet optimization
+
+
+
+---
+
+5.6 Funding Decision Engine
+
+Treasury must automate funding optimization decisions.
+
+
+---
+
+Decision Inputs
+
+Funding engine evaluates:
+
+current liquidity
+
+projected deficits
+
+market funding cost
+
+collateral availability
+
+FX requirements
+
+funding concentration
+
+regulatory limits
+
+stress scenarios
+
+maturity ladder exposure
+
+
+
+---
+
+Optimization Formula
+
+Optimal Funding =
+Min(Cost of Funds)
++ Max(Liquidity Availability)
++ Min(Risk Concentration)
++ Regulatory Compliance
++ Counterparty Diversification
+
+
+---
+
+Decision Outputs
+
+Funding engine produces:
+
+source recommendation
+
+funding size
+
+tenor recommendation
+
+currency recommendation
+
+counterparty selection
+
+collateral usage recommendation
+
+emergency escalation trigger
+
+
+
+---
+
+5.7 Intraday Funding Architecture
+
+Intraday treasury funding supports same-day obligations.
+
+
+---
+
+Intraday Use Cases
+
+Examples:
+
+payment spikes
+
+settlement gaps
+
+clearing deficits
+
+liquidity queue pressure
+
+unexpected withdrawals
+
+operational timing mismatch
+
+
+
+---
+
+Funding Sources
+
+Intraday liquidity may come from:
+
+central treasury pool
+
+intraday credit lines
+
+collateralized central bank access
+
+payment netting optimization
+
+temporary reserve release
+
+
+
+---
+
+Controls
+
+Treasury must enforce:
+
+intraday funding limits
+
+rapid approval paths
+
+auto-escalation
+
+real-time monitoring
+
+cutoff enforcement
+
+
+
+---
+
+5.8 Emergency Funding Architecture
+
+Emergency funding handles severe liquidity disruption.
+
+
+---
+
+Trigger Events
+
+Emergency funding may be triggered by:
+
+bank run scenario
+
+settlement freeze
+
+market funding shutdown
+
+counterparty failure
+
+payment rail disruption
+
+reserve depletion
+
+crisis liquidity alerts
+
+
+
+---
+
+Emergency Sources
+
+Sources may include:
+
+committed backstop facilities
+
+central bank emergency windows
+
+emergency asset liquidation
+
+strategic reserve release
+
+crisis repo access
+
+contingent affiliate funding
+
+
+
+---
+
+Governance
+
+Emergency funding requires:
+
+Role	Responsibility
+
+Treasury	Execute
+CRO	Risk approval
+CFO	Strategic approval
+Crisis Committee	Emergency authorization
+Board	Major escalation
+
+
+
+---
+
+5.9 Capital Markets Funding Architecture
+
+Treasury must support strategic market access.
+
+
+---
+
+Capital Market Instruments
+
+Examples:
+
+bond issuance
+
+MTN programs
+
+commercial paper
+
+securitization
+
+covered bonds
+
+hybrid capital
+
+structured issuance
+
+
+
+---
+
+Lifecycle
+
+Funding Need
+     ↓
+Market Window Analysis
+     ↓
+Instrument Selection
+     ↓
+Pricing
+     ↓
+Execution
+     ↓
+Settlement
+     ↓
+Treasury Allocation
+     ↓
+Lifecycle Monitoring
+
+
+---
+
+Treasury Controls
+
+Controls include:
+
+issuance approval
+
+pricing governance
+
+investor concentration review
+
+covenant controls
+
+settlement verification
+
+legal review
+
+
+
+---
+
+5.10 Collateralized Funding Architecture
+
+Funding may require pledged collateral.
+
+
+---
+
+Eligible Collateral Types
+
+Examples:
+
+government bonds
+
+central bank reserves
+
+HQLA instruments
+
+cash collateral
+
+secured receivables
+
+repo-eligible securities
+
+
+
+---
+
+Collateral Funding Risks
+
+Risks include:
+
+haircut volatility
+
+collateral depletion
+
+valuation mismatch
+
+eligibility change
+
+concentration exposure
+
+settlement failure
+
+
+
+---
+
+Controls
+
+Treasury enforces:
+
+haircut models
+
+collateral availability checks
+
+margin simulation
+
+eligibility validation
+
+stress collateral monitoring
+
+
+
+---
+
+5.11 Counterparty Funding Risk Controls
+
+Treasury must control dependency risk.
+
+
+---
+
+Risk Dimensions
+
+Monitor:
+
+funding concentration
+
+bank dependency
+
+maturity clustering
+
+jurisdiction dependency
+
+collateral dependency
+
+emergency access dependency
+
+
+
+---
+
+Counterparty Limits
+
+Limit Type	Purpose
+
+Exposure limit	Max funding per counterparty
+Tenor limit	Duration control
+Currency limit	FX control
+Concentration limit	Diversification
+Stress dependency limit	Crisis resilience
+
+
+
+---
+
+5.12 Funding Cost Optimization
+
+Treasury seeks lowest safe cost of funding.
+
+
+---
+
+Cost Components
+
+Funding cost includes:
+
+interest rate
+
+spread
+
+collateral cost
+
+operational cost
+
+liquidity premium
+
+FX hedge cost
+
+legal cost
+
+issuance cost
+
+
+
+---
+
+Optimization Logic
+
+Treasury evaluates:
+
+Effective Cost =
+Base Rate
++ Spread
++ Liquidity Premium
++ Collateral Cost
++ Operational Cost
++ FX Cost
+
+
+---
+
+Decision Factors
+
+Funding choice considers:
+
+cheapest source
+
+diversification requirement
+
+maturity profile
+
+operational speed
+
+market liquidity
+
+strategic constraints
+
+
+
+---
+
+5.13 Funding Stress Testing
+
+Funding resilience must be stress-tested.
+
+
+---
+
+Scenarios
+
+Market Freeze
+
+Stress:
+
+no short-term market funding
+
+spread widening
+
+collateral stress
+
+
+
+---
+
+Counterparty Failure
+
+Stress:
+
+credit line withdrawal
+
+repo access loss
+
+liquidity concentration shock
+
+
+
+---
+
+Rating Downgrade
+
+Stress:
+
+spread shock
+
+covenant impact
+
+funding access reduction
+
+
+
+---
+
+Currency Stress
+
+Stress:
+
+FX funding shortage
+
+basis widening
+
+trapped liquidity
+
+
+
+---
+
+Outputs
+
+Simulation produces:
+
+funding survival horizon
+
+refinancing risk
+
+contingency gap
+
+funding cost spike
+
+emergency action plan
+
+
+
+---
+
+5.14 Funding Maturity Ladder Architecture
+
+Treasury must manage refinancing exposure.
+
+
+---
+
+Ladder Buckets
+
+Bucket	Horizon
+
+Overnight	T+0
+Short-term	<30 days
+Medium-term	1–12 months
+Long-term	>1 year
+
+
+
+---
+
+Metrics
+
+Treasury tracks:
+
+maturity wall concentration
+
+rollover exposure
+
+refinancing dependency
+
+duration profile
+
+cliff risk
+
+
+
+---
+
+Controls
+
+maturity diversification
+
+refinancing buffers
+
+rollover limits
+
+ladder alerts
+
+concentration controls
+
+
+
+---
+
+5.15 Regulatory Funding Controls
+
+Funding architecture must satisfy regulatory requirements.
+
+
+---
+
+Regulatory Dimensions
+
+Examples:
+
+LCR funding assumptions
+
+NSFR requirements
+
+emergency funding readiness
+
+collateral eligibility
+
+liquidity contingency plans
+
+recovery planning assumptions
+
+
+
+---
+
+Reporting Outputs
+
+Treasury produces:
+
+funding ratio reports
+
+contingency funding reports
+
+stress funding adequacy
+
+regulator disclosures
+
+funding concentration reports
+
+
+
+---
+
+5.16 Treasury Governance for Funding
+
+Funding requires strong governance.
+
+
+---
+
+Approval Matrix
+
+Funding Type	Approval
+
+Routine funding	Treasury
+Large funding	Treasury + CFO
+Strategic issuance	Executive committee
+Emergency funding	Crisis governance
+Central bank access	Board/Crisis controls
+
+
+
+---
+
+Governance Controls
+
+Include:
+
+funding policy
+
+delegated authorities
+
+emergency override rules
+
+concentration thresholds
+
+crisis triggers
+
+audit trails
+
+
+
+---
+
+5.17 Monitoring & Observability
+
+Treasury funding systems must be observable.
+
+
+---
+
+Metrics
+
+Track:
+
+funding utilization
+
+average funding cost
+
+emergency line usage
+
+maturity concentration
+
+collateral consumption
+
+counterparty concentration
+
+funding latency
+
+market spread stress
+
+
+
+---
+
+Alerts
+
+Alert categories:
+
+funding gap alert
+
+line exhaustion alert
+
+concentration breach
+
+maturity wall alert
+
+collateral depletion
+
+emergency escalation
+
+
+
+---
+
+5.18 Architecture Principles
+
+Funding architecture must be:
+
+Diversified
+
+Cost-optimized
+
+Stress-resilient
+
+Counterparty-aware
+
+Multi-currency capable
+
+Collateral-efficient
+
+Market-integrated
+
+Regulatory compliant
+
+Crisis-operable
+
+Fully observable
+
+
+
+---
+
+
+
+
 
 
