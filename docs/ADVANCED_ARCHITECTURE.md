@@ -1,15 +1,13 @@
-docs/ADVANCED_ARCHITECTURE.md
-
-Parte 8 — Advanced Architecture / Distributed Systems (FAANG-Level)
+## Parte 8 — Advanced Architecture / Distributed Systems
 
 
 ---
 
-1. Purpose
+## 1. Purpose
 
 Este documento define a arquitetura avançada de distributed systems, resilience engineering, reliability patterns e scalability strategy do projeto FinanceAI, elevando a plataforma para padrões de engenharia equivalentes aos utilizados em empresas como Google, Amazon, Netflix, Meta e Stripe.
 
-Objetivos:
+### Objetivos:
 
 Escalar horizontalmente
 
@@ -35,9 +33,9 @@ Tornar a plataforma resiliente a falhas distribuídas
 
 ---
 
-2. Distributed Systems Principles
+## 2. Distributed Systems Principles
 
-2.1 Scalability Philosophy
+### 2.1 Scalability Philosophy
 
 FinanceAI deve ser projetado para:
 
@@ -62,7 +60,7 @@ Scale vertically only as optimization
 
 ---
 
-2.2 Horizontal vs Vertical Scaling
+## 2.2 Horizontal vs Vertical Scaling
 
 Horizontal Scaling (preferred)
 
@@ -105,7 +103,7 @@ ML inference specialization
 
 ---
 
-2.3 Stateless Service Design
+## 2.3 Stateless Service Design
 
 Todos os services HTTP devem ser:
 
@@ -143,7 +141,7 @@ Object Storage
 
 ---
 
-2.4 Network Is a Failure Domain
+## 2.4 Network Is a Failure Domain
 
 Premissas:
 
@@ -178,7 +176,7 @@ observability
 
 ---
 
-2.5 Partial Failure Handling
+## 2.5 Partial Failure Handling
 
 Exemplo:
 
@@ -196,7 +194,7 @@ AI unavailable
 
 ---
 
-2.6 Failure-First Architecture
+## 2.6 Failure-First Architecture
 
 Todo design assume:
 
@@ -222,12 +220,12 @@ network partition
 
 ---
 
-3. Multi-Region Architecture
+## 3. Multi-Region Architecture
 
 
 ---
 
-3.1 Single Region vs Multi Region
+## 3.1 Single Region vs Multi Region
 
 Stage 1
 
@@ -246,7 +244,7 @@ DR: Europe
 
 ---
 
-3.2 Active-Passive
+## 3.2 Active-Passive
 
 Modelo:
 
@@ -270,7 +268,7 @@ RPO < 1 min
 
 ---
 
-3.3 Active-Active
+## 3.3 Active-Active
 
 Para serviços não financeiros críticos:
 
@@ -292,7 +290,7 @@ traffic distribution
 
 ---
 
-3.4 Geo Routing
+## 3.4 Geo Routing
 
 Uso de:
 
@@ -314,7 +312,7 @@ Region down → reroute
 
 ---
 
-3.5 Data Replication
+## 3.5 Data Replication
 
 Sync replication
 
@@ -339,7 +337,7 @@ derived projections
 
 ---
 
-3.6 Disaster Recovery
+## 3.6 Disaster Recovery
 
 Definir:
 
@@ -365,12 +363,12 @@ Logs < 5 min
 
 ---
 
-4. Consistency Models
+## 4. Consistency Models
 
 
 ---
 
-4.1 CAP Decisions
+## 4.1 CAP Decisions
 
 FinanceAI adota diferentes modelos conforme domínio.
 
@@ -412,7 +410,7 @@ Eventually consistent
 
 ---
 
-4.2 Strong Consistency
+## 4.2 Strong Consistency
 
 Obrigatório em:
 
@@ -430,7 +428,7 @@ ledger state
 
 ---
 
-4.3 Eventual Consistency
+## 4.3 Eventual Consistency
 
 Aceito em:
 
@@ -448,7 +446,7 @@ ML features
 
 ---
 
-4.4 Read-Your-Writes
+## 4.4 Read-Your-Writes
 
 Necessário em:
 
@@ -467,7 +465,7 @@ write-through cache
 
 ---
 
-4.5 Replica Lag Handling
+## 4.5 Replica Lag Handling
 
 Quando replica atrasar:
 
@@ -481,12 +479,12 @@ timestamp guard
 
 ---
 
-5. Distributed Transactions
+## 5. Distributed Transactions
 
 
 ---
 
-5.1 Problem
+## 5.1 Problem
 
 Em distributed systems:
 
@@ -501,7 +499,7 @@ Não existe ACID global simples.
 
 ---
 
-5.2 Saga Pattern
+## 5.2 Saga Pattern
 
 Orchestration
 
@@ -543,7 +541,7 @@ projections
 
 ---
 
-5.3 Compensating Transactions
+## 5.3 Compensating Transactions
 
 Se falhar:
 
@@ -563,7 +561,7 @@ retry-safe
 
 ---
 
-5.4 Idempotent Transactions
+## 5.4 Idempotent Transactions
 
 Todo comando financeiro deve aceitar:
 
@@ -580,7 +578,7 @@ Mesmo resultado sem duplicação.
 
 ---
 
-5.5 Exactly Once vs At Least Once
+## 5.5 Exactly Once vs At Least Once
 
 Reality:
 
@@ -593,12 +591,12 @@ At-least-once + idempotency
 
 ---
 
-6. Messaging Reliability
+## 6. Messaging Reliability
 
 
 ---
 
-6.1 Event Driven Architecture
+## 6.1 Event Driven Architecture
 
 FinanceAI usa eventos para:
 
@@ -616,7 +614,7 @@ payment reconciled
 
 ---
 
-6.2 Outbox Pattern
+## 6.2 Outbox Pattern
 
 Problema:
 
@@ -631,7 +629,7 @@ background publisher sends later
 
 ---
 
-6.3 Inbox Pattern
+## 6.3 Inbox Pattern
 
 Evita:
 
@@ -647,7 +645,7 @@ processed_events
 
 ---
 
-6.4 Dead Letter Queue
+## 6.4 Dead Letter Queue
 
 Mensagens inválidas:
 
@@ -666,7 +664,7 @@ quarantine
 
 ---
 
-6.5 Poison Message Handling
+## 6.5 Poison Message Handling
 
 Detectar:
 
@@ -689,7 +687,7 @@ isolate consumer
 
 ---
 
-6.6 Replay Strategy
+## 6.6 Replay Strategy
 
 Permitir:
 
@@ -700,12 +698,12 @@ audit replay
 
 ---
 
-7. CQRS / Event Sourcing
+## 7. CQRS / Event Sourcing
 
 
 ---
 
-7.1 CQRS
+## 7.1 CQRS
 
 Separar:
 
@@ -720,7 +718,7 @@ Reads
 
 ---
 
-7.2 Use Cases
+## 7.2 Use Cases
 
 Ideal para:
 
@@ -736,7 +734,7 @@ projections
 
 ---
 
-7.3 Event Sourcing (selective use)
+## 7.3 Event Sourcing (selective use)
 
 Usar apenas onde gera valor:
 
@@ -752,7 +750,7 @@ Não usar em tudo.
 
 ---
 
-7.4 Snapshotting
+## 7.4 Snapshotting
 
 Evitar replay gigante:
 
@@ -761,7 +759,7 @@ snapshot every N events
 
 ---
 
-7.5 Projection Rebuild
+## 7.5 Projection Rebuild
 
 Se projection quebrar:
 
@@ -771,12 +769,12 @@ rebuild read model
 
 ---
 
-8. Resilience Engineering
+## 8. Resilience Engineering
 
 
 ---
 
-8.1 Circuit Breaker
+## 8.1 Circuit Breaker
 
 Se downstream falhar:
 
@@ -796,7 +794,7 @@ half-open
 
 ---
 
-8.2 Bulkheads
+## 8.2 Bulkheads
 
 Separar recursos:
 
@@ -810,7 +808,7 @@ Evita colapso total.
 
 ---
 
-8.3 Backpressure
+## 8.3 Backpressure
 
 Se sistema sobrecarregar:
 
@@ -824,7 +822,7 @@ shed load
 
 ---
 
-8.4 Rate Limiting
+## 8.4 Rate Limiting
 
 Tipos:
 
@@ -840,7 +838,7 @@ per tenant
 
 ---
 
-8.5 Graceful Degradation
+## 8.5 Graceful Degradation
 
 Exemplo:
 
@@ -852,7 +850,7 @@ Core finance continues
 
 ---
 
-8.6 Retry Budgets
+## 8.6 Retry Budgets
 
 Retries não podem gerar avalanche.
 
@@ -868,7 +866,7 @@ jitter
 
 ---
 
-8.7 Timeout Strategy
+## 8.7 Timeout Strategy
 
 Nunca:
 
@@ -886,12 +884,12 @@ global timeout
 
 ---
 
-9. Service Mesh
+## 9. Service Mesh
 
 
 ---
 
-9.1 Responsibilities
+## 9.1 Responsibilities
 
 Service mesh gerencia:
 
@@ -909,7 +907,7 @@ policy enforcement
 
 ---
 
-9.2 Traffic Policies
+## 9.2 Traffic Policies
 
 Suportar:
 
@@ -925,7 +923,7 @@ fault injection
 
 ---
 
-9.3 Security
+## 9.3 Security
 
 Todo east-west traffic:
 
@@ -936,12 +934,12 @@ authorized
 
 ---
 
-10. Reliability Patterns
+## 10. Reliability Patterns
 
 
 ---
 
-10.1 Leader Election
+## 10.1 Leader Election
 
 Usado em:
 
@@ -955,7 +953,7 @@ singleton workflows
 
 ---
 
-10.2 Distributed Locks
+## 10.2 Distributed Locks
 
 Usar apenas quando necessário.
 
@@ -966,7 +964,7 @@ idempotency > locking
 
 ---
 
-10.3 Health Checks
+## 10.3 Health Checks
 
 Tipos:
 
@@ -985,7 +983,7 @@ Initialization complete
 
 ---
 
-10.4 Safe Shutdown
+## 10.4 Safe Shutdown
 
 Pod termination:
 
@@ -997,7 +995,7 @@ shutdown
 
 ---
 
-10.5 Self-Healing
+## 10.5 Self-Healing
 
 Kubernetes:
 
@@ -1011,12 +1009,12 @@ recreate unhealthy instances
 
 ---
 
-11. Performance Architecture
+## 11. Performance Architecture
 
 
 ---
 
-11.1 Latency Budgets
+## 11.1 Latency Budgets
 
 Exemplo:
 
@@ -1029,7 +1027,7 @@ Total P95: 200ms
 
 ---
 
-11.2 P99 Engineering
+## 11.2 P99 Engineering
 
 Otimizar:
 
@@ -1047,7 +1045,7 @@ P99
 
 ---
 
-11.3 Tail Latency Mitigation
+## 11.3 Tail Latency Mitigation
 
 Usar:
 
@@ -1063,7 +1061,7 @@ timeout budgets
 
 ---
 
-11.4 Hot Path Optimization
+## 11.4 Hot Path Optimization
 
 Hot path:
 
@@ -1081,7 +1079,7 @@ minimal IO
 
 ---
 
-11.5 Async Boundaries
+## 11.5 Async Boundaries
 
 Mover para async:
 
@@ -1097,12 +1095,12 @@ non-critical writes
 
 ---
 
-12. Financial-System Critical Patterns (FinanceAI-specific)
+## 12. Financial-System Critical Patterns (FinanceAI-specific)
 
 
 ---
 
-12.1 Ledger Safety
+## 12.1 Ledger Safety
 
 Nunca permitir:
 
@@ -1113,7 +1111,7 @@ ghost credit
 
 ---
 
-12.2 Immutable Accounting Logs
+## 12.2 Immutable Accounting Logs
 
 Toda operação financeira:
 
@@ -1124,7 +1122,7 @@ traceable
 
 ---
 
-12.3 Reconciliation Engine
+## 12.3 Reconciliation Engine
 
 Validar:
 
@@ -1142,7 +1140,7 @@ anomaly-triggered
 
 ---
 
-12.4 Deterministic Replay
+## 12.4 Deterministic Replay
 
 Para auditoria:
 
@@ -1155,7 +1153,7 @@ same decision trace
 
 ---
 
-12.5 AI Recommendation Consistency
+## 12.5 AI Recommendation Consistency
 
 Recomendações financeiras precisam:
 
@@ -1171,7 +1169,7 @@ decision audit
 
 ---
 
-12.6 Financial Anomaly Containment
+## 12.6 Financial Anomaly Containment
 
 Se detectar fraude ou inconsistência:
 
@@ -1189,7 +1187,7 @@ preserve evidence
 
 ---
 
-13. Architecture Review Checklist
+## 13. Architecture Review Checklist
 
 Antes de produção:
 
@@ -1312,10 +1310,11 @@ financial traceability complete?
 
 ---
 
-14. Final Engineering Principles
+## 14. Final Engineering Principles
 
 FinanceAI adota como princípios finais:
 
+```
 Design for failure
 Scale without redesign
 Prefer simplicity over cleverness
@@ -1327,9 +1326,11 @@ Security by design
 Auditability as a core feature
 Graceful degradation always
 
+```
+
 
 ---
 
-Status: FAANG-level architecture baseline defined
+Status: Level architecture baseline defined
 Owner: Platform Engineering / Architecture
 Applies to: Backend, Infra, AI, Data, Finance Core, Platform Systems
