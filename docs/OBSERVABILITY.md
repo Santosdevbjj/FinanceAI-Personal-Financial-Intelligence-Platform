@@ -1,15 +1,13 @@
-docs/OBSERVABILITY.md
-
-Parte 9 — Observability (FAANG-Level)
+## Parte 9 — Observability
 
 
 ---
 
-1. Purpose
+## 1. Purpose
 
 Este documento define a arquitetura de observability, monitoring, tracing, incident response e reliability telemetry do projeto FinanceAI, seguindo padrões de engenharia usados por organizações como Google SRE, Netflix, Stripe, AWS e Meta.
 
-Objetivos:
+## Objetivos:
 
 Detectar falhas rapidamente
 
@@ -35,12 +33,12 @@ Suportar operação 24/7 com on-call readiness
 
 ---
 
-2. Observability Philosophy
+## 2. Observability Philosophy
 
 
 ---
 
-2.1 Monitoring vs Observability
+## 2.1 Monitoring vs Observability
 
 Monitoring
 
@@ -85,7 +83,7 @@ correlation
 
 ---
 
-2.2 Telemetry-First Engineering
+## 2.2 Telemetry-First Engineering
 
 Todo componente novo deve nascer com:
 
@@ -107,7 +105,7 @@ build first, instrument later
 
 ---
 
-2.3 Unknown Unknowns
+## 2.3 Unknown Unknowns
 
 Observability deve permitir investigação de:
 
@@ -129,7 +127,7 @@ queue storms
 
 ---
 
-2.4 Production Introspection
+## 2.4 Production Introspection
 
 Produção deve permitir responder:
 
@@ -153,12 +151,12 @@ qual AI model degradou?
 
 ---
 
-3. Golden Signals (Google SRE)
+## 3. Golden Signals (Google SRE)
 
 
 ---
 
-3.1 Latency
+## 3.1 Latency
 
 Medir:
 
@@ -199,7 +197,7 @@ DB query P95 < 50ms
 
 ---
 
-3.2 Traffic
+## 3.2 Traffic
 
 Medir:
 
@@ -219,7 +217,7 @@ DB QPS
 
 ---
 
-3.3 Errors
+## 3.3 Errors
 
 Medir:
 
@@ -241,7 +239,7 @@ auth failures
 
 ---
 
-3.4 Saturation
+## 3.4 Saturation
 
 Medir:
 
@@ -265,14 +263,14 @@ model inference saturation
 
 ---
 
-4. RED Method
+## 4. RED Method
 
 Aplicado a cada service.
 
 
 ---
 
-4.1 Rate
+## 4.1 Rate
 
 Quantidade:
 
@@ -284,7 +282,7 @@ transactions/sec
 
 ---
 
-4.2 Errors
+## 4.2 Errors
 
 Taxa de erro:
 
@@ -302,7 +300,7 @@ downstream dependency
 
 ---
 
-4.3 Duration
+## 4.3 Duration
 
 Tempo de execução:
 
@@ -318,14 +316,14 @@ Nunca depender só de média.
 
 ---
 
-5. USE Method
+## 5. USE Method
 
 Aplicado à infra.
 
 
 ---
 
-5.1 Utilization
+## 5.1 Utilization
 
 Medir:
 
@@ -345,7 +343,7 @@ thread usage
 
 ---
 
-5.2 Saturation
+## 5.2 Saturation
 
 Medir:
 
@@ -361,7 +359,7 @@ pending IO
 
 ---
 
-5.3 Errors
+## 5.3 Errors
 
 Infra errors:
 
@@ -379,12 +377,12 @@ DB failover errors
 
 ---
 
-6. Metrics Architecture
+## 6. Metrics Architecture
 
 
 ---
 
-6.1 Metric Categories
+## 6.1 Metric Categories
 
 System Metrics
 
@@ -474,7 +472,7 @@ safety blocks
 
 ---
 
-6.2 Naming Convention
+## 6.2 Naming Convention
 
 Formato:
 
@@ -490,7 +488,7 @@ ledger.reconciliation.mismatch.count
 
 ---
 
-6.3 Cardinality Strategy
+## 6.3 Cardinality Strategy
 
 Evitar cardinalidade explosiva:
 
@@ -517,12 +515,12 @@ tenant tier
 
 ---
 
-7. Logging Architecture
+## 7. Logging Architecture
 
 
 ---
 
-7.1 Structured Logging
+## 7.1 Structured Logging
 
 Formato JSON obrigatório.
 
@@ -541,7 +539,7 @@ Exemplo:
 
 ---
 
-7.2 Correlation IDs
+## 7.2 Correlation IDs
 
 Toda request deve ter:
 
@@ -561,7 +559,7 @@ AI services
 
 ---
 
-7.3 Trace IDs
+## 7.3 Trace IDs
 
 Logs devem incluir:
 
@@ -571,7 +569,7 @@ span_id
 
 ---
 
-7.4 Security-Safe Logging
+## 7.4 Security-Safe Logging
 
 Nunca logar:
 
@@ -591,7 +589,7 @@ raw bank credentials
 
 ---
 
-7.5 PII Redaction
+## 7.5 PII Redaction
 
 Redaction automático:
 
@@ -600,7 +598,7 @@ Antes do log sink.
 
 ---
 
-7.6 Log Sampling
+## 7.6 Log Sampling
 
 Para alto volume:
 
@@ -623,7 +621,7 @@ security events
 
 ---
 
-7.7 Retention
+## 7.7 Retention
 
 Exemplo:
 
@@ -635,12 +633,12 @@ financial audit logs: 7y
 
 ---
 
-8. Distributed Tracing
+## 8. Distributed Tracing
 
 
 ---
 
-8.1 OpenTelemetry Standard
+## 8.1 OpenTelemetry Standard
 
 FinanceAI usa:
 
@@ -658,7 +656,7 @@ correlation
 
 ---
 
-8.2 Trace Propagation
+## 8.2 Trace Propagation
 
 Headers:
 
@@ -668,7 +666,7 @@ tracestate
 
 ---
 
-8.3 Span Hierarchy
+## 8.3 Span Hierarchy
 
 Exemplo:
 
@@ -681,7 +679,7 @@ API Request
 
 ---
 
-8.4 Async Trace Continuity
+# 8.4 Async Trace Continuity
 
 Queue jobs devem manter:
 
@@ -695,7 +693,7 @@ consumer span
 
 ---
 
-8.5 DB Tracing
+## 8.5 DB Tracing
 
 Capturar:
 
@@ -711,7 +709,7 @@ deadlock
 
 ---
 
-8.6 External API Tracing
+## 8.6 External API Tracing
 
 Capturar:
 
@@ -727,7 +725,7 @@ timeout cause
 
 ---
 
-8.7 AI Inference Spans
+## 8.7 AI Inference Spans
 
 Capturar:
 
@@ -745,12 +743,12 @@ moderation checks
 
 ---
 
-9. SLI / SLO / SLA
+## 9. SLI / SLO / SLA
 
 
 ---
 
-9.1 SLI
+## 9.1 SLI
 
 Service Level Indicators
 
@@ -770,7 +768,7 @@ recommendation success
 
 ---
 
-9.2 SLO Targets
+## 9.2 SLO Targets
 
 Critical Financial APIs
 
@@ -800,7 +798,7 @@ Analytics
 
 ---
 
-9.3 Latency SLO
+## 9.3 Latency SLO
 
 Exemplo:
 
@@ -810,7 +808,7 @@ P99 < 500ms
 
 ---
 
-9.4 Error Budget
+## 9.4 Error Budget
 
 Exemplo:
 
@@ -821,7 +819,7 @@ Para 99.9%
 
 ---
 
-9.5 Burn Rate Alerts
+## 9.5 Burn Rate Alerts
 
 Alertar se:
 
@@ -830,12 +828,12 @@ Erro consumir budget rápido.
 
 ---
 
-10. Alerting Strategy
+## 10. Alerting Strategy
 
 
 ---
 
-10.1 Page-Worthy Alerts
+## 10.1 Page-Worthy Alerts
 
 Só paginar se:
 
@@ -851,7 +849,7 @@ outage real
 
 ---
 
-10.2 Warning Alerts
+## 10.2 Warning Alerts
 
 Não acordam on-call.
 
@@ -867,7 +865,7 @@ retry growth
 
 ---
 
-10.3 Symptom-Based Alerts
+## 10.3 Symptom-Based Alerts
 
 Preferir:
 
@@ -880,7 +878,7 @@ CPU high
 
 ---
 
-10.4 Cause-Based Alerts
+## 10.4 Cause-Based Alerts
 
 Também suportar:
 
@@ -894,7 +892,7 @@ auth outage
 
 ---
 
-10.5 Alert Deduplication
+## 10.5 Alert Deduplication
 
 Evitar storm:
 
@@ -908,7 +906,7 @@ root cause linking
 
 ---
 
-10.6 Alert Quality Rule
+## 10.6 Alert Quality Rule
 
 Meta:
 
@@ -917,12 +915,12 @@ false positive < 5%
 
 ---
 
-11. Incident Response
+## 11. Incident Response
 
 
 ---
 
-11.1 Severity Model
+## 11.1 Severity Model
 
 SEV1
 
@@ -964,7 +962,7 @@ minor bug
 
 ---
 
-11.2 Incident Command
+## 11.2 Incident Command
 
 Papéis:
 
@@ -980,7 +978,7 @@ Engineering Lead
 
 ---
 
-11.3 War Room Process
+## 11.3 War Room Process
 
 Criar:
 
@@ -996,7 +994,7 @@ status updates
 
 ---
 
-11.4 Customer Communication
+## 11.4 Customer Communication
 
 Template:
 
@@ -1014,14 +1012,14 @@ post-incident update
 
 ---
 
-12. Runbooks
+## 12. Runbooks
 
 Cada incidente crítico deve ter runbook.
 
 
 ---
 
-12.1 DB Down
+## 12.1 DB Down
 
 Passos:
 
@@ -1037,7 +1035,7 @@ validate consistency
 
 ---
 
-12.2 Queue Backlog
+## 12.2 Queue Backlog
 
 Passos:
 
@@ -1051,7 +1049,7 @@ isolate poison messages
 
 ---
 
-12.3 AI Failure
+## 12.3 AI Failure
 
 Passos:
 
@@ -1065,7 +1063,7 @@ notify ops
 
 ---
 
-12.4 Latency Spike
+## 12.4 Latency Spike
 
 Passos:
 
@@ -1079,7 +1077,7 @@ rate limit if needed
 
 ---
 
-12.5 Auth Outage
+## 12.5 Auth Outage
 
 Passos:
 
@@ -1093,7 +1091,7 @@ emergency degradation
 
 ---
 
-12.6 Payment Inconsistency
+## 12.6 Payment Inconsistency
 
 Passos:
 
@@ -1107,12 +1105,12 @@ preserve logs
 
 ---
 
-13. Financial-System Observability (FinanceAI-specific)
+## 13. Financial-System Observability (FinanceAI-specific)
 
 
 ---
 
-13.1 Ledger Drift Detection
+## 13.1 Ledger Drift Detection
 
 Monitor:
 
@@ -1123,7 +1121,7 @@ Alert immediately.
 
 ---
 
-13.2 Reconciliation Alerts
+## 13.2 Reconciliation Alerts
 
 Alertar:
 
@@ -1137,7 +1135,7 @@ unresolved discrepancy
 
 ---
 
-13.3 Money Movement Tracing
+## 13.3 Money Movement Tracing
 
 Cada transação deve ser rastreável:
 
@@ -1153,7 +1151,7 @@ external references
 
 ---
 
-13.4 Fraud Telemetry
+## 13.4 Fraud Telemetry
 
 Medir:
 
@@ -1167,7 +1165,7 @@ fraud score drift
 
 ---
 
-13.5 AI Recommendation Anomaly Detection
+## 13.5 AI Recommendation Anomaly Detection
 
 Detectar:
 
@@ -1183,7 +1181,7 @@ confidence degradation
 
 ---
 
-13.6 Financial Audit Observability
+## 13.6 Financial Audit Observability
 
 Toda ação financeira deve gerar:
 
@@ -1197,12 +1195,12 @@ replayability
 
 ---
 
-14. On-Call Readiness
+## 14. On-Call Readiness
 
 
 ---
 
-14.1 Pager Strategy
+## 14.1 Pager Strategy
 
 Separar:
 
@@ -1220,7 +1218,7 @@ AI
 
 ---
 
-14.2 Rotations
+## 14.2 Rotations
 
 Regras:
 
@@ -1234,7 +1232,7 @@ backup on-call
 
 ---
 
-14.3 Escalation Model
+## 14.3 Escalation Model
 
 Exemplo:
 
@@ -1243,7 +1241,7 @@ L1 → L2 → Staff → Incident Commander
 
 ---
 
-14.4 Follow-the-Sun
+## 14.4 Follow-the-Sun
 
 Ideal para escala global:
 
@@ -1257,7 +1255,7 @@ Asia
 
 ---
 
-14.5 Alert Fatigue Prevention
+## 14.5 Alert Fatigue Prevention
 
 Revisão mensal de:
 
@@ -1271,12 +1269,12 @@ low value pages
 
 ---
 
-15. Postmortem System
+## 15. Postmortem System
 
 
 ---
 
-15.1 Blameless Postmortem
+## 15.1 Blameless Postmortem
 
 Foco:
 
@@ -1286,7 +1284,7 @@ not who failed
 
 ---
 
-15.2 RCA Model
+## 15.2 RCA Model
 
 Analisar:
 
@@ -1302,7 +1300,7 @@ blast radius
 
 ---
 
-15.3 Corrective Actions
+## 15.3 Corrective Actions
 
 Definir:
 
@@ -1316,14 +1314,14 @@ validation
 
 ---
 
-15.4 Reliability Debt Tracking
+## 15.4 Reliability Debt Tracking
 
 Toda dívida operacional deve entrar no backlog.
 
 
 ---
 
-16. Dashboards Required
+## 16. Dashboards Required
 
 Obrigatórios:
 
@@ -1400,7 +1398,7 @@ network
 
 ---
 
-17. Final Observability Checklist
+## 17. Final Observability Checklist
 
 Antes de produção:
 
@@ -1467,9 +1465,11 @@ unsafe output detection active?
 
 ---
 
-18. Final Engineering Principles
+## 18. Final Engineering Principles
 
 FinanceAI adota:
+
+```
 
 If it cannot be observed, it cannot be trusted
 Alert on symptoms, not noise
@@ -1481,9 +1481,11 @@ Financial anomalies are SEV-class events
 AI behavior must be observable
 Every critical incident must teach the system
 
+```
+
 
 ---
 
-Status: FAANG-level observability baseline defined
+Status: Level observability baseline defined
 Owner: SRE / Platform Engineering / Backend / AI Ops
 Applies to: Backend, Infra, AI, Data, Security, Finance Core, Platform Systems
