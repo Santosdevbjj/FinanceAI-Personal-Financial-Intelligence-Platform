@@ -1,8 +1,3 @@
-
-
-
----
-
 Data Analytics Architecture
 
 Document Version: 1.0
