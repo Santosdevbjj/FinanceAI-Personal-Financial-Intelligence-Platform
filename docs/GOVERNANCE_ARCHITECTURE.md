@@ -809,4 +809,4 @@ The Governance Architecture ensures that Finanças Pessoais operates with:
 - Operational discipline
 - Compliance assurance
 - Audit readiness
-- FAAGrade governance maturity
+- Grade governance maturity
