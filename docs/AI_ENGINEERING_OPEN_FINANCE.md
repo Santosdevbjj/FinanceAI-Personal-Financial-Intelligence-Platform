@@ -1,5 +1,5 @@
-🤖 docs/AI_ENGINEERING_OPEN_FINANCE.md
-🏛️ 1. PROPÓSITO E ESCOPO DO DOCUMENTO
+## 🏛️ 1. PROPÓSITO E ESCOPO DO DOCUMENTO
+
 Este documento técnico define os padrões de Engenharia de Inteligência Artificial, processamento de linguagem natural (NLP), integração com o ecossistema nacional de Open Finance (Banco docs/AI_ENGINEERING_OPEN_FINANCE.mdFinanceAI.
 
 O objetivo é complementar a arquitetura de sistemas distribuídos (ADVANCED_ARCHITECTURE.md), conectando os fluxos conversacionais gerados via Vibe Coding (Lovable.dev) a uma infraestrutura de backend resiliente, escalável e de nível FAANG/Stripe.
