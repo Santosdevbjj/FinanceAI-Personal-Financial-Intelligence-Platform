@@ -99,4 +99,7 @@ Para entender a fundo os mecanismos de resiliência, engenharia de dados e intel
 2. [Engenharia de IA & Open Finance](docs/AI_ENGINEERING_OPEN_FINANCE.md) — Especifica o funcionamento do motor de linguagem natural (NER), a conciliação automatizada com o Banco Central e a governança sob as regras da LGPD.
 
 ```
-Com a união desses dois documentos (ADVANCED_ARCHITECTURE.md + AI_ENGINEERING_OPEN_FINANCE.md), o embasamento técnico do seu portfólio está completo, robusto, altamente profissional e pronto para disputar o topo do Bootcamp! Se precisar de mais algum refinamento nos prompts ou na estrutura, é só avisar.
+
+
+---
+
