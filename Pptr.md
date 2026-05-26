@@ -1,4 +1,7 @@
+winget install --id Git.Git -e --source winget
 
+
+--- 
 https://git-scm.com/install/?utm_source=copilot.com
 
 ---
