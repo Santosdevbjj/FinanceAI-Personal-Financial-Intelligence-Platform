@@ -1,3 +1,40 @@
+git clone https://github.com/Santosdevbjj/FinanceAI-Personal-Financial-Intelligence-Platform.git
+cd FinanceAI-Personal-Financial-Intelligence-Platform
+
+
+
+
+
+---
+
+git remote add lovable-source https://github.com/Santosdevbjj/financeai-personal-financial-intelligence-platform-7b4460b5.git
+
+
+
+---
+
+
+git pull lovable-source main --allow-unrelated-histories
+
+
+
+---
+
+
+git add .
+git commit -m "feat: integration of Lovable UI engine into core financial platform repository"
+git push origin main
+
+
+
+
+
+
+
+
+---
+
+
 financeai-personal-financial-intelligence-platform-7b4460b5
 
 Integrar uma arquitetura distribuída de backend padrão FAANG (ADVANCED_ARCHITECTURE.md) e um motor de IA com Open Finance (AI_ENGINEERING_OPEN_FINANCE.md) dentro de uma ferramenta visual de *Vibe Coding* como o **Lovable.dev** exige uma estratégia cirúrgica.
