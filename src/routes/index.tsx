@@ -49,6 +49,7 @@ function App() {
           </div>
         </main>
       </div>
+      <GovernanceCenter />
     </div>
   );
 }
