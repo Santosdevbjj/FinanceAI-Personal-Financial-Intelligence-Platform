@@ -1,5 +1,57 @@
 winget install --id Git.Git -e --source winget
 
+---
+
+git remote remove lovable-source
+git remote add lovable-source https://github.com/Santosdevbjj/financeai-personal-financial-intelligence-platform-7b4460b5.git
+
+
+---
+git fetch lovable-source
+
+
+---
+
+git checkout -b de-lovable lovable-source/main
+
+
+---
+
+
+git checkout main
+
+
+---
+
+git merge de-lovable --allow-unrelated-histories -m "feat: unificando interface do Lovable com arquitetura core"
+
+
+---
+
+git push origin main
+
+
+---
+
+
+git branch -D de-lovable
+
+
+---
+
+
+
+
+
+
+
+---
+
+
+
+
+
+
 
 --- 
 https://git-scm.com/install/?utm_source=copilot.com
