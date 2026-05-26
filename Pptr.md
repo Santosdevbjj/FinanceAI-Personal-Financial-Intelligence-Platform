@@ -1,3 +1,9 @@
+
+https://git-scm.com/install/?utm_source=copilot.com
+
+---
+
+
 git clone https://github.com/Santosdevbjj/FinanceAI-Personal-Financial-Intelligence-Platform.git
 cd FinanceAI-Personal-Financial-Intelligence-Platform
 
