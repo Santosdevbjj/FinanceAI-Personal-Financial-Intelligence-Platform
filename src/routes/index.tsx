@@ -4,6 +4,7 @@ import { Sidebar } from "@/components/finance/Sidebar";
 import { Header } from "@/components/finance/Header";
 import { AnalyticsPanel } from "@/components/finance/AnalyticsPanel";
 import { GuardianChat } from "@/components/finance/GuardianChat";
+import { GovernanceCenter } from "@/components/finance/GovernanceCenter";
 
 export const Route = createFileRoute("/")({
   head: () => ({
