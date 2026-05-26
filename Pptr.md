@@ -1,3 +1,5 @@
+financeai-personal-financial-intelligence-platform-7b4460b5
+
 Integrar uma arquitetura distribuída de backend padrão FAANG (ADVANCED_ARCHITECTURE.md) e um motor de IA com Open Finance (AI_ENGINEERING_OPEN_FINANCE.md) dentro de uma ferramenta visual de *Vibe Coding* como o **Lovable.dev** exige uma estratégia cirúrgica.
 Como o plano gratuito do Lovable oferece **5 interações diárias**, não podemos desperdiçar comandos. O segredo para um projeto nível FAANG é usar o Lovable para construir um **Front-End "UI-Driven" altamente interativo**, que simula com perfeição matemática e visual o comportamento assíncrono, a segurança e a inteligência que você documentou.
 Abaixo está o passo a passo detalhado, do zero à sincronização com o GitHub, estruturado para economizar seus créditos e maximizar o impacto visual para a banca avaliadora da CAIXA e DIO.
