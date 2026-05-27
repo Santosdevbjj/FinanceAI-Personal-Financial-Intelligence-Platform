@@ -135,6 +135,13 @@ Com mais ciclos de desenvolvimento, o planejamento técnico do FinanceAI contemp
  * [ ] **Suporte Multi-Moedas e Investimentos:** Adicionar microsserviços na camada de tesouraria distribuída para converter aportes automáticos em ativos de renda fixa.
 ⭐ *Se esta plataforma de inteligência financeira inspirou sua visão sobre IA de Alta Disponibilidade e Engenharia de Software Moderna, deixe uma estrela no repositório!*
 
+---
+
+## Link do Lovable 
+
+Link do Lovable:
+
+https://preview--ai-guard-insight-36.lovable.app/
 
 
 
