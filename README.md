@@ -1,3 +1,23 @@
+## Bootcamp CAIXA - Inteligência Artificial na Prática.
+
+<img width="130" height="120" alt="1000126386" src="https://github.com/user-attachments/assets/9ded7185-f702-4112-95aa-c8338416e53e" />
+
+---
+
+## DESCRIÇÃO
+
+Neste desafio, você aprenderá a criar o conceito de um App de Organização de Finanças Pessoais com IA, explorando o Vibe Coding, uma forma leve e criativa de programar conversando com a IA. O objetivo é propor uma solução para o problema de controle financeiro manual e cansativo, usando agentes de IA capazes de criar planos automáticos de economia e interagir por meio de conversas naturais. Você desenvolverá um PRD simplificado (briefing para a IA), aprimorará seus prompts no Copilot e testará o Lovable para gerar fluxos de telas, planos de MVP e agentes inteligentes. A entrega consiste em um repositório com seu prompt final, prints das interações e uma reflexão sobre o processo. Mais do que código, este desafio ensina a pensar junto com a IA, transformando ideias em soluções criativas e funcionais.
+
+
+Neste desafio, seu objetivo é criar o conceito do seu próprio App de Organização de Finanças Pessoais com IA, aplicando o jeito Vibe de programar, guiando ferramentas como o Copilot e o Lovable com prompts claros e criativos. Transforme suas ideias em um projeto real e construa um portfólio que destaque suas habilidades para o mercado!
+
+
+
+
+
+---
+
+
 ```markdown
 # 💸 FinanceAI - Personal Financial Intelligence Platform
 
