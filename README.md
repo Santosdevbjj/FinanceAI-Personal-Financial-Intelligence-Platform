@@ -11,6 +11,10 @@ Neste desafio, você aprenderá a criar o conceito de um App de Organização de
 
 Neste desafio, seu objetivo é criar o conceito do seu próprio App de Organização de Finanças Pessoais com IA, aplicando o jeito Vibe de programar, guiando ferramentas como o Copilot e o Lovable com prompts claros e criativos. Transforme suas ideias em um projeto real e construa um portfólio que destaque suas habilidades para o mercado!
 
+---
+
+
+
 
 
 
