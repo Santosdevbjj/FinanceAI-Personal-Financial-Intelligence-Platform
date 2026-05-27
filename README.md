@@ -137,7 +137,7 @@ Com mais ciclos de desenvolvimento, o planejamento técnico do FinanceAI contemp
 
 ---
 
-## Link do Lovable:
+## Link do projeto no Lovable:
 
 
 https://preview--ai-guard-insight-36.lovable.app/
