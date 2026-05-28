@@ -150,6 +150,35 @@ Abra o navegador no endereço indicado no terminal (padrão: http://localhost:51
 
 ---
 
+## A pasta images contém a captura de telas 
+## Do projeto no Lovable:
+ Aqui deve ser criado um link para mostrar as telas do projeto no Lovable, segue a pasta images com os nomes dos seus arquivos:
+
+images/FinanceAi-Tela01.png
+
+
+images/FinanceAi-Tela02.png
+
+
+images/FinanceAi-Tela03.png
+
+
+images/FinanceAi-Tela04.png
+
+
+images/FinanceAi-Tela05.png
+
+
+images/FinanceAi-Tela06.png
+
+
+images/FinanceAi-Tela07.png
+
+
+
+
+---
+
 ⭐ *Se esta plataforma de inteligência financeira e a fusão entre Vibe Coding e Alta Engenharia inspiraram sua visão sobre tecnologia, deixe uma estrela no repositório!*
 
 ---
