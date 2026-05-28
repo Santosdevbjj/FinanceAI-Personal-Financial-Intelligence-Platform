@@ -209,13 +209,12 @@ FinanceAI-Personal-Financial-Intelligence-Platform/
 **Sergio Santos**
 Senior Data Engineer & Cloud Architect | DIO Campus Expert
 
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-Sergio_Santos-0077B5?style=flat&logo=linkedin)](https://www.linkedin.com/in/sergio-santos-engenheiro/)
-[![Portfólio](https://img.shields.io/badge/Portfólio-portfoliosantossergio.vercel.app-1e3a1e?style=flat)](https://portfoliosantossergio.vercel.app)
 
 
----
+[![Portfólio](https://img.shields.io/badge/Portfólio-Sérgio_Santos-111827?style=for-the-badge&logo=githubpages&logoColor=00eaff)](https://portfoliosantossergio.vercel.app)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Sérgio_Santos-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/santossergioluiz)
 
-*Desenvolvido no Bootcamp CAIXA – Inteligência Artificial na Prática (DIO) ·*
+
 
 ---
 
