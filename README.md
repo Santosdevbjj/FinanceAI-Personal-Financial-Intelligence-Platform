@@ -10,7 +10,10 @@
  * **Live Demo (Vercel Portfolio):** https://portfoliosantossergio.vercel.app/pt-BR
  * **Preview Interativo Front-End (Lovable):**
    https://preview--ai-guard-insight-36.lovable.app/
- * **Repositório Oficial Unificado:** GitHub - FinanceAI
+ * **Repositório Oficial Unificado:** https://github.com/Santosdevbjj/FinanceAI-Personal-Financial-Intelligence-Platform
+
+   ---
+   
 ## 🏛️ 1. O Problema de Negócio (The Core Pain)
 Aplicativos de finanças pessoais tradicionais sofrem com uma taxa global de abandono (*churn*) superior a **74% nos primeiros 30 dias**. O motivo central é o **atrito cognitivo**: a exigência de preenchimentos manuais exaustivos, categorização de notas fiscais e conciliação de extratos geram cansaço e burocracia desnecessária para o usuário.
 Para uma grande instituição financeira como a **CAIXA**, a falta de engajamento em ferramentas de saúde financeira reduz o índice de fidelidade do cliente (*Share of Wallet*) e eleva o risco de inadimplência, dado que o usuário não consegue prever ou mitigar crises no orçamento doméstico.
@@ -155,6 +158,11 @@ Abra o navegador no endereço indicado no terminal (padrão: http://localhost:51
 ### **Desenvolvido por:**
 **Sérgio Santos** — Cientista de Dados | Ambientes Críticos e Governança de Dados
 
-Portfólio
 
-LinkedIn
+
+
+[![Portfólio Sérgio Santos](https://img.shields.io/badge/Portfólio-Sérgio_Santos-111827?style=for-the-badge&logo=githubpages&logoColor=00eaff)](https://portfoliosantossergio.vercel.app)
+[![LinkedIn Sérgio Santos](https://img.shields.io/badge/LinkedIn-Sérgio_Santos-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/santossergioluiz)
+
+---
+
