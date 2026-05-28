@@ -152,3 +152,5 @@ https://preview--ai-guard-insight-36.lovable.app/
 [![LinkedIn Sérgio Santos](https://img.shields.io/badge/LinkedIn-Sérgio_Santos-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/santossergioluiz)
 
 
+
+---
