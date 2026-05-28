@@ -1,5 +1,8 @@
 # 💸 FinanceAI - Personal Financial Intelligence Platform
 
+<img width="130" height="120" alt="1000126386" src="https://github.com/user-attachments/assets/310b33b4-1a57-4520-a645-a872a5cdf13f" />
+
+
 > **Projeto Estratégico de Elite desenvolvido para o Bootcamp CAIXA – Inteligência Artificial na Prática (DIO)**
 > *Uma plataforma premium de gestão e inteligência financeira conversacional construída sob o paradigma de **Vibe Coding**, interface ultra-moderna e arquitetura assíncrona orientada a eventos de alta disponibilidade.*
 > 
