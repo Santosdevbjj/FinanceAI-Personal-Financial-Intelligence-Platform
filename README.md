@@ -5,15 +5,17 @@
 > **Projeto desenvolvido para o Bootcamp CAIXA – Inteligência Artificial na Prática (DIO)**
 > Plataforma conversacional de inteligência financeira construída sob o paradigma de **Vibe Coding** — interface premium, motor NER de categorização automática e arquitetura assíncrona orientada a eventos.
 
+
+
 ---
 
-## Links do Ecossistema
+## 🔗 Ecossistema do Projeto
 
-| Recurso | URL |
-|---|---|
-| 🌐 Live Demo (Portfólio Vercel) | [portfoliosantossergio.vercel.app](https://portfoliosantossergio.vercel.app/pt-BR) |
-| ⚡ Preview Interativo (Lovable) | [preview--ai-guard-insight-36.lovable.app](https://preview--ai-guard-insight-36.lovable.app/) |
-| 📁 Repositório Oficial | [github.com/Santosdevbjj/FinanceAI](https://github.com/Santosdevbjj/FinanceAI-Personal-Financial-Intelligence-Platform) |
+[![Live Demo](https://img.shields.io/badge/Live_Demo-Portfólio_Vercel-111827?style=for-the-badge&logo=vercel&logoColor=00eaff)](https://portfoliosantossergio.vercel.app/pt-BR)
+[![Preview Lovable](https://img.shields.io/badge/Preview-Lovable_App-1e3a1e?style=for-the-badge&logo=react&logoColor=white)](https://preview--ai-guard-insight-36.lovable.app/)
+[![Repositório](https://img.shields.io/badge/GitHub-Repositório_Oficial-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Santosdevbjj/FinanceAI-Personal-Financial-Intelligence-Platform)
+[![LinkedIn Sérgio Santos](https://img.shields.io/badge/LinkedIn-Sérgio_Santos-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/santossergioluiz)
+
 
 ---
 
