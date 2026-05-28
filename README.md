@@ -184,7 +184,7 @@ FinanceAI-Personal-Financial-Intelligence-Platform/
 │   ├── routes/                 # Rotas TanStack Router
 │   └── lib/                    # Utilitários e lógica NER
 ├── docs/
-│   ├── ADVANCED_ARCHITECTURE.md      # Arquitetura backend distribuído (padrão FAANG)
+│   ├── ADVANCED_ARCHITECTURE.md      # Arquitetura backend distribuído 
 │   └── AI_ENGINEERING_OPEN_FINANCE.md # Pipeline de IA com Open Finance
 ├── public/
 ├── vite.config.ts
