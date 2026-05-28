@@ -242,7 +242,7 @@ npm install
 npm run dev
 ```
 
-Acesse `http://localhost:5173` no navegador. Para visualizar a dualidade de interface, alterne o botão **"Modo de Visualização"** no header entre Modo Leigo e Modo Técnico/FAANG.
+Acesse `http://localhost:5173` no navegador. Para visualizar a dualidade de interface, alterne o botão **"Modo de Visualização"** no header entre Modo Leigo e Modo Técnico.
 
 ---
 
