@@ -7,8 +7,9 @@
 > *Uma plataforma premium de gestão e inteligência financeira conversacional construída sob o paradigma de **Vibe Coding**, interface ultra-moderna e arquitetura assíncrona orientada a eventos de alta disponibilidade.*
 > 
 ## 🔗 Links do Ecossistema
- * **Live Demo (Vercel Portfolio):** portfoliosantossergio.vercel.app
- * **Preview Interativo Front-End (Lovable):** ai-guard-insight-36.lovable.app
+ * **Live Demo (Vercel Portfolio):** https://portfoliosantossergio.vercel.app/pt-BR
+ * **Preview Interativo Front-End (Lovable):**
+   https://preview--ai-guard-insight-36.lovable.app/
  * **Repositório Oficial Unificado:** GitHub - FinanceAI
 ## 🏛️ 1. O Problema de Negócio (The Core Pain)
 Aplicativos de finanças pessoais tradicionais sofrem com uma taxa global de abandono (*churn*) superior a **74% nos primeiros 30 dias**. O motivo central é o **atrito cognitivo**: a exigência de preenchimentos manuais exaustivos, categorização de notas fiscais e conciliação de extratos geram cansaço e burocracia desnecessária para o usuário.
