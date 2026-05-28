@@ -1,268 +1,221 @@
-# 💸 FinanceAI — Personal Financial Intelligence Platform
+# FinanceAI — Personal Financial Intelligence Platform
 
 <img width="130" height="120" alt="FinanceAI Logo" src="https://github.com/user-attachments/assets/310b33b4-1a57-4520-a645-a872a5cdf13f" />
 
-> Plataforma premium de gestão financeira conversacional construída sob o paradigma de **Vibe Coding**, com Motor NER simulado, conformidade LGPD e integração Open Finance — desenvolvida para o **Bootcamp CAIXA – Inteligência Artificial na Prática (DIO)**.
+> **Projeto desenvolvido para o Bootcamp CAIXA – Inteligência Artificial na Prática (DIO)**
+> Plataforma conversacional de inteligência financeira construída sob o paradigma de **Vibe Coding** — interface premium, motor NER de categorização automática e arquitetura assíncrona orientada a eventos.
 
 ---
 
-## 🔗 Ecossistema do Projeto
+## Links do Ecossistema
 
-[![Live Demo](https://img.shields.io/badge/Live_Demo-Portfólio_Vercel-111827?style=for-the-badge&logo=vercel&logoColor=00eaff)](https://portfoliosantossergio.vercel.app/pt-BR)
-[![Preview Lovable](https://img.shields.io/badge/Preview-Lovable_App-1e3a1e?style=for-the-badge&logo=react&logoColor=white)](https://preview--ai-guard-insight-36.lovable.app/)
-[![Repositório](https://img.shields.io/badge/GitHub-Repositório_Oficial-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Santosdevbjj/FinanceAI-Personal-Financial-Intelligence-Platform)
-[![LinkedIn Sérgio Santos](https://img.shields.io/badge/LinkedIn-Sérgio_Santos-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/santossergioluiz)
+| Recurso | URL |
+|---|---|
+| 🌐 Live Demo (Portfólio Vercel) | [portfoliosantossergio.vercel.app](https://portfoliosantossergio.vercel.app/pt-BR) |
+| ⚡ Preview Interativo (Lovable) | [preview--ai-guard-insight-36.lovable.app](https://preview--ai-guard-insight-36.lovable.app/) |
+| 📁 Repositório Oficial | [github.com/Santosdevbjj/FinanceAI](https://github.com/Santosdevbjj/FinanceAI-Personal-Financial-Intelligence-Platform) |
 
 ---
 
 ## 1. Problema de Negócio
 
-Aplicativos de finanças pessoais tradicionais registram taxa global de abandono (*churn*) superior a **74% nos primeiros 30 dias**. A causa central é o **atrito cognitivo**: formulários de preenchimento manual, categorização de notas fiscais e conciliação de extratos geram fricção que o usuário médio não tolera por mais de quatro semanas.
+Aplicativos de finanças pessoais tradicionais apresentam **taxa de abandono superior a 74% nos primeiros 30 dias**. A causa central não é a falta de funcionalidade — é o **atrito cognitivo**: preenchimento manual de transações, categorização de notas fiscais e conciliação de extratos criam uma burocracia que cansa o usuário antes mesmo de ele desenvolver o hábito financeiro.
 
-Para uma instituição financeira de grande porte, essa evasão tem custo direto mensurável: reduz o índice de fidelidade (*Share of Wallet*), aumenta o risco de inadimplência — já que o usuário perde rastreabilidade do orçamento — e eleva o custo de aquisição de cliente sem contrapartida de retenção.
+Para uma instituição financeira como a **CAIXA**, esse abandono tem consequências diretas e mensuráveis: a queda no engajamento com ferramentas de saúde financeira reduz o índice de fidelidade (*Share of Wallet*) e eleva o risco de inadimplência, pois o cliente perde a capacidade de antecipar e mitigar crises no orçamento doméstico.
 
-**O objetivo do projeto** é eliminar o formulário tradicional substituindo-o por uma interface conversacional com agentes inteligentes proativos, capaz de automatizar o planejamento financeiro sem exigir digitação estruturada ou planilhas manuais.
+### O Desafio
 
----
-
-## 2. Contexto
-
-O controle financeiro do usuário médio no Brasil é **reativo e falho**. O erro médio de previsão orçamentária em anotações manuais é de **±25%**, gerando estouros frequentes de crédito e uso de cheque especial como compensação emergencial — um padrão documentado pelo Banco Central no relatório de inadimplência de famílias brasileiras.
-
-O **FinanceAI** foi concebido para atender a uma dualidade crítica de público:
-
-- **Usuário final leigo:** interface conversacional fluida (estilo chat), feedbacks visuais imediatos e comandos em linguagem natural, sem jargões bancários.
-- **Avaliador técnico / instituição parceira:** transparência de logs, latência sob controle, conformidade estrita com a **LGPD** e visualização em tempo real dos payloads processados pela IA.
-
-A plataforma integra nativamente regras consagradas de mercado: **Regra 60-20-20** (60% Essenciais, 20% Estilo de Vida, 20% Poupança) e automação do **Desafio das 52 Semanas**.
+Eliminar o formulário tradicional como ponto de entrada e substituí-lo por uma interface baseada em **linguagem natural e agentes inteligentes proativos** — capaz de automatizar o planejamento financeiro sem exigir digitação estruturada, planilhas ou conhecimento bancário prévio.
 
 ---
 
-## 3. Premissas da Solução
+## 2. Contexto do Projeto
 
-Para o desenvolvimento deste MVP, foram adotadas as seguintes premissas:
+O **FinanceAI** foi concebido para atender a uma dualidade crítica de público, unindo simplicidade de atrito zero à densidade técnica exigida em infraestrutura bancária:
 
-- O canal primário de entrada de dados é a **linguagem natural via chat**, não formulários estruturados.
-- O Motor NER opera de forma **simulada com alta fidelidade** — comportamento determinístico em TypeScript replicando o pipeline de produção documentado em `docs/AI_ENGINEERING_OPEN_FINANCE.md`.
-- A integração com Open Finance (BACEN) está em **modo mockado**, representando o fluxo real de consentimento mTLS com dados fictícios para demonstração.
-- O mascaramento LGPD é **aplicado no front-end antes do log**, simulando o filtro de PII (AES-256) que operaria na camada de backend em produção.
-- O período de desenvolvimento seguiu a restrição de **5 interações diárias** do plano gratuito do Lovable, exigindo engenharia de prompts de alta precisão.
+**Usuário leigo:** recebe uma interface conversacional fluida, com feedbacks visuais rápidos e comandos diretos em linguagem do dia a dia (ex: *"Gastei R$ 50 no almoço"*). O sistema categoriza, registra e projeta o impacto financeiro automaticamente, sem formulários.
+
+**Avaliador técnico / engenheiro:** exige transparência nos logs de auditoria, controle de latência, conformidade estrita com a **LGPD** e visualização em tempo real dos payloads JSON processados pela IA — disponíveis na interface via botão "Ver Payload da IA".
+
+O projeto foi construído integralmente via **Vibe Coding** com a ferramenta Lovable.dev, paradigma que substitui o ciclo tradicional de desenvolvimento por conversas orientadas a prompts com IA generativa, traduzindo especificações em código React/TypeScript funcional.
+
+---
+
+## 3. Premissas da Análise e do Desenvolvimento
+
+Para a construção da plataforma, foram adotadas as seguintes premissas:
+
+- O motor NER opera em modo simulado (*front-end driven*), replicando com fidelidade matemática o comportamento assíncrono de um pipeline de IA de produção, sem chamadas reais a APIs externas de LLM.
+- A Regra 60-20-20 (Essencial / Estilo de Vida / Poupança) foi adotada como modelo financeiro-base por ser amplamente validada e compreensível para o perfil do usuário leigo da CAIXA.
+- A conformidade com a **LGPD** foi implementada em nível de UI: mascaramento visual de dados sensíveis com badges `[MASCARADO - AES-256]`, simulando os controles que existiriam em um backend real.
+- O plano gratuito do Lovable limita a 5 interações diárias, o que impôs restrições na granularidade de cada prompt e exigiu planejamento cirúrgico das interações (detalhado na seção de Estratégia).
+- A integração Open Finance é simulada via animação de consentimento mTLS e geração de transações fictícias, conforme as diretrizes do BACEN para prototipagem.
 
 ---
 
 ## 4. Estratégia da Solução
 
-O desenvolvimento seguiu uma abordagem de **Vibe Coding cirúrgico**: engenharia de contexto com prompts estruturados no Lovable para maximizar a qualidade de cada uma das 5 interações disponíveis por dia.
+A solução foi construída em **5 interações planejadas no Lovable.dev**, cada uma com escopo fechado para maximizar o resultado dentro do limite de créditos:
 
-### Interação 1 — Fundação da SPA (O Prompt de Ouro)
+**Interação 1 — Fundação (O Prompt de Ouro):** geração da SPA completa com layout premium (estilo Stripe/Apple), sidebar de navegação, painel analítico com a Regra 60-20-20, barra de progresso da Reserva de Emergência e a dualidade de interface Modo Leigo / Modo Técnico.
 
-Criação completa do layout, componentes de navegação e estados globais em uma única instrução:
+**Interação 2 — Motor NER:** implementação da lógica TypeScript de processamento de linguagem natural no feed de chat. Parsing de palavras-chave por categoria (Essencial, Estilo de Vida) com atualização dinâmica do dashboard e exposição do payload JSON estruturado da transação.
 
-> *Crie uma SPA ultra-moderna de inteligência financeira chamada "FinanceAI". Interface premium estilo Stripe/Apple, tons de verde mineral (#1e3a1e), cinzas neutros, mobile-first. Sidebar de navegação + área central com (1) Painel Analítico com Saldo Consolidado, indicador de "Dinheiro Livre" pela Regra 60-20-20 e progresso da Reserva de Emergência; (2) Feed de Conversação do Agente Guardião. Botão Switch "Modo de Visualização": Modo Leigo oculta tabelas / Modo Técnico revela métricas simuladas de latência, NER e LGPD.*
+**Interação 3 — Open Finance e LGPD:** componente "Central de Governança & Open Finance" com simulação de consentimento mTLS, sincronização bancária e painel de monitoramento de privacidade com mascaramento visual de dados sensíveis.
 
-### Interação 2 — Motor NER de Inteligência Artificial
+**Interações 4 e 5 — Polimento e responsividade:** refinamento de espaçamento mobile-first, contraste WCAG, efeitos de hover e correção de bugs visuais.
 
-Lógica TypeScript simulando Named Entity Recognition no pipeline de chat:
+**Integração com GitHub:** sincronização via método do Branch Isolado (`git fetch` + `checkout -b` + `merge --allow-unrelated-histories`), resolvendo o conflito de históricos entre o repositório do Lovable e o repositório definitivo. O push final utilizou `--force-with-lease`, padrão homologado em Big Techs por proteger o trabalho do time contra sobreposições concorrentes.
 
-> *Implemente o Motor NER no input do chat: animação "IA processando payload..." por 800ms. Parse de texto: "mercado", "carrefour", "aluguel" → [Essencial - 60%]; "cinema", "iFood" → [Estilo de Vida - 20%]. Botão "Ver Payload JSON da IA" em cada resposta, abrindo modal com `amount`, `merchant`, `category` e `confidence_score`.*
-
-### Interação 3 — Central de Governança & Open Finance
-
-Fluxos visuais de segurança e integração bancária regulamentada:
-
-> *Adicione "Central de Governança & Open Finance": botão "Conectar Banco via BACEN" com animação de consentimento mTLS + 3 transações fictícias na tabela. Painel LGPD mostrando mascaramento de Nome/CPF com badges [MASCARADO - AES-256].*
-
-### Interações 4 e 5 — Polimento e Responsividade
-
-> *Refine espaçamento dos cartões no mobile para evitar quebras e adicione efeito hover suave (shadow-lg) em todos os botões.*
-
-### Pipeline Lógico da IA
-
-```
-[Input de Voz ou Texto]
-         │
-         ▼
-[Filtro Sanitizador LGPD] ──► Mascaramento de PII via AES-256
-         │
-         ▼
-[Motor NER (Parser IA)]   ──► Extração de Entidades + Confidence Score
-         │
-         ▼
-[Motor Orçamentário]      ──► Atualização dinâmica do gráfico 60-20-20
-```
-
-**Exemplo de payload gerado pelo pipeline NER** para a entrada *"Paguei R$ 150 no mercado Carrefour ontem à noite"*:
-
-```json
-{
-  "transaction_extracted": {
-    "amount": 150.00,
-    "currency": "BRL",
-    "category": "Alimentação (Essencial - 60%)",
-    "merchant": "Carrefour",
-    "timestamp": "2026-05-27T22:30:00Z",
-    "confidence_score": 0.98,
-    "lgpd_status": "SANITIZED_AND_MASKED"
-  }
-}
-```
+A documentação técnica completa da arquitetura de backend distribuído e do pipeline de engenharia de IA está disponível em [`/docs/ADVANCED_ARCHITECTURE.md`](./docs/ADVANCED_ARCHITECTURE.md) e [`/docs/AI_ENGINEERING_OPEN_FINANCE.md`](./docs/AI_ENGINEERING_OPEN_FINANCE.md).
 
 ---
 
-## 5. Resultados
+## 5. Funcionalidades e Insights de Implementação
 
-A plataforma entregou, dentro das restrições do plano gratuito do Lovable, os seguintes resultados mensuráveis:
+### Agente Guardião — Feed Conversacional
 
-- **Eliminação do atrito de entrada:** usuário registra uma transação com uma frase em linguagem natural em menos de 3 segundos, contra o preenchimento manual médio de 45 segundos em apps tradicionais.
-- **Redução projetada do erro de previsão orçamentária:** de ±25% (baseline manual) para **< 5%** com captura contínua via NER e cruzamento com Open Finance.
-- **Dualidade de interface entregue:** Modo Leigo e Modo Técnico/FAANG operando na mesma SPA, atendendo simultaneamente ao usuário final e ao avaliador técnico institucional.
-- **Conformidade LGPD demonstrável:** fluxo de mascaramento de PII visível e auditável, com badges de status em tempo real na Central de Governança.
-- **Código unificado e versionado:** interface React/TypeScript + documentação de arquitetura avançada consolidados em um único repositório via pipeline Git multi-origem — resolução de conflito de históricos não relacionados com `--allow-unrelated-histories` e rebase linear.
+Interface de chat fluida onde o usuário descreve transações em linguagem natural. O motor NER extrai entidade, valor, comerciante e categoria em 800ms, exibindo um card estruturado de confirmação com o payload JSON da transação disponível sob demanda — tornando a IA auditável e transparente.
 
-### Capturas de Tela da Plataforma
+### Dashboard Analítico com Regra 60-20-20
 
-| Tela 01 | Tela 02 | Tela 03 |
-|---|---|---|
-| ![Tela 01](images/FinanceAi-Tela01.png) | ![Tela 02](images/FinanceAi-Tela02.png) | ![Tela 03](images/FinanceAi-Tela03.png) |
+Cartão de Saldo Consolidado, indicador dinâmico de *Dinheiro Livre para Gastar Hoje* e barra de progresso da Reserva de Emergência. Todos os componentes atualizam em tempo real a cada transação registrada via chat.
 
-| Tela 04 | Tela 05 | Tela 06 |
-|---|---|---|
-| ![Tela 04](images/FinanceAi-Tela04.png) | ![Tela 05](images/FinanceAi-Tela05.png) | ![Tela 06](images/FinanceAi-Tela06.png) |
+### Dualidade de Interface: Modo Leigo / Modo Técnico
 
-| Tela 07 |
-|---|
-| ![Tela 07](images/FinanceAi-Tela07.png) |
+- **Modo Leigo:** gráficos minimalistas e insights em linguagem natural, sem jargões bancários.
+- **Modo Técnico (FAANG):** micro-widgets de infraestrutura com métricas simuladas em tempo real — Latência do Pipeline de IA (ms), Score de Confiança NER (%), Status do Mascaramento LGPD e Sincronização Open Finance.
+
+### Central de Governança & Open Finance
+
+Simulação completa do fluxo de consentimento BACEN com animação mTLS, geração de transações bancárias fictícias pós-sincronização e painel LGPD com mascaramento visual `[MASCARADO - AES-256]` de dados sensíveis como Nome e CPF.
 
 ---
 
-## 6. Decisões Técnicas e Trade-offs
+## 6. Stack Tecnológica
 
-Esta seção documenta as escolhas arquiteturais com as alternativas consideradas e os trade-offs conscientemente aceitos — o critério que diferencia um engenheiro que usa ferramentas de um engenheiro que decide por elas.
-
-### Stack Front-End: React 19 + Vite + Tailwind CSS
-
-**Alternativa considerada:** Next.js 15 com SSR.
-
-**Decisão:** React 19 puro com Vite, via geração acelerada pelo Lovable.
-
-**Rationale:** O FinanceAI é uma SPA de estado rico e interação em tempo real — SSR adicionaria complexidade de hidratação sem ganho de SEO relevante para uma plataforma financeira autenticada. O Vite entrega HMR sub-segundo e bundle otimizado para o padrão de componentes gerado pelo Lovable.
-
-**Trade-off aceito:** Ausência de renderização server-side limita indexação por bots — aceitável para um MVP de dashboard financeiro, que não tem conteúdo público a indexar.
-
----
-
-### Componentes: Radix UI Primitives + Recharts
-
-**Alternativa considerada:** Material UI ou Chakra UI.
-
-**Decisão:** Radix UI para primitivos acessíveis + Recharts para gráficos matemáticos.
-
-**Rationale:** Radix entrega acessibilidade WCAG sem opinião visual — permite aplicar o design system próprio (verde mineral #1e3a1e) sem sobrescrever estilos de biblioteca. Recharts tem API declarativa alinhada ao modelo de dados da Regra 60-20-20, tornando o gráfico de pizza uma consequência direta do estado orçamentário.
-
-**Trade-off aceito:** Curva de composição maior que bibliotecas all-in-one. Justificado pelo controle total sobre a identidade visual premium exigida pelo contexto bancário.
+| Camada | Tecnologias |
+|---|---|
+| **Frontend Core** | React 19, TypeScript 5.8, Vite 7 |
+| **Roteamento / State** | TanStack Router, TanStack Query |
+| **UI Components** | Radix UI (suite completa), shadcn/ui |
+| **Estilização** | Tailwind CSS v4, tw-animate-css |
+| **Gráficos** | Recharts |
+| **Formulários / Validação** | React Hook Form, Zod |
+| **Plataforma de Desenvolvimento** | Lovable.dev (Vibe Coding) |
+| **Package Manager** | Bun |
+| **Deploy** | Vercel (via portfólio) |
 
 ---
 
-### Motor NER: TypeScript simulado de alta fidelidade
+## 7. Decisões Técnicas e Trade-offs
 
-**Alternativa considerada:** Integração real com API de NLP (ex: OpenAI GPT-4o, Hugging Face).
+**TanStack Router vs React Router:** optei pelo TanStack Router pela tipagem end-to-end nativa e pelo modelo de carregamento baseado em loaders que se integra naturalmente ao TanStack Query. O trade-off é uma curva de aprendizado mais íngreme e um ecossistema menor, compensado pelo alinhamento com a arquitetura data-fetching do projeto.
 
-**Decisão:** Pipeline NER determinístico em TypeScript, comportamento simulado.
+**Radix UI + shadcn/ui vs bibliotecas de componentes fechadas (ex: MUI, Chakra):** a combinação Radix + shadcn oferece acessibilidade WAI-ARIA nativa, total controle sobre o CSS e ausência de conflitos com Tailwind. O custo é maior volume de código inicial; o benefício é zero vendor lock-in e UI 100% customizável ao design system FAANG do projeto.
 
-**Rationale:** O objetivo do MVP é demonstrar a arquitetura e o fluxo de dados — não depender de latência de rede ou custo de tokens em produção para fins avaliativos. O payload JSON gerado é estruturalmente idêntico ao que uma chamada de API real retornaria, preservando a validade arquitetural da demonstração.
+**Tailwind CSS v4 vs v3:** a v4 traz engine baseado em Lightning CSS com performance de build significativamente superior. Ainda em fase de adoção pela comunidade no momento do desenvolvimento, o que representa risco de breaking changes em alguns plugins — risco calculado e aceito dado o contexto de MVP.
 
-**Trade-off aceito:** Vocabulário de reconhecimento limitado ao dicionário hardcoded. Em produção, substituído por chamada ao pipeline documentado em `docs/AI_ENGINEERING_OPEN_FINANCE.md`.
+**Motor NER simulado vs integração real com LLM:** a decisão de implementar o NER como lógica TypeScript client-side, ao invés de chamadas a APIs de LLM (OpenAI, Claude), foi deliberada. Elimina latência de rede, custos de API e dependência de terceiros para a demo — mantendo total fidelidade visual ao comportamento de um pipeline real, que seria o próximo passo em produção.
 
----
+**Vibe Coding com Lovable vs desenvolvimento tradicional:** a escolha pelo paradigma conversacional foi o próprio objeto de estudo do bootcamp. O trade-off é a limitação de 5 interações diárias, que exige planejamento de prompts de alto impacto em vez de iteração livre — disciplina análoga à gestão de tokens em contextos de produção com LLMs.
 
-### Sincronização Git: Merge multi-origem com branch temporária
-
-**Alternativa considerada:** Descartar o repositório gerado pelo Lovable e recriar a interface manualmente.
-
-**Decisão:** Estratégia de checkout isolado + merge com `--allow-unrelated-histories` + rebase linear.
-
-**Rationale:** Preservar o histórico de commits do Lovable (rastreabilidade do processo de Vibe Coding) e os documentos de arquitetura preexistentes na pasta `docs/` sem reescrita manual — solução de custo zero em tempo de desenvolvimento.
-
-**Trade-off aceito:** Histórico de commits não-linear na branch `main` durante a fase de unificação. Mitigado pelo rebase final (`git pull origin main --rebase`) que linearizou o histórico antes do push definitivo.
+**`--force-with-lease` vs `-f` no push forçado:** ao resolver o conflito de históricos entre o repositório Lovable e o repositório definitivo, utilizei `--force-with-lease` ao invés do `-f` tradicional. O `--force-with-lease` verifica se nenhum commit remoto foi adicionado desde o último fetch, protegendo o trabalho do time contra sobreposições — padrão homologado em pipelines CI/CD de Big Techs.
 
 ---
 
-### Arquitetura de Backend: CQRS + Kafka (documentada, não implementada no MVP)
+## 8. Resultados e Business Performance
 
-**Decisão:** Documentar a arquitetura de produção em `docs/ADVANCED_ARCHITECTURE.md` em vez de implementar um backend mockado.
+A plataforma entrega, de forma mensurável, os seguintes resultados para o contexto da CAIXA:
 
-**Rationale:** Para o escopo de um MVP de Vibe Coding, implementar um servidor Express ou FastAPI adicionaria complexidade operacional sem valor demonstrável adicional para a banca avaliadora. A documentação arquitetural de nível FAANG (CQRS, Kafka, padrões de resiliência) prova a capacidade de design de sistemas sem exigir infraestrutura em execução.
+**Redução de atrito na entrada de dados:** a substituição do formulário por linguagem natural elimina o principal fator de abandono identificado — o usuário registra uma transação com uma frase, não com um formulário de 5 campos.
 
-**Trade-off aceito:** Ausência de backend real limita a persistência de dados entre sessões. Aceito conscientemente — o foco do desafio é a plataforma conceitual e o processo de Vibe Coding, não a operação de produção.
+**Transparência técnica auditável:** o payload JSON exposto em cada transação do Agente Guardião permite que equipes de engenharia e compliance auditem o raciocínio da IA diretamente na interface, sem acesso ao backend.
 
----
+**Conformidade LGPD demonstrável:** o mascaramento visual com badges `[MASCARADO - AES-256]` e o fluxo de consentimento Open Finance tornam a conformidade tangível para o usuário final — transformando exigência regulatória em diferencial de UX.
 
-## 7. Estrutura do Repositório
-
-```
-FinanceAI-Personal-Financial-Intelligence-Platform/
-├── .github/workflows/          # CI/CD gerado pelo Lovable
-├── docs/                       # Documentação de arquitetura avançada
-│   ├── ADVANCED_ARCHITECTURE.md       # Backend distribuído e resiliência
-│   └── AI_ENGINEERING_OPEN_FINANCE.md # Motor de IA e integração BACEN
-├── images/                     # Capturas de tela da plataforma no Lovable
-│   ├── FinanceAi-Tela01.png
-│   ├── FinanceAi-Tela02.png
-│   ├── FinanceAi-Tela03.png
-│   ├── FinanceAi-Tela04.png
-│   ├── FinanceAi-Tela05.png
-│   ├── FinanceAi-Tela06.png
-│   └── FinanceAi-Tela07.png
-├── src/                        # Código-fonte da interface (React 19 + TypeScript)
-│   ├── components/             # Micro-componentes e widgets dinâmicos
-│   ├── App.tsx                 # Componente master da SPA
-│   └── main.tsx                # Ponto de entrada Vite
-├── package.json                # Manifesto de dependências React/Vite
-├── tailwind.config.js          # Configuração do motor de estilos
-└── README.md                   # Esta documentação
-```
+**Arquitetura escalável documentada:** a pasta `/docs` contém a especificação completa de um backend distribuído padrão FAANG (`ADVANCED_ARCHITECTURE.md`) e o pipeline de engenharia de IA com Open Finance (`AI_ENGINEERING_OPEN_FINANCE.md`), prontos para orientar a implementação real em produção.
 
 ---
 
-## 8. Como Executar Localmente
+## 9. Como Executar o Projeto
 
-**Pré-requisitos:** Node.js >= 18.x ou Bun instalado.
+### Pré-requisitos
+
+- Node.js 20+ ou Bun 1.x
+- Git
+
+### Instalação
 
 ```bash
-# 1. Clonar o repositório
+# Clone o repositório
 git clone https://github.com/Santosdevbjj/FinanceAI-Personal-Financial-Intelligence-Platform.git
-
-# 2. Acessar a pasta do projeto
 cd FinanceAI-Personal-Financial-Intelligence-Platform
 
-# 3. Instalar dependências
+# Instale as dependências (recomendado com Bun)
+bun install
+# ou
 npm install
 
-# 4. Iniciar o servidor de desenvolvimento (Vite)
+# Inicie o servidor de desenvolvimento
+bun dev
+# ou
 npm run dev
 ```
 
-Acesse `http://localhost:5173` no navegador. Para visualizar a dualidade de interface, alterne o botão **"Modo de Visualização"** no header entre Modo Leigo e Modo Técnico.
+A aplicação estará disponível em `http://localhost:5173`.
+
+### Build de Produção
+
+```bash
+bun run build
+# ou
+npm run build
+```
 
 ---
 
-## 9. Próximos Passos
+## 10. Estrutura do Repositório
 
-- [ ] **Integração real com Open Finance:** substituir os mocks de consentimento por chamadas reais a agregadores de APIs regulamentados pelo BACEN.
-- [ ] **Streaming de voz nativo:** integrar Web Speech API para captação e conversão de comandos de áudio sem latência perceptível.
-- [ ] **Microsserviço de investimentos automáticos:** converter o percentual do bloco de 20% (Poupança) em aportes automatizados em ativos de renda fixa via camada de tesouraria.
-- [ ] **Backend de produção:** implementar o padrão CQRS + Kafka documentado em `docs/ADVANCED_ARCHITECTURE.md`, substituindo o pipeline NER simulado por chamadas reais ao motor de IA.
-- [ ] **Monitoramento contínuo:** dashboard de taxa de abandono em tempo real para validar empiricamente a redução do churn abaixo de 74%.
+```
+FinanceAI-Personal-Financial-Intelligence-Platform/
+├── src/                        # Código-fonte React/TypeScript (gerado via Lovable)
+│   ├── components/             # Componentes UI (Radix + shadcn)
+│   ├── routes/                 # Rotas TanStack Router
+│   └── lib/                    # Utilitários e lógica NER
+├── docs/
+│   ├── ADVANCED_ARCHITECTURE.md      # Arquitetura backend distribuído (padrão FAANG)
+│   └── AI_ENGINEERING_OPEN_FINANCE.md # Pipeline de IA com Open Finance
+├── public/
+├── vite.config.ts
+├── tailwind.config.ts
+└── README.md
+```
+
+---
+
+## 11. Próximos Passos
+
+- Integrar motor NER real via API de LLM (Claude Haiku ou GPT-4o-mini) para processamento de linguagem natural em produção, substituindo o parser TypeScript simulado.
+- Implementar o backend distribuído documentado em `ADVANCED_ARCHITECTURE.md` com Node.js/Fastify, PostgreSQL e Redis para cache de sessão.
+- Conectar ao Open Finance real via APIs do BACEN com autenticação mTLS e fluxo de consentimento OAuth 2.0.
+- Adicionar testes de componente com Vitest e Testing Library, cobrindo os fluxos críticos do Agente Guardião e do dashboard analítico.
+- Evoluir o modelo de categorização para aprendizado personalizado por perfil de usuário, reduzindo a taxa de erro de classificação ao longo do uso.
 
 ---
 
-**Desenvolvido por Sérgio Santos** — Engenheiro de Dados Sênior | Arquitetura Cloud | Ambientes Críticos Bancários
+## Autor
 
-[![Portfólio](https://img.shields.io/badge/Portfólio-Sérgio_Santos-111827?style=for-the-badge&logo=githubpages&logoColor=00eaff)](https://portfoliosantossergio.vercel.app)
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-Sérgio_Santos-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/santossergioluiz)
+**Sergio Santos**
+Senior Data Engineer & Cloud Architect | DIO Campus Expert
+
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Sergio_Santos-0077B5?style=flat&logo=linkedin)](https://www.linkedin.com/in/sergio-santos-engenheiro/)
+[![Portfólio](https://img.shields.io/badge/Portfólio-portfoliosantossergio.vercel.app-1e3a1e?style=flat)](https://portfoliosantossergio.vercel.app)
+[![GitHub](https://img.shields.io/badge/GitHub-Santosdevbjj-181717?style=flat&logo=github)](https://github.com/Santosdevbjj)
 
 ---
 
-⭐ *Se a fusão entre Vibe Coding e arquitetura de plataforma financeira foi útil para sua visão técnica, deixe uma estrela no repositório.*
+*Desenvolvido no Bootcamp CAIXA – Inteligência Artificial na Prática (DIO) ·*
 
 ---
+
