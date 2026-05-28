@@ -211,7 +211,7 @@ Senior Data Engineer & Cloud Architect | DIO Campus Expert
 
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-Sergio_Santos-0077B5?style=flat&logo=linkedin)](https://www.linkedin.com/in/sergio-santos-engenheiro/)
 [![Portfólio](https://img.shields.io/badge/Portfólio-portfoliosantossergio.vercel.app-1e3a1e?style=flat)](https://portfoliosantossergio.vercel.app)
-[![GitHub](https://img.shields.io/badge/GitHub-Santosdevbjj-181717?style=flat&logo=github)](https://github.com/Santosdevbjj)
+
 
 ---
 
