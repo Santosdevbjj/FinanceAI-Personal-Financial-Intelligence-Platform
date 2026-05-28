@@ -1,6 +1,5 @@
-Aqui está a reescrita completa e profissional do seu README.md, estruturada sob as melhores práticas de portfólio de grandes tecnológias (padrão FAANG), e aplicando os conceitos de comunicação, clareza e autoridade defendidos por **Meigarom Lopes** e **Luiz Café**.
-Esta documentação foi desenhada sob medida para impressionar a banca avaliadora da **CAIXA** e da **DIO**, destacando o uso inovador do *Vibe Coding*, a arquitetura avançada de backend e a integração com engenharia de IA e Open Finance.
 # 💸 FinanceAI - Personal Financial Intelligence Platform
+
 > **Projeto Estratégico de Elite desenvolvido para o Bootcamp CAIXA – Inteligência Artificial na Prática (DIO)**
 > *Uma plataforma premium de gestão e inteligência financeira conversacional construída sob o paradigma de **Vibe Coding**, interface ultra-moderna e arquitetura assíncrona orientada a eventos de alta disponibilidade.*
 > 
