@@ -14,3 +14,25 @@ financeai-santossergio
 
 
 ---
+
+Your app is live!
+Successfully published to the internet
+
+financeai-santossergio.lovable.app
+
+Update settings anytime!
+
+
+---
+
+https://financeai-santossergio.lovable.app/
+
+
+
+
+
+
+
+
+
+---
