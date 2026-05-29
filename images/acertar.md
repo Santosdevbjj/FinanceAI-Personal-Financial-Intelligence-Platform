@@ -3,3 +3,14 @@ Adicione um modal “Ver transformação LGPD” que mostre, em etapas, como Nom
 
 ---
 
+
+
+financeai-santossergio.lovable.app
+
+---
+
+
+financeai-santossergio
+
+
+---
