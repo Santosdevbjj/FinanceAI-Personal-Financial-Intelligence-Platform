@@ -12,7 +12,7 @@
 ## 🔗 Ecossistema do Projeto
 
 [![Live Demo](https://img.shields.io/badge/Live_Demo-Portfólio_Vercel-111827?style=for-the-badge&logo=vercel&logoColor=00eaff)](https://portfoliosantossergio.vercel.app/pt-BR)
-[![Preview Lovable](https://img.shields.io/badge/Preview-Lovable_App-1e3a1e?style=for-the-badge&logo=react&logoColor=white)](https://preview--ai-guard-insight-36.lovable.app/)
+[![Lovable](https://img.shields.io/badge/Preview-Lovable_App-1e3a1e?style=for-the-badge&logo=react&logoColor=white)](https://financeai-santossergio.lovable.app/)
 [![Repositório](https://img.shields.io/badge/GitHub-Repositório_Oficial-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Santosdevbjj/FinanceAI-Personal-Financial-Intelligence-Platform)
 [![LinkedIn Sérgio Santos](https://img.shields.io/badge/LinkedIn-Sérgio_Santos-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/santossergioluiz)
 
