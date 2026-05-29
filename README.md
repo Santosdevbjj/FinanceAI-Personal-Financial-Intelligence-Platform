@@ -1,4 +1,4 @@
-# FinanceAI — Personal Financial Intelligence Platform
+# FinanceAI — Personal Financial Intelligence Platform 
 
 <img width="130" height="120" alt="FinanceAI Logo" src="https://github.com/user-attachments/assets/310b33b4-1a57-4520-a645-a872a5cdf13f" />
 
