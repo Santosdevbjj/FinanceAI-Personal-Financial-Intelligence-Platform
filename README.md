@@ -199,7 +199,7 @@ FinanceAI-Personal-Financial-Intelligence-Platform/
 ## 11. Próximos Passos
 
 - Integrar motor NER real via API de LLM (Claude Haiku ou GPT-4o-mini) para processamento de linguagem natural em produção, substituindo o parser TypeScript simulado.
-- Implementar o backend distribuído documentado em `ADVANCED_ARCHITECTURE.md` com Node.js/Fastify, PostgreSQL e Redis para cache de sessão.
+- Implementar o backend distribuído documentado em `ADVANCED_ARCHITECTURE.md` com Node.js/Fastify, PostgreSQL e Redis para cache de sessão. 
 - Conectar ao Open Finance real via APIs do BACEN com autenticação mTLS e fluxo de consentimento OAuth 2.0.
 - Adicionar testes de componente com Vitest e Testing Library, cobrindo os fluxos críticos do Agente Guardião e do dashboard analítico.
 - Evoluir o modelo de categorização para aprendizado personalizado por perfil de usuário, reduzindo a taxa de erro de classificação ao longo do uso.
