@@ -232,5 +232,3 @@ Senior Data Engineer & Cloud Architect | DIO Campus Expert
 
 ---
 
-> *"O mercado de trabalho não contrata ferramenta. O mercado de trabalho contrata quem resolve problemas."*  
-> — Meigarom Lopes, Comunidade DS
