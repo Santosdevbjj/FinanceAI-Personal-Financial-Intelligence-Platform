@@ -83,7 +83,7 @@ Cartão de Saldo Consolidado, indicador dinâmico de *Dinheiro Livre para Gastar
 ### Dualidade de Interface: Modo Leigo / Modo Técnico
 
 - **Modo Leigo:** gráficos minimalistas e insights em linguagem natural, sem jargões bancários.
-- **Modo Técnico (FAANG):** micro-widgets de infraestrutura com métricas simuladas em tempo real — Latência do Pipeline de IA (ms), Score de Confiança NER (%), Status do Mascaramento LGPD e Sincronização Open Finance.
+- **Modo Técnico:** micro-widgets de infraestrutura com métricas simuladas em tempo real — Latência do Pipeline de IA (ms), Score de Confiança NER (%), Status do Mascaramento LGPD e Sincronização Open Finance.
 
 ### Central de Governança & Open Finance
 
