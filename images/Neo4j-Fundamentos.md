@@ -2,6 +2,70 @@
 Neo4J Casos de uso
 https://neo4j.com/use-cases/
 
+## Você pode criar uma instância gratuita do Neo4j AuraDB ou baixar o Neo4j Desktop para auxiliar no seu aprendizado.
+
+
+Essa é uma excelente dúvida, e a resposta curta é: **sim, ambas são ótimas opções, mas elas servem a propósitos e perfis de aprendizado diferentes.**
+
+Para quem está estudando e quer testar modelos sem atrito, a própria Neo4j oferece essas duas portas de entrada gratuitas. Vamos entender em detalhes as vantagens, desvantagens e o cenário ideal para cada uma delas:
+
+---
+
+### 1. Neo4j AuraDB (A Nuvem Gratuita)
+
+O **AuraDB** é a versão *Database-as-a-Service* (DBaaS) da Neo4j. Isso significa que o banco de dados roda nos servidores de nuvem deles (gerenciados por eles), e você o acessa pelo seu navegador de internet.
+
+* **Vantagens:**
+* **Zero Instalação:** Você cria uma conta, clica em um botão e, em menos de 3 minutos, tem um banco de dados de grafos pronto para uso. Não consome memória RAM nem processamento do seu computador.
+* **Acesse de Qualquer Lugar:** Como está na nuvem, você pode acessar seu banco de dados do computador do trabalho, do notebook pessoal ou de onde quiser, apenas fazendo login no console web.
+* **Sempre Atualizado:** A Neo4j cuida de todas as atualizações de segurança e versões de forma transparente.
+
+
+* **Desvantagens:**
+* **Limitação de Tamanho (Na versão grátis):** A instância gratuita possui um limite de nós e relacionamentos (geralmente até 50.000 nós e 175.000 relacionamentos). É mais do que suficiente para aprender e testar projetos pequenos, mas limita bases de dados gigantescas.
+* **Pausa por Inatividade:** Para economizar recursos na nuvem, se você ficar alguns dias sem usar a instância gratuita, a Neo4j a "pausa". Você precisa entrar no painel e clicar em *Resume* (Retomar) para acordá-la, o que leva um ou dois minutos.
+* **Sem Plugins Avançados:** Algumas ferramentas muito específicas ou customizações pesadas de plugins não podem ser instaladas na camada gratuita do AuraDB.
+
+
+
+---
+
+### 2. Neo4j Desktop (O Laboratório Local)
+
+O **Neo4j Desktop** é um aplicativo que você baixa e instala diretamente no seu sistema operacional (Windows, Mac ou Linux). Ele funciona como uma central de controle para criar quantos bancos de dados de grafos você quiser localmente.
+
+* **Vantagens:**
+* **Sem Limites de Dados:** O único limite do Neo4j Desktop é o espaço em disco e a memória RAM do seu próprio computador. Você pode carregar bases de dados massivas de milhões de nós para testar.
+* **Crie Múltiplos Bancos:** Você pode criar um banco de dados para estudar fraudes, outro para o sistema de recomendação de filmes e outro para testes rápidos. Todos isolados e independentes.
+* **Acesso Total a Plugins (APOC e GDS):** Se você quiser aprender algoritmos avançados de grafos (como PageRank, detecção de comunidades com o *Graph Data Science - GDS*) ou usar extensões fantásticas de procedimentos (biblioteca *APOC*), você os instala com **um clique** no Neo4j Desktop.
+* **Funciona Offline:** Não depende de conexão com a internet para rodar as consultas Cypher.
+
+
+* **Desvantagens:**
+* **Consumo de Hardware:** Bancos de dados locais consomem recursos. Se o seu computador for mais antigo ou tiver pouca memória RAM (menos de 8GB), rodar o Neo4j Desktop junto com outras ferramentas pesadas pode deixar a máquina lenta.
+* **Gerenciamento Manual:** Você é o administrador do banco. Se quiser atualizar a versão do Neo4j, precisará fazer isso pela interface do aplicativo.
+
+
+
+---
+
+### Resumo: Qual Escolher?
+
+| Critério | Neo4j AuraDB (Nuvem) | Neo4j Desktop (Local) |
+| --- | --- | --- |
+| **Instalação** | Nenhuma (Acesso via navegador) | Baixar e instalar instalador de ~600MB |
+| **Uso de Hardware** | Leve (Roda na nuvem) | Depende da sua máquina (RAM e CPU) |
+| **Algoritmos Avançados** | Limitado na versão free | Total acesso (GDS e APOC inclusos) |
+| **Internet** | Obrigatória | Apenas para baixar, roda offline |
+| **Recomendado para** | Iniciantes, estudos rápidos, PCs modestos | Desenvolvedores, cientistas de dados, grandes bases |
+
+### 💡 Veredito Prático
+
+Se você está apenas querendo praticar os comandos que aprendeu na GraphAcademy sem complicação, **comece pelo Neo4j AuraDB (Nuvem)**. É a opção mais rápida e sem fricção.
+
+Se no futuro você decidir criar um sistema real, conectar o Neo4j a uma aplicação sua em Python/Java local, ou quiser estudar a biblioteca de algoritmos de inteligência em grafos (GDS), aí vale a pena fazer o download do **Neo4j Desktop**! 
+
+
 
 
 ---
@@ -859,6 +923,881 @@ Por fim, a lição aborda a aplicação mais intuitiva dos grafos: redes de tran
 
 
 ---
+
+
+
+
+
+
+Fundamentos do Neo4j › Consultando Grafos
+Consultando seu modelo de dados
+
+Sérgio
+Fundamentos do Neo4j
+
+Pensamento gráfico
+O que é Neo4j?
+Pensando em Gráficos
+Gráficos estão por toda parte
+Crie seu próprio modelo de dados em grafo
+(Opcional)
+Consultando Grafos
+Leitura de gráficos
+Reconhecimento de padrões
+Criação de gráficos
+Consultando seu modelo de dados
+(Opcional)
+Explorando o Neo4j
+Obtenha o Neo4j
+Ferramentas Neo4j
+Parabéns e próximos passos
+Consultando seu modelo de dados
+Continuar →
+OK, agora você já sabe o que são grafos e como consultá-los.
+
+Vamos usar esse conhecimento e aplicá-lo ao modelo de dados que você construiu no primeiro módulo.
+
+Se você tiver alguma pergunta específica em mente, me avise. Ou posso gerar uma para você.
+
+Escreva uma consulta no meu modelo de dados.
+
+Quais clientes estão compartilhando o mesmo número de telefone no sistema, diminuindo uma possível fraude de identidade ligada a contas diferentes?
+
+10:40
+obterModelosDeDadosDoUsuário
+10:40
+1. Questão comercial
+Quais clientes abordaram o mesmo número de telefone (PhoneNumber), caíram possível fraude de identidade associada a contas diferentes?
+
+2. Consulta cifrada com chamadas numeradas
+MATCH (c1:Customer)-[:CUSTOMER_USES_PHONE]->(pn:PhoneNumber)<-[:CUSTOMER_USES_PHONE]-(c2:Customer) // <1>
+WHERE id(c1) < id(c2) // <2>
+OPTIONAL MATCH (c1)-[:OWNS]->(acc1:Account) // <3>
+OPTIONAL MATCH (c2)-[:OWNS]->(acc2:Account) // <4>
+WITH c1, c2, pn, collect(DISTINCT acc1.accountNumber) AS accounts1, collect(DISTINCT acc2.accountNumber) AS accounts2 // <5>
+WHERE size(accounts1) > 0 AND size(accounts2) > 0 // <6>
+RETURN c1.name AS customerA, accounts1 AS accountsA, c2.name AS customerB, accounts2 AS accountsB, pn.number AS phone // <7>
+ORDER BY size(accounts1) + size(accounts2) DESC // <8>
+LIMIT 100 // <9>
+3. Explicação cláusula por cláusula
+CORRESPONDER
+
+O que faz: encontra pares de clientes que usam o mesmo telefone por meio de um número de telefone.
+<1> usa o relacionamento CLIENTE USA TELEFONE entre dois Clientes para conectar dois clientes através do PhoneNumber compartilhado.
+O padrão leva em conta o modelo: Cliente -[:CUSTOMER USA PHONE ]-> PhoneNumber e PhoneNumber -[:CUSTOMER USA PHONE]-> Customer.
+ONDE
+
+O que faz: evita duplicação de pares, garantindo que c1 e c2 sejam clientes diferentes sem repetição (ordem estável com id(C)).
+<2> usa id(c1) < id(c2) para processar cada par apenas uma vez.
+PARTIDA OPCIONAL
+
+O que faz: tentar encontrar contas associadas a cada cliente, sem tornar-se uma consulta dependente de suas contas.
+<3> encontra contas possivelmente associadas ao cliente A (acc1).
+<4> encontra contas possivelmente associadas ao cliente B (acc2).
+COM
+
+O que faz: agregar informações para cada cliente mantendo as variações anteriores.
+<5> coleta de números de contas diferentes para cada cliente (contas1, contas2).
+ONDE
+
+O que faz: filtrar para manter apenas pares onde ambos os clientes têm contas associadas (evita pares sem contas relevantes).
+<6> garanta que cada lado do par tenha pelo menos uma conta.
+RETORNAR
+
+O que faz: definir a saída final com os nomes dos clientes, as contas associadas e o número de telefone compartilhado.
+<7> retornar clienteA, contasA, clienteB, contasB e telefone.
+ENCOMENDAR POR
+
+O que faz: prioridade pares com mais contas associadas (maior potencial de fraude ou maior evidência).
+<8> ordena pela soma das contas de ambos os clientes, em ordem decrescente.
+LIMITE
+
+O que faz: limite o número de resultados para evitar retornos demasiado pares.
+<9> restrinja a 100 pares como cortes gerais de visualização inicial.
+4. Conexão do modelo de dados
+Este uso:
+Nós: Cliente, Número de Telefone, Conta.
+Relacionamentos: CLIENTE USA TELEFONE, É PRÓPRIO.
+A lógica: dois clientes que acompanham o mesmo PhoneNumber aparecem conectados via PhoneNumber, e as contas (Account) associadas a cada cliente ajudam a sinalizar se há contas relacionadas relacionadas ao mesmo telefone, o que é relevante para detecção de fraude conforme seu modelo de Detecção de Fraude.
+5. Próximo passo (conversa)
+Você quer filtrar os resultados para números que aparecem em pelo menos N clientes (por exemplo, 3 ou mais) para priorizar fraudes com maior impacto? Se sim, qual seria o valor de N que deseja usar como limites?
+
+10:40
+👍👎
+Gere uma consulta Cypher para encontrar pares de clientes diferentes que acompanham o mesmo nó PhoneNumber e mostre o campo e164_internal.
+
+10:43
+1. Questão comercial
+Quais pares de clientes diferem do mesmo PhoneNumber e qual é o valor de e164_internal desse PhoneNumber?
+
+2. Consulta cifrada com chamadas numeradas
+MATCH (c1:Customer)-[:CUSTOMER_USES_PHONE]->(pn:PhoneNumber)<-[:CUSTOMER_USES_PHONE]-(c2:Customer) // <1>
+WHERE id(c1) < id(c2) // <2>
+RETURN c1.name AS customerA, c1.id AS customerA_id, c2.name AS customerB, c2.id AS customerB_id, pn.e164_internal AS e164_internal // <3>
+ORDER BY e164_internal ASC // <4>
+LIMIT 100 // <5>
+3. Explicação cláusula por cláusula
+CORRESPONDER
+
+O que faz: encontra pares de clientes que utilizam o mesmo PhoneNumber através do nó PhoneNumber.
+<1> busca duas entidades Cliente conectado ao mesmo PhoneNumber via o relacionamento CLIENTE USA TELEFONE em ambos os lados.
+ONDE
+
+O que faz: evita a duplicação de pares invertidos, garantindo que cada par seja considerado uma vez.
+<2> garante que o par (c1, c2) seja contado apenas quando o id de c1 for menor que o de c2.
+RETORNAR
+
+O que faz: defina quais informações serão exibidas sobre cada par.
+<3> retorna os nomes e ids de ambos os clientes (customerA/customerA id e customerB/customerB id) junto com o valor de e164_internal do PhoneNumber compartilhado.
+ENCOMENDAR POR
+
+O que faz: organizar os resultados por ordem crescente do valor de e164_internal, facilitando a leitura ou seleção de números específicos.
+<4> ordena pela coluna e164_internal.
+LIMITE
+
+O que faz: restrinja o número de resultados para uma visualização inicial.
+<5> limite a 100 pares.
+4. Conexão do modelo de dados
+Este padrão usa: Customer, PhoneNumber e o relacionamento CUSTOMER USES PHONE.
+A lógica: dois clientes (c1, c2) usam o mesmo número de telefone (pn), o que é exatamente o que queremos para identificar possíveis fraudes associadas a números compartilhados.
+Observação: este padrão corresponde à ideia de Co-ocorrência no seu modelo, utilizando um PhoneNumber comum como elo entre dois Clientes.
+10:43
+👍👎
+
+Enviar
+Modelo de dados
+
+ACCEPTS_INPUT
+acceptedAt: LOCAL DATETIME
+inputFormat: STRING
+
+PART_OF
+since: DATE
+
+LOGGED_ERROR
+loggedAt: LOCAL DATETIME
+details: STRING
+
+PART_OF
+since: DATE
+
+DERIVED_VIA
+derivedAt: LOCAL DATETIME
+
+TRIGGERS
+triggeredAt: LOCAL DATETIME
+triggerReason: STRING
+
+DERIVED_FROM
+derivedAt: DATE
+
+PART_OF
+since: DATE
+
+TRIGGERS
+triggeredAt: LOCAL DATETIME
+triggerReason: STRING
+
+TRIGGERS
+triggerReason: STRING
+triggeredAt: LOCAL DATETIME
+
+GENERATES
+format: STRING
+generatedAt: LOCAL DATETIME
+
+EXECUTES
+executedAt: LOCAL DATETIME
+status: STRING
+
+SIMILAR_TO
+similarityScore: FLOAT
+
+SHARED_DEVICE
+firstUsed: DATETIME
+lastUsed: DATETIME
+
+FROM_LOCATION
+
+USING_DEVICE
+
+TO_MERCHANT
+
+MADE_TRANSACTION
+
+OWNS
+since: DATE
+
+CUSTOMER_USES_PHONE
+relationshipId: STRING
+
+BELONGS_TO
+since: DATE
+
+CONFIGURES_NORMALIZATION
+configDetail: STRING
+configuredAt: LOCAL DATETIME
+
+OUTPUTS_PHONE_NUMBER
+format: STRING
+generatedAt: LOCAL DATETIME
+
+TESTS_NORMALIZATION
+startedAt: LOCAL DATETIME
+status: STRING
+duration: DURATION
+
+UTILIZES_FIXTURE
+lastUsed: LOCAL DATETIME
+usageCount: INTEGER
+
+HAS_COUNTRY_CODE
+source: STRING
+verifiedAt: LOCAL DATETIME
+
+USES_EXTENSION
+extensionNotes: STRING
+usedAt: LOCAL DATETIME
+
+APPLIES_TO
+appliedAt: LOCAL DATETIME
+constraint: STRING
+
+RUNS_FOR
+startedAt: LOCAL DATETIME
+completed: BOOLEAN
+duration: DURATION
+
+VALIDATED_BY
+status: STRING
+validatedAt: LOCAL DATETIME
+
+NodeKeyConstraint
+createdAt: LOCAL DATETIME
+expression: STRING
+constraintName: STRING
+appliesTo: STRING
+id: STRING
+
+TestCase
+executedAt: LOCAL DATETIME
+status: STRING
+title: STRING
+id: STRING
+
+Error
+occurredAt: LOCAL DATETIME
+code: STRING
+message: STRING
+id: STRING
+severity: STRING
+
+Log
+level: STRING
+id: STRING
+loggedAt: LOCAL DATETIME
+message: STRING
+
+Graph
+createdAt: LOCAL DATETIME
+name: STRING
+description: STRING
+id: STRING
+
+Derivation
+recordedAt: LOCAL DATETIME
+method: STRING
+description: STRING
+name: STRING
+id: STRING
+
+Constraint
+constraintName: STRING
+id: STRING
+appliesTo: STRING
+createdAt: LOCAL DATETIME
+expression: STRING
+
+Report
+id: STRING
+generatedAt: LOCAL DATETIME
+name: STRING
+
+IntegrationTest
+name: STRING
+framework: STRING
+id: STRING
+
+UnitTest
+framework: STRING
+name: STRING
+id: STRING
+
+Test
+name: STRING
+description: STRING
+id: STRING
+
+Validation
+issues: LIST
+id: STRING
+outcome: STRING
+
+Number
+id: STRING
+e164Internal: STRING
+countryCode: STRING
+value: STRING
+e164InternalSource: STRING
+
+Country
+name: STRING
+id: STRING
+code: STRING
+
+Input
+name: STRING
+id: STRING
+description: STRING
+
+Pipeline
+createdAt: LOCAL DATETIME
+id: STRING
+name: STRING
+
+Location
+latitude: FLOAT
+longitude: FLOAT
+city: STRING
+country: STRING
+
+Device
+deviceType: STRING
+userAgent: STRING
+ipAddress: STRING
+id: STRING
+
+Merchant
+category: STRING
+name: STRING
+id: STRING
+riskScore: FLOAT
+
+Transaction
+id: STRING
+timestamp: DATETIME
+status: STRING
+currency: STRING
+amount: FLOAT
+
+Customer
+name: STRING
+registeredAt: DATETIME
+id: STRING
+phone: STRING
+email: STRING
+
+Account
+status: STRING
+accountType: STRING
+id: STRING
+createdAt: DATE
+accountNumber: STRING
+
+PhoneNumber
+e164_internal: STRING
+type: STRING
+number: STRING
+constraints: CONSTRAINT phone_unique FOR (p:PhoneNumber) REQUIRE (p.countryCode, p.number) IS NODE KEY.
+countryCode: STRING
+
+Ingestion
+status: STRING
+name: STRING
+configuredAt: LOCAL DATETIME
+pipelineName: STRING
+id: STRING
+version: STRING
+
+Normalization
+rulesAppliedCount: INTEGER
+configuredAt: LOCAL DATETIME
+description: STRING
+id: STRING
+version: STRING
+name: STRING
+
+TestSuite
+description: STRING
+suiteId: STRING
+createdAt: LOCAL DATETIME
+name: STRING
+id: STRING
+
+Fixture
+fixtureId: STRING
+description: STRING
+id: STRING
+name: STRING
+path: STRING
+
+CountryCode
+description: STRING
+id: STRING
+name: STRING
+code: STRING
+
+Digit
+id: STRING
+value: STRING
+description: STRING
+
+Extension
+id: STRING
+description: STRING
+extensionValue: STRING
+
+ContinuousIntegration
+configuredAt: LOCAL DATETIME
+name: STRING
+version: STRING
+ciSystem: STRING
+id: STRING
+
+
+Texto original
+<3> retorna os nomes e ids de ambos os clientes (customerA/customerAid e customerB/customerBid) junto com o valor de e164_internal do PhoneNumber compartilhado.
+Avalie a tradução
+O feedback vai ser usado para ajudar a melhorar o Google Tradutor
+
+
+
+---
+
+
+
+
+Fundamentos do Neo4j ›
+Explorando o Neo4j
+
+Sérgio
+Fundamentos do Neo4j
+
+Pensamento gráfico
+O que é Neo4j?
+Pensando em Gráficos
+Gráficos estão por toda parte
+Crie seu próprio modelo de dados em grafo
+(Opcional)
+Consultando Grafos
+Leitura de gráficos
+Reconhecimento de padrões
+Criação de gráficos
+Consultando seu modelo de dados
+(Opcional)
+Explorando o Neo4j
+Obtenha o Neo4j
+Ferramentas Neo4j
+Parabéns e próximos passos
+
+Português (Brasil)
+Powered by Google TradutorTradutor
+Explorando o Neo4j
+Neste módulo, você explorará as ferramentas disponíveis para acessar seu banco de dados de grafos e como executar o Neo4j localmente e na nuvem.
+
+Você aprenderá sobre:
+
+As diferentes edições do Neo4j e opções de implantação disponíveis.
+
+Como executar o Neo4j localmente usando o Neo4j Desktop para desenvolvimento.
+
+Como usar o Neo4j Aura para bancos de dados de grafos hospedados na nuvem.
+
+As ferramentas disponíveis para importar, consultar e explorar seus dados.
+
+Preparados? Vamos lá →
+
+73%
+Consultando seu modelo de dados
+Obtenha o Neo4j
+
+
+
+Texto original
+The different Neo4j editions and deployment options available.
+Avalie a tradução
+O feedback vai ser usado para ajudar a melhorar o Google Tradutor  
+
+
+
+---
+
+]
+
+
+
+Fundamentos do Neo4j › Explorando o Neo4j
+Obtenha o Neo4j
+
+Sérgio
+Fundamentos do Neo4j
+
+Pensamento gráfico
+O que é Neo4j?
+Pensando em Gráficos
+Gráficos estão por toda parte
+Crie seu próprio modelo de dados em grafo
+(Opcional)
+Consultando Grafos
+Leitura de gráficos
+Reconhecimento de padrões
+Criação de gráficos
+Consultando seu modelo de dados
+(Opcional)
+Explorando o Neo4j
+Obtenha o Neo4j
+Ferramentas Neo4j
+Parabéns e próximos passos
+
+Português (Brasil)
+Powered by Google TradutorTradutor
+Lição
+Obtenha o Neo4j
+Existem muitas opções para usar o Neo4j, incluindo uma solução totalmente hospedada na nuvem ( AuraDB ), instalações locais e contêineres Docker.
+
+Nesta lição, você explorará algumas dessas opções.
+
+Edições Comunitária e Empresarial
+Existem duas edições do Neo4j à sua escolha: a Community Edition (CE) e a Enterprise Edition (EE). A Enterprise Edition inclui todos os recursos da Community Edition, além de funcionalidades adicionais para empresas, como backups, clustering e failover.
+
+A Community Edition é uma edição totalmente funcional do Neo4j, adequada para implantações de instância única. Ela oferece suporte completo a recursos essenciais do Neo4j, como transações compatíveis com ACID, Cypher e APIs de programação. É ideal para aprender Neo4j, projetos do tipo "faça você mesmo" e aplicações em pequenos grupos de trabalho.
+
+A Enterprise Edition amplia a funcionalidade da Community Edition para incluir recursos essenciais de desempenho e escalabilidade, como arquitetura de cluster e funcionalidade de backup online. Recursos adicionais de segurança incluem controle de acesso baseado em funções e suporte a LDAP, por exemplo, Active Directory. É a escolha ideal para sistemas de produção com requisitos de escalabilidade e disponibilidade, como soluções comerciais e internas críticas.
+
+A documentação do Neo4j Editions inclui uma comparação dos recursos disponíveis em cada edição.
+
+AuraDB
+O AuraDB é um serviço em nuvem totalmente gerenciado que fornece um banco de dados Neo4j como serviço. É um serviço de banco de dados em nuvem totalmente gerenciado, escalável e seguro que permite que você se concentre na criação de aplicativos sem se preocupar com os aspectos operacionais do gerenciamento de um banco de dados.
+
+O console AuraDB
+Você pode criar uma instância gratuita do Neo4j em console.neo4j.io e escalá-la conforme necessário. O AuraDB está disponível em várias regiões, e você pode escolher a região que melhor atenda às suas necessidades.
+
+Instalação
+Você pode instalar o Neo4j na maioria das plataformas, incluindo Linux, macOS e Windows. A documentação de instalação do Neo4j fornece instruções detalhadas para cada plataforma.
+
+Além disso, o Neo4j oferece uma ferramenta de desenvolvimento para desktop que inclui uma instalação local do Neo4j, uma interface baseada em navegador e um conjunto de ferramentas para ajudar você a desenvolver e gerenciar seus bancos de dados Neo4j. As instruções de instalação e uso estão disponíveis na página de download do Neo4j Desktop .
+
+O desktop Neo4j
+Implantações em nuvem
+Os anúncios do marketplace em nuvem da Neo4j representam uma maneira rápida e fácil de começar a usar bancos de dados de grafos na plataforma em nuvem de sua escolha.
+
+Você pode encontrar mais informações na documentação de implantações do Neo4j Cloud .
+
+Docker
+O Neo4j fornece imagens Docker tanto para a edição Community quanto para a Enterprise.
+
+A documentação do Neo4j para Docker fornece instruções sobre como executar, configurar e implantar o Neo4j em um contêiner Docker.
+
+Comece agora
+A opção de implementação ideal do Neo4j dependerá das suas necessidades. O Neo4j AuraDB e o Neo4j Desktop oferecem a maneira mais fácil de começar a usar o Neo4j.
+
+Verifique se você entendeu.
+Edições do Neo4j
+Quais recursos estão incluídos na edição comunitária de código aberto do Neo4j? (Selecione todas as opções aplicáveis)
+
+ Linguagem de consulta cifrada
+ APIs de programação
+ Agrupamento
+ transações compatíveis com ACID
+Confira a resposta
+80%
+Explorando o Neo4j
+Ferramentas Neo4j
+Esta lição foi útil?SimNão
+
+
+
+
+---
+
+
+Você concluiu com sucesso a transição para o módulo final **"Explorando o Neo4j"**, especificamente na lição **"Obtenha o Neo4j"** (Get Neo4j). Esta etapa expande o conhecimento para fora do ambiente de estudos da GraphAcademy, ensinando as opções arquiteturais para instalar e rodar o Neo4j em projetos reais e ambientes produtivos.
+
+Aqui está a análise técnica do conteúdo apresentado e a resolução do questionário que está na sua tela:
+
+---
+
+### 1. Análise Arquitetural das Opções de Implantação
+
+O Neo4j oferece flexibilidade de infraestrutura dependendo do tamanho e objetivo do seu projeto:
+
+* **Neo4j AuraDB (Nuvem Gerenciada):** É a melhor opção para focar apenas no código e na modelagem. O Neo4j cuida de patches, atualizações, infraestrutura e backups automaticamente. Existe uma versão gratuita vitalícia para protótipos.
+* **Neo4j Desktop:** Uma ferramenta local excelente para desenvolvedores. Permite gerenciar múltiplos bancos de dados na sua máquina local de forma visual e instalar plugins populares como o APOC e a biblioteca de Graph Data Science (GDS).
+* **Docker / Self-Hosted:** Ideal para pipelines de CI/CD ou quando a empresa exige controle total sobre os servidores físicos ou instâncias na nuvem privada (AWS, Azure, GCP).
+
+---
+
+### 2. Diferença entre Edições: Community vs. Enterprise
+
+A separação entre as edições dita quando você deve migrar de uma estrutura simples para uma infraestrutura corporativa:
+
+* **Community Edition:** É o motor completo do Neo4j, mas projetado para rodar em uma **única máquina** (instância única). Ela não tem limites artificiais de dados, mas não possui recursos nativos de alta disponibilidade.
+* **Enterprise Edition:** Projetada para sistemas críticos que não podem parar. Introduz capacidades de **Clustering** (múltiplos servidores trabalhando juntos), backups em tempo real sem pausar o banco, e segurança avançada (LGPD/GDPR com controle de acesso granular por propriedade e nó).
+
+---
+
+### 3. Resolução do Teste (Quiz): Recursos da Community Edition
+
+O questionário no final da sua tela pergunta:
+
+> **Quais recursos estão incluídos na edição comunitária de código aberto (Community Edition) do Neo4j? (Selecione todas as opções aplicáveis)**
+
+Analisando as alternativas com base no texto explicativo da lição:
+
+1. **Linguagem de consulta cifrada (Cypher):** **Sim**. O Cypher é o padrão aberto para consultas e está 100% disponível na versão comunitária.
+2. **APIs de programação (Drivers):** **Sim**. Conectar suas aplicações em Python, Java, JavaScript, .NET, etc., funciona perfeitamente na versão comunitária.
+3. **Agrupamento (Clustering / Alta Disponibilidade):** *Não*. Como vimos, criar clusters de servidores e failover é um recurso exclusivo da versão *Enterprise*.
+4. **Transações compatíveis com ACID:** **Sim**. A garantia de integridade (Atomicidade, Consistência, Isolamento e Durabilidade) nas operações financeiras ou de escrita é nativa do motor básico do Neo4j.
+
+#### **Resposta Correta para selecionar na tela:**
+
+Você deve marcar três caixas de seleção:
+
+* **`Linguagem de consulta cifrada`**
+* **`APIs de programação`**
+* **`transações compatíveis com ACID`**
+
+*(Deixe apenas a opção "Agrupamento" desmarcada).*
+
+---
+
+### Próximo Passo
+
+Selecione as três opções corretas, clique em **"Confira a resposta"** para validar seus pontos e clique em avançar para ir para a última lição de conteúdo: **"Ferramentas Neo4j"** (Neo4j Tools), onde você conhecerá o Neo4j Browser e o Neo4j Bloom! 
+
+
+
+---
+
+
+
+Fundamentos do Neo4j › Explorando o Neo4j
+Ferramentas Neo4j
+
+Sérgio
+Fundamentos do Neo4j
+
+Pensamento gráfico
+O que é Neo4j?
+Pensando em Gráficos
+Gráficos estão por toda parte
+Crie seu próprio modelo de dados em grafo
+(Opcional)
+Consultando Grafos
+Leitura de gráficos
+Reconhecimento de padrões
+Criação de gráficos
+Consultando seu modelo de dados
+(Opcional)
+Explorando o Neo4j
+Obtenha o Neo4j
+Ferramentas Neo4j
+Parabéns e próximos passos
+
+Português (Brasil)
+Powered by Google TradutorTradutor
+Lição
+Ferramentas Neo4j
+O Neo4j oferece um ecossistema completo de ferramentas para trabalhar com o banco de dados de grafos Neo4j, incluindo:
+
+O console Neo4j
+
+Drivers de programação
+
+APIs e Bibliotecas
+
+Inovações do Neo4j Labs
+
+Nesta lição, você aprenderá sobre algumas das ferramentas disponíveis no console do Neo4j.
+
+Você pode aprender sobre outros métodos de interação com o Neo4j em outros cursos da GraphAcademy .
+
+Console
+O Console Neo4j reúne as ferramentas necessárias para você começar a usar o Neo4j.
+
+Uma captura de tela do Console Neo4j
+Você pode:
+
+Gerencie suas instâncias do Neo4j Aura.
+
+Importar dados.
+
+Explore e visualize seus dados.
+
+Consulte seus dados usando Cypher.
+
+Importar
+A ferramenta de importação do Neo4j (ou Importador de Dados) é uma ferramenta "sem código" que facilita a importação de dados para o Neo4j. Sua interface gráfica permite a conversão simples de dados em nós e relacionamentos.
+
+Uma captura de tela da interface de usuário de importação do Neo4j.
+O Data Importer permite que você:
+
+Defina visualmente o modelo de dados em grafo, incluindo nós, relacionamentos e propriedades.
+
+Faça o upload dos arquivos de dados de origem.
+
+Mapear campos para propriedades.
+
+Defina restrições e índices de ID exclusivos.
+
+O importador de dados é uma excelente ferramenta para importar dados para o Neo4j rapidamente, sem precisar escrever nenhum código.
+
+Saiba mais no curso Fundamentos da Importação de Dados .
+
+Explorar
+Explore (ou Neo4j Bloom ) é uma ferramenta de exploração de grafos para interação visual com dados em grafo.
+
+Uma captura de tela do bloom do Neo4j
+Você pode criar consultas para explorar os padrões em seus dados e visualizar os resultados.
+
+O Bloom é acessível a todos e uma ótima ferramenta para experimentação e apresentação.
+
+Consulta
+A ferramenta de consulta (ou navegador) permite escrever e executar consultas Cypher.
+
+Uma captura de tela da ferramenta de consulta.
+Você pode salvar consultas e resultados usados ​​com frequência em vários formatos de arquivo.
+
+A função Query dá acesso ao poder da linguagem Cypher.
+
+Verifique se você entendeu.
+Restrição de Duplicados
+Verdadeiro ou falso - O Data Importer é uma ferramenta visual para importar dados para bancos de dados de grafos Neo4j.
+
+ Verdadeiro
+ Falso
+Confira a resposta
+87%
+Obtenha o Neo4j
+Parabéns e próximos passos
+Esta lição foi útil?SimNão
+
+
+
+
+----
+
+Você chegou à lição **"Ferramentas Neo4j"**, a última etapa de conteúdo técnico do módulo "Explorando o Neo4j"! Esta lição resume o ecossistema visual fornecido pelo **Console Neo4j** para que você consiga gerenciar, importar, explorar e consultar dados de forma integrada.
+
+Aqui está a análise das ferramentas apresentadas e a resolução do quiz para você fechar este bloco:
+
+---
+
+### 1. Análise do Ecossistema de Ferramentas do Console
+
+O Neo4j centraliza a experiência de desenvolvimento em quatro pilares fundamentais dentro de seu ecossistema:
+
+* **Gerenciamento (Console):** O hub centralizado onde você administra suas instâncias de banco de dados na nuvem (como o AuraDB).
+* **Importação (Data Importer):** Uma ferramenta totalmente **sem código** (*no-code*). Ela permite que você carregue arquivos (como CSVs), desenhe os nós e as setas na tela e mapeie as colunas do arquivo diretamente para as propriedades do grafo, criando índices e restrições automaticamente de forma visual.
+* **Exploração Visual (Neo4j Bloom / Explore):** Focada em exploração de negócios. Em vez de exigir códigos complexos, ela permite que analistas interajam e investiguem padrões no grafo usando uma linguagem mais natural e visual, sendo ideal para apresentações e descoberta de fraudes.
+* **Consulta Técnica (Query / Browser):** É a interface onde você digita os comandos **Cypher** que praticou nas lições anteriores, permitindo executar buscas profundas e salvar seus scripts favoritos.
+
+---
+
+### 2. Resolução do Teste (Quiz): Restrição de Duplicados
+
+O exercício final faz uma validação direta sobre a ferramenta de importação:
+
+> **Verdadeiro ou falso - O Data Importer é uma ferramenta visual para importar dados para bancos de dados de grafos Neo4j.**
+
+Com base no texto da lição, o *Data Importer* é explicitamente definido como uma ferramenta "sem código" cuja interface gráfica facilita a conversão simples e o mapeamento visual de arquivos para nós e relacionamentos no Neo4j.
+
+#### **Resposta Correta:**
+
+* **`Verdadeiro`**
+
+---
+
+### Próximos Passos
+
+Marque a opção **Verdadeiro**, clique em **"Confira a resposta"** para validar e, em seguida, clique no botão azul **"Parabéns e próximos passos"** para emitir o seu certificado de conclusão dos Fundamentos do Neo4j! 
+
+
+
+---
+
+
+
+Fundamentos do Neo4j › Explorando o Neo4j
+Parabéns e próximos passos
+
+Sérgio
+Fundamentos do Neo4j
+
+Pensamento gráfico
+O que é Neo4j?
+Pensando em Gráficos
+Gráficos estão por toda parte
+Crie seu próprio modelo de dados em grafo
+(Opcional)
+Consultando Grafos
+Leitura de gráficos
+Reconhecimento de padrões
+Criação de gráficos
+Consultando seu modelo de dados
+(Opcional)
+Explorando o Neo4j
+Obtenha o Neo4j
+Ferramentas Neo4j
+Parabéns e próximos passos
+
+Português (Brasil)
+Powered by Google TradutorTradutor
+Lição
+Parabéns e próximos passos
+Parabéns por concluir o curso "Fundamentos do Neo4j".
+
+Neste curso, você aprendeu:
+
+Teoria básica de grafos e os elementos que compõem um grafo
+
+Estruturas de grafos
+
+Casos de uso comuns de grafos
+
+Elementos de um banco de dados de grafos Neo4j
+
+Como navegar em um banco de dados gráfico
+
+Como começar a usar o Neo4j
+
+Continue seus estudos na GraphAcademy com os seguintes cursos básicos :
+
+Fundamentos do Cypher - Aprenda o essencial da linguagem de consulta Cypher.
+
+Fundamentos da Modelagem de Dados em Grafos - Aprenda a projetar um grafo no Neo4j
+
+Fundamentos da Importação de Dados - Aprenda como importar dados para o Neo4j
+
+Você pode criar uma instância gratuita do Neo4j AuraDB ou baixar o Neo4j Desktop para auxiliar no seu aprendizado.
+
+Completo
+93%
+Ferramentas Neo4j
+Esta lição foi útil?SimNão
+
+
+
+
+---
+
+
+
+
+
+
+
+
 
 
 
