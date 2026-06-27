@@ -2,6 +2,185 @@
 Neo4J Casos de uso
 https://neo4j.com/use-cases/
 
+---
+
+
+
+
+
+Fundamentos do Neo4j ›
+Resumo do curso
+
+Sérgio
+
+Português (Brasil)
+Powered by Google TradutorTradutor
+Resumo do curso
+Parabéns por concluir o curso Neo4j Fundamentals!
+
+Esperamos que o curso tenha sido útil e que agora você se sinta mais confiante ao usar o Neo4j.
+
+Se você gostou do curso, que tal compartilhar seu certificado com seus amigos e colegas? Vamos recapitular o que você aprendeu e destacar alguns pontos-chave.
+Ver certificado
+Adicionar ao LinkedIn
+Neste curso, você aprendeu:
+
+teoria básica de grafos
+
+A estrutura de um banco de dados de grafos Neo4j
+
+Casos de uso comuns de grafos
+
+Como navegar em um banco de dados Neo4j
+
+Como escrever consultas Cypher simples
+
+Continue seus estudos na GraphAcademy com os seguintes cursos básicos :
+
+Fundamentos do Cypher - Aprenda o essencial da linguagem de consulta Cypher.
+
+Fundamentos da Modelagem de Dados em Grafos - Aprenda a projetar um grafo no Neo4j
+
+Importando dados CSV para o Neo4j - Aprenda como importar dados CSV para o Neo4j usando Cypher
+
+Você pode criar uma instância gratuita do Neo4j AuraDB ou baixar o Neo4j Desktop para obter um banco de dados Neo4j gratuito para auxiliar seus estudos.
+
+Segue um resumo do curso.
+
+O que são bancos de dados de grafos?
+Os grafos são estruturas matemáticas constituídas por arestas e vértices.
+
+O Neo4j armazena e organiza dados usando Nós , Relacionamentos , Rótulos e Propriedades.
+
+O que são bancos de dados de grafos?
+Os gráficos são úteis quando:
+Quando o problema exige a compreensão da relação entre entidades.
+
+Quando o problema envolve uma hierarquia.
+
+Quando o problema exige a exploração de relações de profundidade variável ou desconhecida.
+
+Quando o problema exige a avaliação de rotas ou caminhos através de uma rede.
+
+Casos de uso comuns
+As plataformas de comércio eletrônico combinam avaliações, histórico de compras e histórico de navegação para fornecer recomendações em tempo real .
+
+O ICIJ utilizou o Neo4j para explorar e compreender a rede de empresas globais e identificar pessoas com controle significativo.
+
+Muitas empresas utilizam o Neo4j para planejamento, análise de custos, análise de impacto e também para solucionar problemas quando eles surgem.
+
+O que confere ao Neo4j sua vantagem?
+O Neo4j é um banco de dados de grafos nativo, projetado especificamente para percorrer grafos.
+
+Quando as junções entre tabelas são calculadas em tempo de leitura, essa informação é salva de forma a permitir uma rápida busca de ponteiros na memória.
+
+Em bancos de dados de grafos, as consultas são proporcionais à quantidade de dados acessados ​​durante uma consulta, e não ao tamanho total dos dados.
+
+O que são bancos de dados de grafos?
+Elementos do gráfico
+Nó
+
+Um nó geralmente representa um registro individual, por exemplo, uma coisa ou um fato .
+
+Rótulo
+
+Os nós podem ter um ou mais rótulos. Os rótulos permitem agrupar os nós e também servem como ponto de partida para consultas ao banco de dados.
+
+Relação
+
+Uma relação conecta dois nós. Cada relação tem exatamente um nó inicial e um nó final . Uma relação terá um único tipo .
+
+Tipo
+
+Os relacionamentos são identificados pelo seu tipo .
+
+Propriedade
+
+Tanto os nós quanto os relacionamentos podem conter propriedades. Uma propriedade é um par chave/valor.
+
+Exemplo de gráfico
+Um exemplo de gráfico
+Regras de modelagem
+Os nós geralmente representam coisas . Exemplos de entidades que normalmente podem ser representadas como um nó são: pessoa, produto, evento, livro ou estação de metrô.
+
+As relações são geralmente representadas por verbos . Podemos usar uma relação para representar uma conexão pessoal ou profissional (Pessoa conhece Pessoa, Pessoa é casada com Pessoa), para afirmar um fato (Pessoa mora em Local, Pessoa possui Carro, Pessoa avaliou Filme) ou até mesmo para representar uma hierarquia (Pai/ Mãe é pai/mãe de Filho/Filha, Software depende de Biblioteca).
+
+Os verbos também podem ser nós . Um verbo pode ser modelado como um nó quando um ou mais fatos precisam ser associados a ele. Por exemplo, você pode querer agrupar várias compras de produtos em um único (:Order)nó.
+
+Recursos
+Existem muitos recursos disponíveis para você aprender mais sobre o Neo4j
+: https://neo4j.com/developer/resources/
+
+Site da comunidade Neo4j onde você pode fazer ou responder perguntas sobre o Neo4j e discutir com outros usuários:
+https://community.neo4j.com
+
+Documentação do Neo4j:
+https://neo4j.com/docs/
+
+Ambientes de teste Neo4j para experimentar com grafos:
+https://sandbox.neo4j.com/?ref=graph-academy
+
+Vídeos no canal do Neo4j no YouTube:
+https://www.youtube.com/channel/UCvze3hU6OZBkB1vkhH2lH9Q
+
+Torne-se um desenvolvedor certificado Neo4j:
+https://graphacademy.neo4j.com/categories/certification/
+
+Repositório GitHub:
+https://github.com/neo4j-contrib
+
+Eventos Neo4j em todo o mundo:
+https://neo4j.com/events/world/all/
+
+Para aprender mais sobre casos de uso do Neo4j, consulte os Graph Gists:
+https://neo4j.com/graphgists/
+
+Participe de um encontro do Neo4j:
+https://www.meetup.com/topics/neo4j/
+
+Veja perguntas e respostas sobre o Neo4j:
+https://stackoverflow.com/tags/neo4j/hot
+
+Feedback do curso
+Agradecemos qualquer feedback que você possa nos fornecer sobre este curso. Caso tenha algum comentário, preencha este formulário . Monitoramos ativamente os feedbacks e os utilizamos para aprimorar nosso catálogo de cursos.
+
+Próximos passos
+Após concluir este curso, recomendamos que você faça o seguinte curso:
+
+Fundamentos de Cifra
+Aprenda Cypher em 1 hora
+
+Ver curso →
+
+
+ 
+
+Ou por que não experimentar uma destas recomendações com base no seu histórico de matrículas?
+
+Fundamentos de Cifra
+Aprenda Cypher em 1 hora
+
+Mais de 35.000 alunos que concluíram o curso Neo4j Fundamentals também concluíram o curso Cypher Fundamentals .
+
+Ver curso →
+
+
+Fundamentos da Importação de Dados
+Aprenda como importar dados para o Neo4j.
+
+Mais de 7.000 alunos que concluíram o curso Fundamentos do Neo4j também concluíram o curso Fundamentos da Importação de Dados .
+
+Ver curso →
+
+
+
+
+
+
+
+---
+
+
 ## Você pode criar uma instância gratuita do Neo4j AuraDB ou baixar o Neo4j Desktop para auxiliar no seu aprendizado.
 
 
