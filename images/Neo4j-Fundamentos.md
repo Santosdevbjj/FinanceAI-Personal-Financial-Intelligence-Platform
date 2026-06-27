@@ -27,6 +27,10 @@ Parabéns e próximos passos
 
 Português (Brasil)
 Powered by Google TradutorTradutor
+
+---
+
+
 Pensamento gráfico
 Bem-vindo(a) aos Fundamentos do Neo4j. Este é o seu ponto de partida para aprender sobre o Neo4j e bancos de dados de grafos.
 
