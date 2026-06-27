@@ -1,6 +1,10 @@
 ---
+Neo4J Casos de uso
+https://neo4j.com/use-cases/
 
 
+
+---
 
 Fundamentos do Neo4j ›
 Pensamento gráfico
@@ -202,6 +206,666 @@ Com tecnologia MediaWiki
 
 
 ---
+
+Neo4J Casos de uso
+https://neo4j.com/use-cases/
+
+
+Skip to content
+Neo4j to acquire GraphAware, launch new open-standards intelligence analysis solutions | Read more
+
+Neo4j logo
+
+Products
+Products: submenu
+
+Solutions
+Solutions: submenu
+
+Why Neo4j
+Why Neo4j: submenu
+
+Developers
+Developers: submenu
+
+Resources
+Resources: submenu
+Pricing
+
+Contact
+Aura login
+Get started free
+
+
+
+Next-Gen Application Use Cases
+Transform data into knowledge to build reliable AI, detect fraud, optimize CX, boost supply chain resilience, and more. The sky’s the limit.
+
+Business Use Cases
+Industry Use Cases
+Technical Use Cases
+Get Started
+Enterprise Graphs
+
+Business Use Cases
+AI Systems
+Model and manage context to build production-grade AI Systems with ease.
+
+Learn More 
+Generative AI
+Unify vector search, knowledge graph, and data science to build breakthrough GenAI apps that deliver highly accurate responses, rich context, and deep explainability.
+
+Learn More 
+Fraud Detection & Analytics
+Detect sophisticated scams like money laundering, credit fraud, claims fraud, and more.
+
+Learn More 
+Supply Chain Management
+Gain real-time visibility, drive resilience, and improve supply chain planning.
+
+Learn More 
+Real-Time Recommendations
+Make relevant recommendations based on purchase history, similar customers, grouped items, and more.
+
+Learn More 
+Optimize Customer Experiences
+Deepen your understanding of customers to personalize experiences and know the next best action to take.
+
+Learn More 
+Identity & Access Management
+Track users, assets, relationships, and authorizations to ensure only trusted users can access your systems.
+
+Learn More 
+Data Privacy, Risk, & Compliance
+Ensure compliance and data privacy to reduce security risks..
+
+Learn More 
+Network & IT Operations
+Make sense of the complex interdependencies central to managing your network and IT infrastructure.
+
+Learn More 
+Industry Use Cases
+Financial Services
+Manage risk, stay agile, comply with regulations, and protect against fraud.
+
+Learn More 
+US Federal Government
+Improve citizen services, make operations more efficient, and achieve mission outcomes.
+
+Learn More 
+Healthcare & Life Sciences
+Accelerate drug discovery, improve health outcomes, manufacturing, and affiliation management.
+
+Learn More 
+Retail
+Personalize experiences, make better product recommendations, optimize supply chains, and more.
+
+Learn More 
+Telecommunications
+Manage complex networks and boost customer satisfaction.
+
+Learn More 
+
+Technical Use Cases
+Knowledge Graphs
+Connect and map your data for more meaningful integration, querying, and analysis.
+
+Learn More 
+Pattern Matching
+Find meaningful patterns, such as shapes, trends, and recurring relationships, in raw or semi-structured data.
+
+Learn More 
+Digital Twin
+Create a model of a real-world product, process, or system to increase visibility, improve efficiency, and reduce risk.
+
+Learn More 
+Metadata Management
+Organize data about data to improve data discovery, understanding, and usability.
+
+Learn More 
+
+
+Get Started With Graph Intelligence
+Build Apps Faster with AuraDB
+Build with a fully managed database, 1,000 faster queries, a flexible schema, and enterprise-grade security. No JOINs required.
+
+Start Building
+Take Free, Hands-on Courses at GraphAcademy
+Sharpen your skills in building knowledge graphs, applications, and AI on a graph database, no matter your current level of experience.
+
+opens in new tabTake Courses
+
+
+Model Your Data Like Your Business
+Build a knowledge graph to mirror each key business area and interconnect them for deep contextual insights to help you build AI, optimize operations, and more.
+
+Get Insights
+Products
+AuraDB
+Aura Graph Analytics
+Aura Agent
+Enterprise Studio
+Community Edition
+Cypher Query Language
+Fleet Manager
+Graph Database
+Graph Data Science
+GraphQL
+Knowledge layer
+Pricing
+Virtual Graph
+Solutions
+AI systems
+Case studies
+GenAI
+GraphRAG
+Industries & use cases
+Knowledge graphs
+Model context protocol (MCP)
+Pattern matching
+Developers
+AI + graph
+Agent memory
+opens in new tabCommunity
+Developer home
+Documentation
+Deployment Center
+Developer blog
+opens in new tabGraphAcademy
+Release notes
+Data Scientists
+opens in new tabData science community
+Data science documentation
+Get started with graph data science
+Graph data science home
+opens in new tabGraphAcademy for data science
+For Executives
+opens in new tabCustomer success stories
+Executive insights
+IDC business value whitepaper
+Resources
+Blog
+Events hub
+opens in new tabGraphAcademy
+GraphSummit
+NODES
+NODES AI
+Resource library
+Research center
+Video hub
+Webinars
+Partners
+Become a partner
+Find a partner
+OEM partners
+opens in new tabPartner portal login
+Solution partners
+Technology partners
+Company
+About Us
+Awards and honors
+Careers
+Culture
+Graphs4Good
+Leadership
+Newsroom
+opens in new tabSupport
+opens in new tabTrust center
+Contact Us ❯
+US: 1-855-636-4532
+Sweden: +46 171 480 113
+UK: +44 20 3868 3223
+France: +33 (0) 1 88 46 13 20
+Singapore: +65 6859 0336
+Australia: +61 2 8395 2895
+India: +91 6827 521 210
+Social Networks
+opens in new tab
+ opens in new tab
+ opens in new tab
+ opens in new tab
+ opens in new tab
+ opens in new tab
+© 2026 Neo4j, Inc.
+Terms | Privacy Notice | Sitemap
+opens in new tabAnti-Corruption Policy
+©2026 Neo4j, Inc., Neo Technology®, Neo4j®, Cypher®, Neo4j Bloom™, Neo4j Graph Data Science Library™, Neo4j® Aura™, and Neo4j® AuraDB™ are registered trademarks or a trademark of Neo4j, Inc. All other marks are owned by their respective companies.
+
+Neomi, AI Agent
+
+
+Neomi
+Neomi
+AI Assistant
+Hi, I'm Neomi an AI Assistant here to assist you. How can I help you?
+
+Podemos conversar em Português se você preferir
+
+Message input
+Support
+Book a Meeting
+Ask Neomi a question
+
+By engaging with this chat, I confirm that I have read and understood Neo4j’s Privacy Policy. 
+
+
+
+---
+
+
+https://neo4j.com/customer-stories/transport-for-london/
+
+Skip to content
+Neo4j to acquire GraphAware, launch new open-standards intelligence analysis solutions | Read more
+
+Neo4j logo
+
+Products
+Products: submenu
+
+Solutions
+Solutions: submenu
+
+Why Neo4j
+Why Neo4j: submenu
+
+Developers
+Developers: submenu
+
+Resources
+Resources: submenu
+Pricing
+
+Contact
+Aura login
+Get started free
+All customer stories
+Transport For London Cuts Congestion by 10% with a Digital Twin Powered by Neo4j
+How a digital twin of the world’s most intricate transport network, built on Neo4j’s graph solution, boosts incident response time, improves journeys for millions and lays the groundwork for the metropolis of the future.
+
+10%
+
+estimated congestion reduction
+
+$750M
+
+estimated annual economic savings
+
+$1,500
+
+annual time savings value for every driver
+
+
+Transport for London (TfL) is in charge of running and maintaining London’s transport network of road, rail, and underground, one of the largest and most complex in the world. Its mission: to ensure that nine million residents and almost twenty million annual visitors can travel safely and easily, moving London forward in a healthy, inclusive and sustainable way. 
+
+That’s no small feat when you consider that around 80% of journeys in London take place on roads, equating to over 3.7 billion trips per year. 
+
+As one of the most visited capital cities on the planet, transport lines are also a vital lifeline for London and the wider country. Managing this network is a deeply complex, intricate challenge; monitoring it alone is a technical feat when you consider there are 65,000 roads alone.
+
+Reacting to incidents on those roads is even harder – but essential. London experiences 20,000 unplanned transport incidents yearly, and each passing minute left unaddressed means traffic jams build exponentially. Congestion in the city costs London $7.5 billion per year in lost labor alone, on top of the stress and inconvenience for road users.
+
+What if you could bring together real-time data on all those roads and spot an incident before someone picks it up on CCTV? Breaking a traffic jam within seconds rather than minutes could save the city countless hours and cut the pollution created by stationary vehicles.
+
+That was what one pioneer at TfL set out to do – with the help of Neo4j.
+
+Using graph to power a digital transport twin
+“For a long time, TfL took a totally reactive approach to data,” says Andy Emmonds, Chief Transport Analyst at TfL. 
+
+One of the main challenges to using a digital solution to solve London’s congestion problem was the prevalence of low-quality and disparate travel data.
+
+Many journeys are private and multi-modal (you might drive or cycle, then catch a train, then walk), making them hard to track. Meanwhile, TfL’s historical approach was to collect distinct data sets, which meant they could only answer a fraction of the questions the team wanted to ask. 
+
+TfL collects terabytes of data every week, but because of how that data is stored and analyzed – separately – no meaningful conclusions can be drawn based on the relationships between datasets. Insufficient sensors to gather fresh data, like cameras and telematics, often means that TfL only gets insight into traffic incidents once they’ve been visually spotted as well.
+
+“We were effectively using this disparate data through Excel sheets. None of this data was aligned or real-time, and what we needed was to be a real-time operator – to do that, we needed a digital twin.”
+
+Andy Emmonds
+
+Chief Transport Analyst, TfL
+
+
+A digital twin is a computer replication of physical phenomena – in this case, of London’s transport network – in which if/then scenarios can be tested before the system is deployed in the real world. And it’s exactly what Andy identified that TfL needed to deal with its congestion challenge. 
+
+He quickly understood that using a graph would be the most efficient, cost-effective, and performant way to power such a model. TfL needed a way to uncover hidden relationships and patterns across billions of data connections to make the decisions needed to predict and handle traffic incidents. Graphs enable people to store and examine the connections between data points as data itself, much in the same way commuters think about the routes and connections in their daily travel. 
+
+“We found that real-time data can only be solved by a graph database because a graph database is an agile and adaptive way to interpret granular data at scale,” says Andy. 
+
+A road link is a node – it’s a route from A to B that has many properties, intrinsically suited to graph for this reason, compared to those cumbersome spreadsheets TfL previously relied on.
+
+“Trips and routing can only be efficiently managed through such a database,” adds Andy. For his team, Neo4j’s graph solution was the way forward.
+
+When every minute is worth $14,000
+TfL’s goal is to dramatically improve its ability to detect and address incidents on London’s road network in as close to real-time as possible, which has massive financial implications – every minute of delay creates negative outcomes. 
+
+Currently, it takes TfL between 14 and 17 minutes to detect an incident. By the time it’s spotted and interventions put in place, an average of 27 minutes have been lost in terms of traffic buildup. That means every minute of delay from an incident’s occurrence is worth $14,000.
+
+“What we’re trying to do here is reduce that intervention curve. If we can bring that intervention window back to a minute or two minutes, then that delay curve for the whole incident is much, much reduced,” says Andy.
+
+“Congestion costs London £6 billion ($7.5bn) a year, we can make a big dent in that through managing this operation in real-time.”
+
+Making real-world decisions in a virtual environment
+So what does TfL’s transport digital twin look like, and how exactly does graph power it? The twin consists of five layers:
+
+Digital twin data: the first level of the model, where input data is aligned with the business challenge
+Framework: the data is organized to solve the challenge
+Graph database: the data is set up so it mirrors the physical network it is modeling 
+Visual layer: The data is sent to TfL’s control room for interpretation
+Plug and play layer: The data is used to solve different road problems
+With Neo4j’s graph solution, TfL could connect and feed those data sets into the digital twin. To try out its new solution and to see what real-time insights it would provide them, TfL set up a stage rehearsal – which yielded results almost immediately. 
+
+Says Andy: “We set up a test product which was fed data powered by graph that could tell us in near real-time if there was a problem on the road. On the day of the test, the system detected five incidents that the control room didn’t pick up. That was the proof in the pudding for us.”
+
+What was working with Neo4j like for Andy and his team? “We worked really closely with the Neo4j team, and they became close collaborators. Ultimately, what we’ve created is a holistic product. It has enabled us to go back to the drawing board, establish new networks and new ways of thinking, and unlock efficiencies.”
+
+
+How TfL will cut congestion costs by $750 million
+TfL hopes its digital twin will also play a crucial role in its vision to cut congestion by 10% – a result worth $750 million per year to the capital and over $1,500 in time back per driver per year according to its own estimates.
+
+Andy and his team are looking to the future too. Using the new solution, Andy hopes to build an optimizer for peak traffic days, for example, when a stadium event is happening, to best plan and control routes across the network driven by data from the digital twin.
+
+Further down the line, Andy and his team expect to use their solution to build emission reduction strategies for London and even lay the foundation for an autonomous vehicle network. 
+
+“The great thing about a solution like this is that the architecture is open and agile,” explains Andy. “There’s nothing stopping us from using it to build and understand the metropolis of the future, and to me, that next step is making London’s roads autonomous and green.”
+
+Get in touch
+Uncover hidden insights with Neo4j’s graph database and analytics. Let’s talk.
+
+
+Read a complimentary Gartner® report on knowledge graphs for AI
+Read the report
+
+Partners
+
+
+Microsoft Azure
+Use Cases
+
+Recommendations
+Industry
+
+Government & municipality
+Transportation
+opens in new tabtfl.gov.uk
+Europe
+Explore More
+
+Audience Acuity Accelerates Identity Resolution to Under 24 Hours with Neo4j Graph Analytics for Snowflake
+Read Case Study 
+
+Syngenta Transforms Chemical Intuition into Digital Precision with Neo4j
+Read Case Study 
+
+IndyKite Helps Enterprises Build Trust in AI and Data with Neo4j
+Read Case Study 
+
+Build intelligent apps easily
+Transform your data into knowledge to build smart, accurate, and adaptive applications.
+
+Start Building
+Products
+AuraDB
+Aura Graph Analytics
+Aura Agent
+Enterprise Studio
+Community Edition
+Cypher Query Language
+Fleet Manager
+Graph Database
+Graph Data Science
+GraphQL
+Knowledge layer
+Pricing
+Virtual Graph
+Solutions
+AI systems
+Case studies
+GenAI
+GraphRAG
+Industries & use cases
+Knowledge graphs
+Model context protocol (MCP)
+Pattern matching
+Developers
+AI + graph
+Agent memory
+opens in new tabCommunity
+Developer home
+Documentation
+Deployment Center
+Developer blog
+opens in new tabGraphAcademy
+Release notes
+Data Scientists
+opens in new tabData science community
+Data science documentation
+Get started with graph data science
+Graph data science home
+opens in new tabGraphAcademy for data science
+For Executives
+opens in new tabCustomer success stories
+Executive insights
+IDC business value whitepaper
+Resources
+Blog
+Events hub
+opens in new tabGraphAcademy
+GraphSummit
+NODES
+NODES AI
+Resource library
+Research center
+Video hub
+Webinars
+Partners
+Become a partner
+Find a partner
+OEM partners
+opens in new tabPartner portal login
+Solution partners
+Technology partners
+Company
+About Us
+Awards and honors
+Careers
+Culture
+Graphs4Good
+Leadership
+Newsroom
+opens in new tabSupport
+opens in new tabTrust center
+Contact Us ❯
+US: 1-855-636-4532
+Sweden: +46 171 480 113
+UK: +44 20 3868 3223
+France: +33 (0) 1 88 46 13 20
+Singapore: +65 6859 0336
+Australia: +61 2 8395 2895
+India: +91 6827 521 210
+Social Networks
+opens in new tab
+ opens in new tab
+ opens in new tab
+ opens in new tab
+ opens in new tab
+ opens in new tab
+© 2026 Neo4j, Inc.
+Terms | Privacy Notice | Sitemap
+opens in new tabAnti-Corruption Policy
+©2026 Neo4j, Inc., Neo Technology®, Neo4j®, Cypher®, Neo4j Bloom™, Neo4j Graph Data Science Library™, Neo4j® Aura™, and Neo4j® AuraDB™ are registered trademarks or a trademark of Neo4j, Inc. All other marks are owned by their respective companies.
+
+Neomi, AI Agent
+
+
+Neomi
+Neomi
+AI Assistant
+Hi, I'm Neomi an AI Assistant here to assist you. How can I help you?
+
+Podemos conversar em Português se você preferir
+
+Message input
+Support
+Book a Meeting
+Ask Neomi a question
+
+By engaging with this chat, I confirm that I have read and understood Neo4j’s Privacy Policy. 
+
+
+
+
+---
+
+
+
+
+
+Fundamentos do Neo4j › Pensamento em Grafos
+Gráficos estão por toda parte
+
+Sérgio
+Fundamentos do Neo4j
+
+Pensamento gráfico
+O que é Neo4j?
+Pensando em Gráficos
+Gráficos estão por toda parte
+Crie seu próprio modelo de dados em grafo
+(Opcional)
+Consultando Grafos
+Leitura de gráficos
+Reconhecimento de padrões
+Criação de gráficos
+Consultando seu modelo de dados
+(Opcional)
+Explorando o Neo4j
+Obtenha o Neo4j
+Ferramentas Neo4j
+Parabéns e próximos passos
+
+Português (Brasil)
+Powered by Google TradutorTradutor
+Lição
+Gráficos estão por toda parte
+1736 até os dias atuais
+Os bancos de dados de grafos têm origem na teoria dos grafos , um conceito criado na Prússia da década de 1730.
+
+O problema das Sete Pontes de Königsberg questionava se era possível atravessar a cidade a pé, cruzando cada uma de suas sete pontes exatamente uma vez, sem refazer o caminho.
+
+O processo de abstração necessário para resolver
+Euler resolveu isso representando as massas de terra como vértices (nós) e as pontes como arestas (relações), formando um grafo.
+
+Ele provou que tal caminho era impossível porque o grafo exigia que todos os nós tivessem um número par de arestas, o que não era o caso, lançando assim as bases da teoria dos grafos.
+
+Os gráficos permitem encontrar novas informações e comprovar hipóteses.
+
+Descubra padrões em seus dados.
+Os gráficos permitem descobrir padrões nos seus dados, sejam eles:
+
+Cliente : utilização de dados do cliente para recomendações, prevenção de cancelamentos, ofertas personalizadas e anúncios direcionados, aprimorando a retenção de clientes e o crescimento da receita.
+
+Rede e Segurança : análise de dados de ativos de TI para oferecer suporte a um monitoramento de segurança abrangente e uma resposta proativa a ameaças.
+
+Funcionário : armazenamento de dados de funcionários para apoiar o desenvolvimento de talentos, a gestão de carreira e a alocação de recursos, ajudando a alinhar as capacidades da força de trabalho com as necessidades do negócio.
+
+Transações : captura de dados transacionais para detectar atividades ilegais, apoiando o combate à lavagem de dinheiro, a detecção de fraudes, a avaliação de risco de crédito e a detecção de fraudes em crédito, revelando padrões ocultos, anomalias e conexões.
+
+Produto : centralizar os dados do produto para oferecer recomendações personalizadas, otimizar o lançamento de novos produtos, aprimorar a personalização, gerenciar o estoque e refinar as estratégias de preços.
+
+Fornecedores : armazenamento de dados sobre desempenho, estoque, custos, logística e conformidade dos fornecedores para otimizar a gestão da cadeia de suprimentos, dando suporte a programas como planejamento de rotas, visibilidade em tempo real, planejamento de estoque e análise de riscos.
+
+Processo : a criação de um gráfico de dados relacionados ao processo pode identificar gargalos, melhorar a eficiência, automatizar tarefas e monitorar o desempenho por meio da análise de dados operacionais, de recursos, de qualidade e de custos.
+
+Você pode ler mais casos de uso do Neo4j em diversos setores e para clientes em neo4j.com/use-cases .
+
+Grafos de conhecimento e IA generativa
+Os grafos tornaram-se uma parte importante no desenvolvimento de aplicações de Inteligência Artificial Generativa (GenAI). As aplicações de GenAI precisam acessar o significado dos dados, e os grafos de conhecimento podem fornecer esse contexto.
+
+Os grafos de conhecimento fornecem uma maneira estruturada de representar entidades, seus atributos e seus relacionamentos, permitindo uma compreensão abrangente e interconectada das informações.
+
+Os grafos de conhecimento podem decompor fontes de informação e integrá-las, permitindo visualizar as relações entre os dados.
+
+Você pode não estar familiarizado com o termo "grafo de conhecimento", mas provavelmente já usou um. Os mecanismos de busca normalmente utilizam grafos de conhecimento para fornecer informações sobre pessoas, lugares e coisas.
+
+O seguinte grafo de conhecimento poderia representar o Neo4j:
+
+Um exemplo de um grafo de conhecimento do Neo4j mostrando as relações entre pessoas.
+Existem muitos casos de uso para Neo4j e GenAI, incluindo busca vetorial, grafos de conhecimento e ciência de dados.
+
+Roteamento
+Os gráficos são fáceis de visualizar no planejamento de rotas e no transporte.
+
+Ao navegar em uma rede de transporte público, você utiliza conceitos da teoria dos grafos, tratando estações ou paradas como nós e rotas ou conexões como arestas.
+
+A rede do metrô de Londres
+Ao encontrar os caminhos mais curtos ou mais eficientes nessa rede, você está resolvendo um problema semelhante à busca em grafos, otimizando sua rota para chegar ao seu destino de forma eficiente.
+
+Um grafo de nível superior pode conter relações ponderadas entre paradas para representar as linhas, enquanto um grafo de nível inferior pode modelar plataformas dentro de estações e serviços como nós no grafo.
+
+A Transport for London (TfL) utiliza o Neo4j para armazenar uma representação digital da sua rede de transportes , o que lhe permite identificar gargalos e reduzir o congestionamento na rede.
+
+Continuar
+27%
+Pensando em Gráficos
+Crie seu próprio modelo de dados em grafo
+Esta lição foi útil?SimNão
+
+
+
+
+---
+
+Aqui está uma análise estruturada e resumida da lição **"Gráficos estão por toda parte"** do curso de Fundamentos do Neo4j.
+
+Esta lição conecta a origem histórica da matemática dos grafos com as suas aplicações modernas mais poderosas, como Inteligência Artificial e otimização de rotas.
+
+---
+
+## 1. A Origem Histórica: As Sete Pontes de Königsberg (1736)
+
+A lição começa explicando que a origem dos bancos de dados de grafos está na matemática do século XVIII, quando o matemático **Leonhard Euler** resolveu o famoso problema da cidade de Königsberg.
+
+* **O Problema:** Era possível caminhar pela cidade cruzando as 7 pontes sobre o rio Prególia exatamente uma vez e voltar ao início?
+* **A Solução de Euler:** Ele simplificou o mapa físico transformando os pedaços de terra em **Vértices (Nós)** e as pontes em **Arestas (Relacionamentos)**. Ele provou matematicamente que o caminho era impossível (pois os nós precisariam ter um número par de conexões). Ali nascia a **Teoria dos Grafos**.
+
+---
+
+## 2. Padrões de Dados no Mundo Real
+
+O texto destaca que os grafos são a melhor ferramenta para encontrar padrões ocultos onde os dados são altamente conectados. Os principais casos de uso práticos citados são:
+
+* **Fraudes e Transações:** Detectar lavagem de dinheiro, fraudes em cartões e anomalias rastreando o caminho do dinheiro entre contas conectadas.
+* **Clientes e Produtos:** Sistemas de recomendação (ex: *"quem comprou X também comprou Y"*), personalização e prevenção de cancelamentos (*churn*).
+* **Cadeia de Suprimentos (Logística):** Gerenciamento de fornecedores, estoques e rotas em tempo real.
+* **Segurança de TI:** Monitoramento de ativos de rede para prever e mitigar ameaças cibernéticas de forma proativa.
+
+---
+
+## 3. Grafos de Conhecimento e IA Generativa (GenAI)
+
+Um dos pontos mais modernos da lição é a conexão dos grafos com a Inteligência Artificial:
+
+* **Contexto para a IA:** Modelos de linguagem (LLMs) são ótimos em gerar texto, mas falham em lógica factual. Os **Grafos de Conhecimento (Knowledge Graphs)** estruturam entidades e atributos de forma interconectada, dando à IA o "contexto" real e estruturado que ela precisa para não alucinar.
+* **Uso no dia a dia:** Os grandes motores de busca (como o Google) já usam grafos de conhecimento há anos para exibir aqueles painéis informativos quando você pesquisa por pessoas, lugares ou fatos.
+
+---
+
+## 4. Roteamento e Cidades Inteligentes
+
+Por fim, a lição aborda a aplicação mais intuitiva dos grafos: redes de transporte público e mapas.
+
+* As estações ou paradas são os **Nós**.
+* As linhas de metrô, ônibus ou ruas são as **Arestas** (que podem ter "pesos", como a distância ou o tempo de viagem).
+* **Estudo de Caso Prático:** O texto cita a **Transport for London (TfL)**, que mapeou toda a complexa rede de transportes de Londres usando o Neo4j para criar um gêmeo digital e prever congestionamentos em tempo real.
+
+
+---
+
+
+
+
+
+
+
 
 
 
