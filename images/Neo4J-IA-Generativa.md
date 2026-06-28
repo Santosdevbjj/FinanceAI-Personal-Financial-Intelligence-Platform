@@ -1,5 +1,26 @@
 
 
+---
+
+
+https://graphacademy.neo4j.com/courses/llm-vectors-unstructured/
+
+https://graphacademy.neo4j.com/courses/llm-knowledge-graph-construction/
+
+https://graphacademy.neo4j.com/courses/llm-chatbot-python/
+
+https://graphacademy.neo4j.com/courses/genai-integration-langchain/
+
+https://graphacademy.neo4j.com/courses/importing-fundamentals/?ref=recommendation
+
+
+
+
+
+
+
+---
+
 
 
 Fundamentos de Neo4j e IA Generativa › IA Generativa
