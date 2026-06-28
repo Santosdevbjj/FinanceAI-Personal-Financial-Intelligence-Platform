@@ -29,8 +29,13 @@ Adicionar ou atualizar um filme
 Exclusão de dados
 Excluindo Emil
 
-Português (Brasil)
+Português (Brasil) 
+
+
+
 Powered by Google TradutorTradutor
+
+
 Leitura de dados do Neo4j
 Neste módulo, você aprenderá como escrever código Cypher para recuperar dados do grafo.
 
