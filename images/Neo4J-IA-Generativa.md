@@ -1,185 +1,106 @@
 
 
 
-GraphAcademy
-Todos os cursos
-GraphRAG
-Certificações
-Sérgio
+
+Fundamentos de Neo4j e IA Generativa › IA Generativa
+O que é IA generativa?
+
 Sérgio
 Fundamentos do Neo4j e IA Generativa
-2 horasIA generativa e GraphRAG
-Descubra como o Neo4j e o GraphRAG podem dar suporte aos seus projetos de IA generativa.
 
-Inscreva-se no curso
-Curso favorito
-Descrição do curso
-Neste curso, você aprenderá como o Neo4j e os Grafos de Conhecimento podem ajudá-lo a criar aplicações de IA Generativa (GenAI).
-
-Você aprenderá por que os bancos de dados de grafos são uma opção confiável para fundamentar os modelos GenAI, usando o Neo4j para fornecer informações factuais e confiáveis, impedindo que o LLM forneça informações falsas, também conhecidas como alucinações .
-
-Você aprenderá sobre:
-
-Incorporações e índices vetoriais: como são usados ​​no GenAI e como usá-los no Neo4j.
-
-RAG (Retrieval Augmented Generation) e como o GraphRAG se baseia nele para fornecer uma abordagem baseada em grafos para contextualizar modelos de IA generativa.
-
-Como usar o pacote Neo4j GraphRAG para Python para interagir com modelos de IA e o Neo4j.
-
-Este curso utiliza modelos da OpenAI , embora você possa usar o modelo e o fornecedor de sua preferência.
-
-Pré-requisitos
-Antes de iniciar este curso, você deve ter:
-
-Conhecimento básico de bancos de dados de grafos e Neo4j.
-
-Conhecimento de Python e capacidade de ler programas simples.
-
-Recomendamos fazer o curso Neo4j Fundamentals .
-
-Para concluir as tarefas práticas deste curso, você precisará de uma chave de API da OpenAI .
-
-Duração
-2 horas
-
-O que você aprenderá
-Os fundamentos da IA ​​generativa, os Grandes Modelos de Linguagem (LLMs) e suas limitações.
-
-Como fornecer contexto melhora a precisão das respostas da IA ​​generativa.
-
-Sobre a Geração Aumentada por Recuperação (RAG) e como ela combina recuperação e geração para obter melhores respostas.
-
-Como vetores e embeddings possibilitam a busca semântica e a recuperação contextual no Neo4j.
-
-Habilidades práticas na construção e consulta de grafos de conhecimento a partir de dados estruturados e não estruturados.
-
-Como usar o pacote Neo4j GraphRAG para Python para integrar busca vetorial, percurso em grafos e consulta em linguagem natural para aplicações de IA aprimoradas.
-
-Este curso inclui
-15 lições
-
-2 desafios opcionais curtos
-
-12 questionários simples para auxiliar seu aprendizado
-
-Obtenha suporte
-Se você ficar preso em qualquer etapa, nossa comunidade amigável terá prazer em ajudar. Você pode buscar ajuda no site da comunidade Neo4j ou acessar o servidor Discord do Neo4j para discussões em tempo real.
-
-Opinião
-Se você tiver algum comentário ou feedback sobre este curso, pode nos enviar um e-mail para graphacademy@neo4j.com .
-
-01. IA Generativa
-3 Lições
+IA generativa
 O que é IA generativa?
 Considerações
 Contexto
-02. Geração Aumentada de Recuperação (RAG)
-4 Lições
+Geração Aumentada de Recuperação (RAG)
 O que é RAG?
 Vetor RAG
 Índices vetoriais
 GraphRAG
-03. Grafos de Conhecimento
-2 Lições
+Grafos de conhecimento
 O que é um grafo de conhecimento?
 Criação de Grafos de Conhecimento
-04. Integrando o Neo4j com IA Generativa
-6 Lições
+Integrando o Neo4j com IA Generativa
 GraphRAG para Python
 Recuperador de vetores
 Gasoduto RAG
 Recuperador de vetores aprimorado por grafos
 Recuperador de texto para código cifrado
 Estruturas GenAI
-Cursos relacionados
-Os usuários que concluíram este curso também concluíram:
 
-Consultas cifradas intermediárias
-Continue sua jornada de aprendizado com consultas Cypher.
-4 horas
-Fundamentos da Importação de Dados
-Aprenda como importar dados para o Neo4j.
-2 horas
-Importando dados CSV para o Neo4j
-Aprenda como importar dados CSV para o Neo4j usando Cypher.
-2 horas
-Ver todos os cursos →
+Português (Brasil)
+Powered by Google TradutorTradutor
+Lição
+O que é IA generativa?
+GenAI
+A Inteligência Artificial Generativa (ou GenAI) refere-se a sistemas de inteligência artificial projetados para criar novos conteúdos que se assemelham a dados produzidos por humanos. Os dados podem ser texto, imagens, áudio ou código.
 
-Produtos
-Banco de dados de grafos Neo4j
-Neo4j AuraDB
-Ciência de Dados em Grafos com Neo4j
-Centro de Implantação
-Serviços profissionais
-Preços
-Ferramentas gráficas
-Ferramentas de desenvolvimento Neo4j
-Espaço de trabalho Neo4j
-Neo4j Bloom
-Biblioteca GraphQL Neo4j
-Conectores de dados Neo4j
-Linguagem de consulta Cypher
-Casos de uso
+Esses modelos, como o GPT (para texto) ou o DALL-E (para imagens), são treinados em grandes conjuntos de dados e usam padrões aprendidos a partir desses dados para gerar novas saídas.
+
+Um diagrama que mostra o processo de IA Generativa.
+A IA generativa é amplamente utilizada em aplicações como chatbots, criação de conteúdo, síntese de imagens e geração de código.
+
+Os modelos de IA generativa não são "inteligentes" da mesma forma que os humanos:
+
+Eles não entendem nem compreendem o conteúdo que geram.
+
+Eles se baseiam em padrões estatísticos e correlações aprendidas a partir de seus dados de treinamento.
+
+Embora os modelos de IA generativa possam produzir resultados coerentes e contextualmente relevantes, eles carecem de compreensão.
+
+Modelos de Linguagem de Grande Porte (LLMs)
+Este curso se concentrará em modelos de geração de texto, especificamente em Modelos de Linguagem de Grande Porte (LLMs).
+
+Os LLMs são um tipo de modelo de IA generativa projetado para entender e gerar textos semelhantes aos humanos.
+
+Esses modelos são treinados com grandes quantidades de dados textuais e podem executar diversas tarefas, incluindo responder a perguntas, resumir dados e analisar textos.
+
+A resposta gerada por um LLM é uma continuação probabilística das instruções que recebe.
+
+O LLM fornece a resposta mais provável com base nos padrões que aprendeu a partir de seus dados de treinamento.
+
+Caso lhe seja apresentada a instrução:
+
+"Continue esta sequência - AB C"
+Um mestre em Direito (LLM) poderia responder:
+
+"DE F"
+Instruções
+Para que um profissional com mestrado em direito (LLM) execute uma tarefa, você fornece uma instrução .
+
+O enunciado deve especificar suas necessidades e fornecer instruções claras sobre como responder.
+
+Um usuário pergunta a um especialista em Direito (LLM): "O que é um LLM? Responda usando linguagem simples, evitando jargões." O especialista responde com uma definição simples de LLM.
+A precisão na descrição da tarefa, potencialmente combinada com exemplos ou contexto, garante que o modelo compreenda a intenção e produza resultados relevantes e precisos.
+
+Um exemplo de pergunta pode ser uma questão simples.
+
+Qual é a capital do Japão?
+Ou, poderia ser mais descritivo:
+
+Você é um agente de viagens amigável que ajuda um cliente a escolher um pacote de viagem.
+destino de férias. Seus leitores podem ter o inglês como segunda língua.
+Portanto, use uma linguagem simples e evite expressões coloquiais.
+Evite jargões a todo custo.
+Fale-me sobre a capital do Japão.
+O LLM interpretará essas instruções e retornará uma resposta com base nos padrões que aprendeu a partir de seus dados de treinamento.
+
+Verifique se você entendeu
 IA generativa
-Indústrias e casos de uso
-Estudos de caso
-Clientes
-Desenvolvedores
-Página inicial do desenvolvedor
-Documentação
-Centro de Implantação
-Blog do desenvolvedor
-Comunidade
-Eventos Virtuais
-GraphAcademy
-Cientistas de Dados
-Página inicial de Ciência de Dados em Grafos
-Documentação de Ciência de Dados
-Comece a usar a Ciência de Dados em Grafos
-Comunidade de Ciência de Dados
-GraphAcademy para Ciência de Dados
-Aprender
-Biblioteca de Recursos
-Blog do Neo4j
-GraphAcademy
-Centro de Pesquisa
-Estudos de caso
-Análises Executivas
-Calendário de eventos
-Cúpula do Gráfico
-Conexões
-Webinários
-Parceiros
-Encontre um parceiro
-Torne-se um parceiro
-Parceiros de Soluções
-Parceiros OEM
-Parceiros de Tecnologia
-Login no Portal de Parceiros
-Empresa
-Sobre nós
-Sala de imprensa
-Prêmios e Honrarias
-Gráficos para o Bem
-Carreiras
-Cultura
-Diversidade
-Liderança
-Apoiar
-Fale conosco →
-EUA: 1-855-636-4532
-Suécia: +46 171 480 113
-Reino Unido: +44 20 3868 3223
-França: +33 (0) 1 88 46 13 20
-Redes sociais
-© 2026 Neo4j, Inc.
-Termos | Política de Privacidade | Mapa do Site
-| Política Anticorrupção
-Neo4j®, Neo Technology®, Cypher®, Neo4j® Bloom™, Neo4j® AuraDS™ e Neo4j® AuraDB™ são marcas registradas da Neo4j, Inc. Todas as outras marcas são propriedade de suas respectivas empresas. 
+Quais das seguintes afirmações sobre IA Generativa são verdadeiras? (Selecione todas as que se aplicam.)
+
+ Os modelos de IA generativa podem gerar novos conteúdos, como texto, imagens ou código.
+ Os Modelos de Linguagem de Grande Porte (LLMs, na sigla em inglês) geram texto com base em padrões aprendidos a partir de dados de treinamento.
+ A qualidade do estímulo pode afetar a relevância e a precisão da resposta do modelo.
+ Os modelos de IA generativa sempre compreendem o significado do conteúdo que produzem.
+Confira a resposta
+10%
+IA generativa
+Considerações
+Esta lição foi útil?SimNão
 
 
 
-
-
+---
 
 
